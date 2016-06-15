@@ -34,10 +34,11 @@ formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(level
 console.setFormatter(formatter)  
 logging.getLogger('').addHandler(console) 
 
-'''
-启动方法
-'''
+
 def run(self):
+    '''
+    #启动方法
+    '''
     while True:
         logging.info("aweak!")
         tasks = []

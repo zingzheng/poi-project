@@ -29,8 +29,8 @@ logging.getLogger('').addHandler(console)
 
 class BaseTask(object):
     '''
-    任务的基类
-    目前子类有两种：按网格切分的任务，按照行政区域切分的任务
+    #任务的基类
+    #目前子类有两种：按网格切分的任务，按照行政区域切分的任务
     '''
     
     def __init__(self,args):
@@ -50,21 +50,21 @@ class BaseTask(object):
        
     def str_to_time(self, s):
         '''
-        字符串格式日期转datetime
+        #字符串格式日期转datetime
         '''
         return datetime.datetime.strptime(s, '%Y%m%d')
 
     
     def time_to_str(self, t):
         '''
-        datetime格式日期转字符串
+        #datetime格式日期转字符串
         '''
         return t.strftime('%Y%m%d')  
 
 
     def up_to_now(self, s_nex):
         '''
-        若时间已经过时，自动更新到当前
+        #若时间已经过时，自动更新到当前
         '''
         now = datetime.datetime.now()
         nex = self.str_to_time(s_nex)
@@ -76,14 +76,14 @@ class BaseTask(object):
 
     def goNex(self):
         '''
-        更新下次执行时间
+        #更新下次执行时间
         '''
         self.nex = self.time_to_str(self.str_to_time(self.nex) + datetime.timedelta(days=int(self.delta)))
     
     
     def isTime(self):
         '''
-        判断当前任务是否需要被执行
+        #判断当前任务是否需要被执行
         '''
         now = datetime.datetime.now()
         nex = self.str_to_time(self.nex)
@@ -100,7 +100,7 @@ class BaseTask(object):
     
     def run(self):
         '''
-        抽象方法，根据任务类型具体实现
+        #抽象方法，根据任务类型具体实现
         '''
         pass
 
@@ -110,7 +110,7 @@ class BaseTask(object):
 
 class SubTask(BaseTask):
     '''
-    以行政区域划分的任务类
+    #以行政区域划分的任务类
     '''
 
     def __int__(self):
@@ -121,7 +121,7 @@ class SubTask(BaseTask):
 
 class CutTask(BaseTask):
     '''
-    以网格划分的任务类
+    #以网格划分的任务类
     '''
     
     def _init__(self,args):
@@ -133,7 +133,7 @@ class CutTask(BaseTask):
 
     def _getShape(self):
         '''
-        获取当前任务目标地区的多边形范围
+        #获取当前任务目标地区的多边形范围
         '''
         if self.rtype == 0:
             sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm0.shp")
@@ -157,7 +157,7 @@ class CutTask(BaseTask):
       
     def check(self, address):
         '''
-        检查地址address是否在任务的region内  
+        #检查地址address是否在任务的region内  
         '''
         for s in self.region.split('@'):
             if s not in address:
@@ -166,7 +166,7 @@ class CutTask(BaseTask):
     
     def dumpFile(self,datas):
         '''
-        将结果一次性写入文件
+        #将结果一次性写入文件
         '''
         with open(self.filePath,'w') as f:
             f.writelines(datas)
@@ -174,7 +174,7 @@ class CutTask(BaseTask):
     
     def run(self):
         '''    
-        程序入口，执行该任务，请自行判断任务是否到钟执行
+        #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
         mapdi = MapDi.map_fac(self.map_type)
         datas = []
@@ -207,7 +207,7 @@ class CutTask(BaseTask):
 
 def taskFac(s,args):
     '''
-    静态方法，任务工厂类
+    #静态方法，任务工厂类
     '''
     if int(s) == 0:
         return CutTask(args)

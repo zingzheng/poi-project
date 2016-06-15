@@ -23,23 +23,26 @@ formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(level
 console.setFormatter(formatter)  
 logging.getLogger('').addHandler(console) 
     
-'''
-将由多点表示的多边形可视化
-para:
-    points - [[x0,y0],[x1,y1]...]
-'''
+
 def showShape(points):
+    '''
+    #将由多点表示的多边形可视化
+    para:
+        points - [[x0,y0],[x1,y1]...]
+    '''
     y = [p[0] for p in points]
     x = [p[1] for p in points]
     plt.plot(y,x, 'x')
     plt.show()
-    
-'''
-将由多个矩形可视化，暂时只能以两点表示矩形
-para:
-    bboxs - [[y0,x0,y1,x1],...]
-'''
+
+
+
 def showBboxs(bboxs):
+    '''
+    #将由多个矩形可视化，暂时只能以两点表示矩形
+    para:
+        bboxs - [[y0,x0,y1,x1],...]
+    '''
     bx,by=[],[]
     for bbox in bboxs:
         bx.append(bbox[1])
@@ -49,10 +52,11 @@ def showBboxs(bboxs):
     plt.plot(by,bx, 'o')
     plt.show()
     
-'''
-同时展示多边形和矩形，方便比较
-'''   
+  
 def showUp(points,bboxs):
+    '''
+    #同时展示多边形和矩形，方便比较
+    ''' 
     y = [p[0] for p in points]
     x = [p[1] for p in points]
     plt.plot(y,x, 'x')
@@ -66,16 +70,17 @@ def showUp(points,bboxs):
     plt.show()
 
     
-'''
-网格切分
-para：
-    bbox：最大的方格(l_lng,l_lat,r_lng,r_lat)
-    region_polygon:实际的区域多边形，用于排除和实际区域无交集的方格
-    n:切分为n*n块
-return:
-    [bbox]
-'''
+
 def cut(bbox, region_polygon ,n):
+    '''
+    #网格切分
+    para：
+        bbox：最大的方格(l_lng,l_lat,r_lng,r_lat)
+        region_polygon:实际的区域多边形，用于排除和实际区域无交集的方格
+        n:切分为n*n块
+    return:
+        [bbox]
+    '''
     l_lng,l_lat,r_lng,r_lat = bbox
     d_lng = (r_lng - l_lng)*1.0 / n
     d_lat = (r_lat - l_lat)*1.0 / n
@@ -95,24 +100,26 @@ def cut(bbox, region_polygon ,n):
     return bboxs
 
 
-'''
-将行政区域的中文转化为对应的拼音
-para:
-    prov - 行政名称，如：广东、广州 
-'''
+
 def py(prov):
+    '''
+    #将行政区域的中文转化为对应的拼音
+    para:
+        prov - 行政名称，如：广东、广州 
+    '''
     #prov = unicode(prov, "utf-8")
     if prov == u'陕西':
         return 'shaanxi'
     else:
         return "".join(lazy_pinyin(prov))
 
-'''
-将省份转化为对应的GADM序号
-para:
-    prov - 省份名，如：广东
-'''
+
 def regionIndex(prov):
+    '''
+    #将省份转化为对应的GADM序号
+    para:
+        prov - 省份名，如：广东
+    '''
     province_to_index = {
         "anhui": 0,
         "beijing": 1,

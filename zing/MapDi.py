@@ -63,8 +63,11 @@ class BaseMap(object):
     def __init__(self):
         pass
     
-    #根据不同的切分内核创建不同的请求URL
+    
     def conSearchUrl(self, keyword, region, index):
+        '''
+        #根据不同的切分内核创建不同的请求URL
+        '''
         if type(region) == type("aaa"):
             return self._conSubUrl(self, keyword, region, index)
         else:
@@ -78,12 +81,18 @@ class BaseMap(object):
     def _conBoxUrl(self, keyword, region, index):
         pass  
     
-    #构建逆地址查询url
+    
     def _conReUrl(self, location):
+        '''
+        #构建逆地址查询url,抽象方法
+        '''
         pass
     
-    #发送get请求，若连接失败，自动重试re次。若失败，返回None
+    
     def request(self, url):
+        '''
+        #发送get请求，若连接失败，自动重试re次。若失败，返回None
+        '''
         re = 3
         res = None
         while re:
@@ -98,31 +107,45 @@ class BaseMap(object):
                 continue
         return res
     
-    #获取请求结果 statue(True,False)，message
+    
     def getStatue(self, res):
+        '''
+        #获取请求结果 statue(True,False)，message。抽象方法。
+        '''
         pass
     
-    #返回结果条数，0：无,n：n,-1：溢出
+   
     def getCount(self, res):
+        '''
+        #返回结果条数，0：无,n：n,-1：溢出。抽象方法。
+        '''
         pass
     
     
-    #均采用高德的行政区域划分
+    
     def getSub(self):
+        '''
+        #均采用高德的行政区域划分
+        '''
         pass
     
-    #将搜索结果转化为需求的数据
+    
     def parser(self,res):
+        '''
+        #将搜索结果转化为需求的数据。抽象方法。
+        '''
         pass
             
                 
         
 
 
-'''
-具体的地图类：百度地图
-'''   
+  
 class BaiduMap(BaseMap):
+    
+    '''
+    #具体的地图类：百度地图
+    ''' 
     
     def __init__(self):
         self.KEY = 'voRyF7opZzGGETYert5D2PYk'
@@ -130,8 +153,11 @@ class BaiduMap(BaseMap):
         self.REGEO_URL = 'http://api.map.baidu.com/geocoder/v2/?'
         self.size = 50
     
-    #location = [lat,lng]    
+        
     def _conReUrl(self, location):
+        '''
+        #location = [lat,lng]
+        '''
         REGEO_PARA = {
             'ak':self.KEY,
             'location':'lat,lng',
@@ -143,8 +169,11 @@ class BaiduMap(BaseMap):
     def _conSubUrl(self, keyword, region, index):
         pass
     
-    #region = [左下lng,左下lat,右上lng,右上lat]
+    
     def _conBoxUrl(self, keyword, region, index):
+        '''
+        #region = [左下lng,左下lat,右上lng,右上lat]
+        '''
         SEARCH_PARA = {
             'ak':self.KEY,
             'bounds':'左下lat,左下lng,右上lat,右上lng',
@@ -209,5 +238,8 @@ class BaiduMap(BaseMap):
         return pois
     
 def map_fac(mapType):
+    '''
+    #地图方言工厂方法
+    '''
     if mapType == '百度':
         return BaiduMap()
