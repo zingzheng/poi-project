@@ -5,10 +5,23 @@ Created on 2016年6月14日
 @依赖第三方包：matplotlib、pyshap、pypinyin
 '''
 
+import os
 import matplotlib.pyplot as plt
 from shapely.geometry import box
 from pypinyin import lazy_pinyin
+import logging
 
+BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
+logging.basicConfig(level=logging.DEBUG,
+                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+                datefmt='%a, %d %b %Y %H:%M:%S',
+                filename=BASE_PATH+'/log.txt',
+                filemode='a')
+console = logging.StreamHandler()  
+console.setLevel(logging.INFO)   
+formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')  
+console.setFormatter(formatter)  
+logging.getLogger('').addHandler(console) 
     
 '''
 将由多点表示的多边形可视化
