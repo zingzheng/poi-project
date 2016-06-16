@@ -134,7 +134,7 @@ class SubTask(BaseTask):
                 res = mapdi.request(url)
                 stat,msg = mapdi.getStatue(res)
                 if not stat:
-                    logging.ERROR("error %s,%s"%(msg,url))
+                    logging.error("error %s,%s"%(msg,url))
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -221,7 +221,7 @@ class CutTask(BaseTask):
                 res = mapdi.request(url)
                 stat,msg = mapdi.getStatue(res)
                 if not stat:
-                    logging.ERROR("error %s,%s"%(msg,url))
+                    logging.error("error %s,%s"%(msg,url))
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:

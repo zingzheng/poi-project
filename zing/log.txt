@@ -1119,3 +1119,85 @@ Thu, 16 Jun 2016 21:00:14 MapDi.py[line:103] ERROR <urlopen error timed out>
 Thu, 16 Jun 2016 21:00:14 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_size=20&bounds=23.466042%2C116.366827%2C23.526085%2C116.434827&page_num=1&ak=voRyF7opZzGGETYert5D2PYk&q=%E6%9D%91
 Thu, 16 Jun 2016 21:00:30 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_size=20&bounds=23.405998%2C116.366827%2C23.466042%2C116.434827&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&q=%E6%9D%91
 Thu, 16 Jun 2016 21:00:54 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_size=20&bounds=23.405998%2C116.366827%2C23.466042%2C116.434827&page_num=1&ak=voRyF7opZzGGETYert5D2PYk&q=%E6%9D%91
+Thu, 16 Jun 2016 21:13:10 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:13:10 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:13:11 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:13:11 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:13:11 Runner.py[line:45] INFO 正在执行： 1 腾讯 2 440507 村 0 20160616
+Thu, 16 Jun 2016 21:13:13 PTask.py[line:146] INFO running http://apis.map.qq.com/ws/place/v1/search?page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&boundary=region%28440507%2C0%29&keyword=%E6%9D%91&page_index=1
+Thu, 16 Jun 2016 21:13:21 MapDi.py[line:102] ERROR erro while conn: http://apis.map.qq.com/ws/geocoder/v1/?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&location=23.402240%2C116.770660
+Thu, 16 Jun 2016 21:13:21 MapDi.py[line:103] ERROR <urlopen error [Errno 8] nodename nor servname provided, or not known>
+Thu, 16 Jun 2016 21:13:37 PTask.py[line:146] INFO running http://apis.map.qq.com/ws/place/v1/search?page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&boundary=region%28440507%2C0%29&keyword=%E6%9D%91&page_index=2
+Thu, 16 Jun 2016 21:13:52 Runner.py[line:47] INFO SUCCESS! 1 腾讯 2 440507 村 0 20160616
+Thu, 16 Jun 2016 21:13:52 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:13:53 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&output=json&page_size=20&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&q=%E6%9D%91
+Thu, 16 Jun 2016 21:20:32 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:20:32 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:20:33 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:20:33 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:20:33 Runner.py[line:45] INFO 正在执行： 1 腾讯 2 440507 村 0 20160616
+Thu, 16 Jun 2016 21:20:35 PTask.py[line:146] INFO running http://apis.map.qq.com/ws/place/v1/search?page_size=20&keyword=%E6%9D%91&page_index=1&boundary=region%28440507%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Thu, 16 Jun 2016 21:21:00 PTask.py[line:146] INFO running http://apis.map.qq.com/ws/place/v1/search?page_size=20&keyword=%E6%9D%91&page_index=2&boundary=region%28440507%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Thu, 16 Jun 2016 21:21:15 Runner.py[line:47] INFO SUCCESS! 1 腾讯 2 440507 村 0 20160616
+Thu, 16 Jun 2016 21:21:15 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:21:16 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&ak=voRyF7opZzGGETYert5D2PYk&q=%E6%9D%91&page_num=0&output=json
+Thu, 16 Jun 2016 21:23:36 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:23:36 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:23:37 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:23:37 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:23:37 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:23:38 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&page_size=20&page_num=0&output=json&q=%E6%9D%91&ak=voRyF7opZzGGETYert5D2PYk
+Thu, 16 Jun 2016 21:25:10 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:25:10 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:25:11 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:25:11 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:25:11 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:25:12 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&output=json&q=%E6%9D%91&ak=voRyF7opZzGGETYert5D2PYk
+Thu, 16 Jun 2016 21:26:19 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:26:19 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:26:21 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:26:21 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:26:21 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:26:22 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?q=%E6%9D%91&page_size=20&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&ak=voRyF7opZzGGETYert5D2PYk&output=json&page_num=0
+Thu, 16 Jun 2016 21:27:33 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:27:33 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:27:34 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:27:34 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:27:34 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:27:35 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&page_size=20&q=%E6%9D%91&output=json
+Thu, 16 Jun 2016 21:28:49 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:28:49 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:28:50 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:28:50 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:28:50 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:28:52 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&q=%E6%9D%91&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&page_size=20
+Thu, 16 Jun 2016 21:29:45 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:29:45 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:29:46 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:29:46 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:29:46 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:29:47 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&q=%E6%9D%91&output=json&page_num=0
+Thu, 16 Jun 2016 21:30:56 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:30:56 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:30:57 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:30:57 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:30:57 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:30:59 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&q=%E6%9D%91&page_size=20&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 16 Jun 2016 21:31:14 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:31:14 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:31:16 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:31:16 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:31:16 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:31:17 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&page_num=0&q=%E6%9D%91&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_size=20
+Thu, 16 Jun 2016 21:31:40 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:31:40 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:31:41 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:31:41 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:31:41 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:31:43 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?q=%E6%9D%91&output=json&ak=voRyF7opZzGGETYert5D2PYk&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828&page_num=0&page_size=20
+Thu, 16 Jun 2016 21:32:16 Runner.py[line:33] INFO aweak!
+Thu, 16 Jun 2016 21:32:16 Runner.py[line:35] INFO 正在读取任务...
+Thu, 16 Jun 2016 21:32:17 Runner.py[line:41] INFO 任务读取成功！
+Thu, 16 Jun 2016 21:32:17 Runner.py[line:42] INFO 开始执行任务....
+Thu, 16 Jun 2016 21:32:17 Runner.py[line:45] INFO 正在执行： 0 百度 2 广东@汕头 村 0 20160616
+Thu, 16 Jun 2016 21:32:18 PTask.py[line:233] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&q=%E6%9D%91&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=23.586128%2C116.842828%2C23.646172%2C116.910828

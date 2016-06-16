@@ -40,8 +40,8 @@ class POI(object):
                     self.address, self.adcode, self.country,
                     self.province, self.city, self.district, self.stree]])
         except Exception as e:
-            logging.ERROR("error in str poi")
-            logging.ERROR(e)
+            logging.error("error in str poi")
+            logging.error(e)
         return poistr
         
 
@@ -187,7 +187,7 @@ class TencentMap(BaseMap):
         res = self.request(url)
         stat,msg = self.getStatue(res)
         if not stat:
-            logging.ERROR("获取行政子区域失败 %s,%s"%(msg,url))
+            logging.error("获取行政子区域失败 %s,%s"%(msg,url))
             return None
         sub = []
         for d in res['result'][0]:
@@ -238,7 +238,7 @@ class TencentMap(BaseMap):
                 rRes = self.request(rURL)
                 stat,msg = self.getStatue(rRes)
                 if not stat:
-                    logging.WARN("failed request: %s,%s"%(rURL, msg))
+                    logging.warn("failed request: %s,%s"%(rURL, msg))
                     continue
                 regeo = rRes['result']
                 poi.stree_num = regeo['address_component']['street_number']
@@ -251,8 +251,8 @@ class TencentMap(BaseMap):
                 poi.stree = regeo['address_component']['street']
                 pois.append(poi)       
             except Exception as e:
-                logging.ERROR("error while parse data")
-                logging.ERROR(e)
+                logging.error("error while parse data")
+                logging.error(e)
                 continue
         return pois
     
@@ -349,7 +349,8 @@ class BaiduMap(BaseMap):
                 rRes = self.request(rURL)
                 stat,msg = self.getStatue(rRes)
                 if not stat:
-                    logging.WARN("failed request: %s,%s"%(rURL, msg))
+                    print(rURL,msg)
+                    logging.warn("failed request: %s" % (msg))
                     continue
                 regeo = rRes['result']
                 poi.stree_num = regeo['addressComponent']['street_number']
@@ -362,8 +363,8 @@ class BaiduMap(BaseMap):
                 poi.stree = regeo['addressComponent']['street']
                 pois.append(poi)       
             except Exception as e:
-                logging.ERROR("error while parse data")
-                logging.ERROR(e)
+                logging.error("error while parse data")
+                logging.error(e)
                 continue
         return pois
 
