@@ -15,27 +15,17 @@ task.txt文件格式：列和列之间用空格分开，行最后不要有多余
 '''
 
 import os
-import logging
 import time
 from zing import PTask
+from zing.Util import logging
 
-time.sleep(1)
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
 taskPath = BASE_PATH+'/task.txt'
-logging.basicConfig(level=logging.DEBUG,
-                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                datefmt='%a, %d %b %Y %H:%M:%S',
-                filename=BASE_PATH+'/log.txt',
-                filemode='a')
-console = logging.StreamHandler()  
-console.setLevel(logging.INFO)   
-formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')  
-console.setFormatter(formatter)  
-logging.getLogger('').addHandler(console) 
 
 
-def run(self):
+
+def run():
     '''
     #启动方法
     '''
@@ -44,10 +34,10 @@ def run(self):
         tasks = []
         logging.info("正在读取任务...")
         # 读取任务文件，并解析为任务类
-        with open(taskPath, 'r') as f:
+        with open(taskPath, 'r', encoding = 'utf-8') as f:
             for line in f:
                 args = line.split('\n')[0].split(' ') 
-                tasks.append(PTask.taskFac(args[0], args[1:]))
+                tasks.append(PTask.taskFac(args))
         logging.info("任务读取成功！")
         logging.info("开始执行任务....")
         for task in tasks:
@@ -60,7 +50,7 @@ def run(self):
                     logging.error('FAILED! %s' %(task.toStr()))
         logging.info("任务执行结束！")
         logging.info("开始更新任务状态....")
-        with open(taskPath, 'w') as f:
+        with open(taskPath, 'w', encoding = 'utf-8') as f:
             for task in tasks:
                 f.write(task.toStr())
                 f.write('\n')

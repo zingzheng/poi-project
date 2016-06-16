@@ -7,27 +7,17 @@ Created on 2016年6月14日
 
 import os
 import json
-import time.sleep as sleep
+from time import sleep
 from urllib.parse import urlencode
 from urllib import request
 
-import logging
+from zing.Util import logging
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
-logging.basicConfig(level=logging.DEBUG,
-                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                datefmt='%a, %d %b %Y %H:%M:%S',
-                filename=BASE_PATH+'/log.txt',
-                filemode='a')
-console = logging.StreamHandler()  
-console.setLevel(logging.INFO)   
-formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')  
-console.setFormatter(formatter)  
-logging.getLogger('').addHandler(console) 
 
 class POI(object):
     '''
-    poi信息bean类
+    #poi信息bean类
     '''
     
     name = 'na'
@@ -43,21 +33,22 @@ class POI(object):
     stree='na'
     
     def toString(self):
+        poistr = None
         try:
-            ','.join([str(s) for s in [
+            poistr = ','.join([str(s) for s in [
                     self.name, self.stree_num, self.lat, self.lng,
                     self.address, self.adcode, self.country,
                     self.province, self.city, self.district, self.stree]])
         except Exception as e:
             logging.ERROR("error in str poi")
             logging.ERROR(e)
-            
+        return poistr
         
 
 class BaseMap(object):
     '''
-    地图方言的基类
-    目前支持的方言子类包括：百度、腾讯、高德
+    #地图方言的基类
+    #目前支持的方言子类包括：百度、腾讯、高德
     '''
     
     def __init__(self):
@@ -69,16 +60,22 @@ class BaseMap(object):
         #根据不同的切分内核创建不同的请求URL
         '''
         if type(region) == type("aaa"):
-            return self._conSubUrl(self, keyword, region, index)
+            return self._conRegUrl(keyword, region, index)
         else:
-            return self._conBoxUrl(self, keyword, region, index)
+            return self._conBoxUrl(keyword, region, index)
     
     
-    def _conSubUrl(self, keyword, region, index):
+    def _conRegUrl(self, keyword, region, index):
+        '''
+        #构建按行政区域搜索查询url,抽象方法
+        '''
         pass
     
     
     def _conBoxUrl(self, keyword, region, index):
+        '''
+        #构建按矩形区域搜索查询url,抽象方法
+        '''
         pass  
     
     
@@ -95,15 +92,15 @@ class BaseMap(object):
         '''
         re = 3
         res = None
+        sleep(1)
         while re:
             re-=1
             try:
-                f = request.urlopen(url)
+                f = request.urlopen(url, timeout=5)
                 res = json.loads(f.read().decode('utf-8'))
             except Exception as e:
                 logging.error("erro while conn: %s" %(url))
                 logging.error(e)
-                sleep(0.2)
                 continue
         return res
     
@@ -125,7 +122,7 @@ class BaseMap(object):
     
     def getSub(self):
         '''
-        #均采用高德的行政区域划分
+        #实时行政区域划分
         '''
         pass
     
@@ -136,10 +133,131 @@ class BaseMap(object):
         '''
         pass
             
-                
+
+class TencentMap(BaseMap):
+    '''
+    #具体的地图类：腾讯地图
+    '''                
+    
+    def __init__(self):
+        self.KEY = '56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7'
+        self.SEARCH_URL = 'http://apis.map.qq.com/ws/place/v1/search?'
+        self.REGEO_URL = 'http://apis.map.qq.com/ws/geocoder/v1/?'
+        self.size = 20
         
+    def _conReUrl(self, location):
+        '''
+        #逆地址解析URL
+        #location = [lat,lng]
+        '''
+        REGEO_PARA = {
+            'key':self.KEY,
+            'location':'lat,lng'
+            }
+        REGEO_PARA['location'] = '%f,%f'%location
+        url = self.REGEO_URL + urlencode(REGEO_PARA)
+        return url
+    
+    def _conRegUrl(self, keyword, region, index):
+        '''
+        #构建按照行政区域搜索的URL
+        '''
+        SEARCH_PARA = {
+            'boundary':'region('+region+',0)',
+            'page_size':self.size,
+            'page_index':index,
+            'keyword':keyword,
+            'key':self.KEY
+            }
+        url = self.SEARCH_URL + urlencode(SEARCH_PARA)
+        return url
+    
+    def _conBoxUrl(self, keyword, region, index):
+        '''
+        #构建按照矩形区域搜索的URL
+        #region = [左下lng,左下lat,右上lng,右上lat]
+        '''
+        pass
+    
+    def getSub(self,region):
+        '''
+        #获取实时行政子区域
+        '''
+        url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, self.KEY)
+        res = self.request(url)
+        stat,msg = self.getStatue(res)
+        if not stat:
+            logging.ERROR("获取行政子区域失败 %s,%s"%(msg,url))
+            return None
+        sub = []
+        for d in res['result'][0]:
+            sub.append(d['id'])
+        return sub
+    
+    def getCount(self, res):
+        '''
+        #返回结果条数，0：无,n：n,-1：溢出。
+        '''
+        if not res:
+            return 0
+        count = int(res['count'])
+        if 0<count<2200:
+            return count
+        if count >= 2200:
+            return -1
+        try:
+            res['cluster']
+            return -1
+        except:
+            return 0
+    
+    
+    def getStatue(self, res):
+        '''
+        #解析结果的状态
+        '''
+        if res == None:
+            return False,"conn error"
+        if int(res['status']) != 0:
+            return False,res['message']
+        return True,'ok'    
 
-
+    def parser(self, res):
+        pois = [] 
+        datas = res['data']
+        if len(datas) == 0:
+            return None
+    
+        for data in datas:
+            try:
+                poi = POI()
+                poi.name = data['title']
+                poi.lat = float(data['location']['lat'])
+                poi.lng = float(data['location']['lng'])
+                rURL = self._conReUrl((poi.lat, poi.lng))
+                rRes = self.request(rURL)
+                stat,msg = self.getStatue(rRes)
+                if not stat:
+                    logging.WARN("failed request: %s,%s"%(rURL, msg))
+                    continue
+                regeo = rRes['result']
+                poi.stree_num = regeo['address_component']['street_number']
+                poi.address = regeo['address']
+                poi.adcode = regeo['ad_info']['adcode']
+                poi.country = regeo['address_component']['nation']
+                poi.province = regeo['address_component']['province']
+                poi.city = regeo['address_component']['city']
+                poi.district = regeo['address_component']['district']
+                poi.stree = regeo['address_component']['street']
+                pois.append(poi)       
+            except Exception as e:
+                logging.ERROR("error while parse data")
+                logging.ERROR(e)
+                continue
+        return pois
+    
+#--------------------------------
+        
   
 class BaiduMap(BaseMap):
     
@@ -151,11 +269,12 @@ class BaiduMap(BaseMap):
         self.KEY = 'voRyF7opZzGGETYert5D2PYk'
         self.SEARCH_URL = 'http://api.map.baidu.com/place/v2/search?'
         self.REGEO_URL = 'http://api.map.baidu.com/geocoder/v2/?'
-        self.size = 50
+        self.size = 20
     
         
     def _conReUrl(self, location):
         '''
+        #逆地址解析URL
         #location = [lat,lng]
         '''
         REGEO_PARA = {
@@ -163,22 +282,25 @@ class BaiduMap(BaseMap):
             'location':'lat,lng',
             'output':'json'
             }
-        REGEO_PARA['location'] = '%f,%f'%(location)
+        REGEO_PARA['location'] = '%f,%f'%location
+        url = self.REGEO_URL + urlencode(REGEO_PARA)
+        return url
         
         
-    def _conSubUrl(self, keyword, region, index):
+    def _conRegUrl(self, keyword, region, index):
         pass
     
     
     def _conBoxUrl(self, keyword, region, index):
         '''
+        #构建按照矩形区域搜索的URL
         #region = [左下lng,左下lat,右上lng,右上lat]
         '''
         SEARCH_PARA = {
             'ak':self.KEY,
             'bounds':'左下lat,左下lng,右上lat,右上lng',
             'q':'学校',
-            'page_size':'20',
+            'page_size':self.size,
             'page_num':'0',
             'output':'json'
             }
@@ -190,12 +312,20 @@ class BaiduMap(BaseMap):
         return url
     
     def getCount(self, res):
+        '''
+        #返回结果条数，0：无,n：n,-1：溢出。
+        '''
+        if not res:
+            return 0
         count = int(res['total'])
         if count >= 400:
             count = -1
         return count
     
     def getStatue(self, res):
+        '''
+        #解析结果的状态
+        '''
         if res == None:
             return False,"conn error"
         if int(res['status']) != 0:
@@ -204,7 +334,7 @@ class BaiduMap(BaseMap):
     
     def parser(self, res):
         pois = [] 
-        datas = res['result']
+        datas = res['results']
         if len(datas) == 0:
             return None
     
@@ -212,10 +342,10 @@ class BaiduMap(BaseMap):
             try:
                 poi = POI()
                 poi.name = data['name']
-                poi.lat = data['location']['lat']
-                poi.lng = data['location']['lng'] 
+                poi.lat = float(data['location']['lat'])
+                poi.lng = float(data['location']['lng'])
                 
-                rURL = self.conReUrl([poi.lat, poi.lng])
+                rURL = self._conReUrl((poi.lat, poi.lng))
                 rRes = self.request(rURL)
                 stat,msg = self.getStatue(rRes)
                 if not stat:
@@ -229,13 +359,14 @@ class BaiduMap(BaseMap):
                 poi.province = regeo['addressComponent']['province']
                 poi.city = regeo['addressComponent']['city']
                 poi.district = regeo['addressComponent']['district']
-                poi.stree = regeo['addressComponent']['street'] 
+                poi.stree = regeo['addressComponent']['street']
                 pois.append(poi)       
             except Exception as e:
                 logging.ERROR("error while parse data")
                 logging.ERROR(e)
                 continue
         return pois
+
     
 def map_fac(mapType):
     '''
@@ -243,3 +374,5 @@ def map_fac(mapType):
     '''
     if mapType == '百度':
         return BaiduMap()
+    elif mapType == '腾讯':
+        return TencentMap()

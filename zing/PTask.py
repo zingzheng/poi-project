@@ -10,20 +10,11 @@ import zing.Util as myUtil
 import shapefile
 from shapely.geometry import Polygon,shape
 
-import logging
+from zing.Util import logging
 from zing import MapDi
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
-logging.basicConfig(level=logging.DEBUG,
-                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                datefmt='%a, %d %b %Y %H:%M:%S',
-                filename=BASE_PATH+'/log.txt',
-                filemode='a')
-console = logging.StreamHandler()  
-console.setLevel(logging.INFO)   
-formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')  
-console.setFormatter(formatter)  
-logging.getLogger('').addHandler(console) 
+
 
 
 
@@ -34,17 +25,18 @@ class BaseTask(object):
     '''
     
     def __init__(self,args):
-        self.map_type = args[0]
-        self.region_type = args[1]
-        self.region = args[2]
-        self.keyword = args[3]
-        self.delat = args[4]
-        if len(args) == 6:
-            self.nex = self.up_to_now(args[4])
+        self.core_type = args[0]
+        self.map_type = args[1]
+        self.region_type = int(args[2])
+        self.region = args[3]
+        self.keyword = args[4]
+        self.delta = args[5]
+        if len(args) == 7:
+            self.nex = self.up_to_now(args[6])
         else:
             self.nex = self.time_to_str(datetime.datetime.now())
             
-        fp = '-'.join([self.keyword, self.region, self.nex])
+        fp = '-'.join([self.map_type, self.keyword, self.region, self.nex])
         self.filePath = BASE_PATH + '/res/'+fp+'.txt'
     
        
@@ -93,10 +85,19 @@ class BaseTask(object):
             return False
     
     def toList(self):
-        return [self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
+        return [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
 
     def toStr(self):
-        return ' '.join(self.toList())
+        return ' '.join([str(s) for s in self.toList()])
+    
+    def dumpFile(self,datas):
+        '''
+        #将结果一次性写入文件
+        '''
+        with open(self.filePath,'w',encoding = 'utf-8') as f:
+            for data in datas:
+                f.write(data)
+                f.write('\n')
     
     def run(self):
         '''
@@ -113,8 +114,42 @@ class SubTask(BaseTask):
     #以行政区域划分的任务类
     '''
 
-    def __int__(self):
-        pass
+    def __init__(self,args):
+        super().__init__(args)
+        
+        
+    def run(self):
+        '''    
+        #程序入口，执行该任务，请自行判断任务是否到钟执行
+        '''
+        mapdi = MapDi.map_fac(self.map_type)
+        datas = []
+        regions = [self.region]
+        while regions:
+            r = regions.pop()
+            page,size,count = 0, mapdi.size, mapdi.size
+            while page*size < count:
+                page += 1
+                url = mapdi.conSearchUrl(self.keyword, r, page)
+                res = mapdi.request(url)
+                stat,msg = mapdi.getStatue(res)
+                if not stat:
+                    logging.ERROR("error %s,%s"%(msg,url))
+                    return False
+                count = mapdi.getCount(res)
+                if count == 0:
+                    break
+                elif count == -1:
+                    regions.extend(mapdi.getSub(r))
+                    break
+                else:
+                    logging.info("running %s"%(url))
+                    pois = mapdi.parser(res)
+                    for poi in pois:
+                        datas.append(poi.toString())
+        self.dumpFile(datas)
+        return True
+
     
     
 
@@ -123,22 +158,27 @@ class CutTask(BaseTask):
     '''
     #以网格划分的任务类
     '''
-    
-    def _init__(self,args):
-        super(args)
+    def __init__(self,args):
+        super().__init__(args)
+        if self.region_type == 0:
+            self.province, self.city = '', ''
+        elif self.region_type == 1:
+            self.province, self.city = self.region, ''
+        else:
+            self.province, self.city = self.region.split('@')
         self.shape = self._getShape()
         self.bbox = self.shape.bbox
-        self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), [100,50,10][self.rtype])
+        self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), [100,50,10][self.region_type])
     
 
     def _getShape(self):
         '''
         #获取当前任务目标地区的多边形范围
         '''
-        if self.rtype == 0:
+        if self.region_type == 0:
             sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm0.shp")
             shape = sf.shapes()[0]
-        elif self.rtype == 1:
+        elif self.region_type == 1:
             sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm1.shp")
             index = myUtil.regionIndex(self.province)
             shape = sf.shapes()[index]
@@ -164,12 +204,6 @@ class CutTask(BaseTask):
                 return False
         return True
     
-    def dumpFile(self,datas):
-        '''
-        #将结果一次性写入文件
-        '''
-        with open(self.filePath,'w') as f:
-            f.writelines(datas)
     
     
     def run(self):
@@ -187,7 +221,7 @@ class CutTask(BaseTask):
                 res = mapdi.request(url)
                 stat,msg = mapdi.getStatue(res)
                 if not stat:
-                    logging.ERROR("error %s,%s"%(url,msg))
+                    logging.ERROR("error %s,%s"%(msg,url))
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -205,10 +239,11 @@ class CutTask(BaseTask):
         return True
 
 
-def taskFac(s,args):
+def taskFac(args):
     '''
     #静态方法，任务工厂类
     '''
+    s = args[0]
     if int(s) == 0:
         return CutTask(args)
     else:
