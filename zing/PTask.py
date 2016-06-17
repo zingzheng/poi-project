@@ -126,6 +126,7 @@ class SubTask(BaseTask):
         datas = []
         regions = [self.region]
         while regions:
+            print(regions)
             r = regions.pop()
             page,size,count = 0, mapdi.size, mapdi.size
             while page*size < count:
@@ -147,6 +148,7 @@ class SubTask(BaseTask):
                     pois = mapdi.parser(res)
                     for poi in pois:
                         datas.append(poi.toString())
+                        print(poi.toString())
         self.dumpFile(datas)
         return True
 
@@ -214,12 +216,14 @@ class CutTask(BaseTask):
         datas = []
         while self.bboxs:
             bbox = self.bboxs.pop()
+            print(len(bbox))
             page,size,count = 0, mapdi.size, mapdi.size
             while page*size < count:
                 page += 1
                 url = mapdi.conSearchUrl(self.keyword, bbox, page)
                 res = mapdi.request(url)
                 stat,msg = mapdi.getStatue(res)
+                print(res)
                 if not stat:
                     logging.error("error %s,%s"%(msg,url))
                     return False
@@ -233,6 +237,7 @@ class CutTask(BaseTask):
                     logging.info("running %s"%(url))
                     pois = mapdi.parser(res)
                     for poi in pois:
+                        print(poi.toString())
                         if self.check(poi.address):
                             datas.append(poi.toString())
         self.dumpFile(datas)

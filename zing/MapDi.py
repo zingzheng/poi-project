@@ -138,10 +138,14 @@ class BaseMap(object):
 class GaodeMap(BaseMap):
     '''
     #具体的地图类：高德地图
+    #高德api只支持1000次每天，肯定有问题
     '''
     
     def __init__(self):
         self.KEY = 'd74aa1ef25769557ba86c90c7a953337'
+        #self.KEY = '42418aff604a1c1ac2368abece1d97ba'
+        #self.KEY = '40c824f549f1a5e019e108725766a019'
+        #self.KEY = '3bf16b36729b31f7e985b55793f3a821'
         self.SEARCH_URL = 'http://restapi.amap.com/v3/place/text?'
         self.REGEO_URL = ' http://restapi.amap.com/v3/geocode/regeo?'
         self.size = 50
@@ -155,7 +159,7 @@ class GaodeMap(BaseMap):
             'key':self.KEY,
             'location':'lng,lat'
             }
-        REGEO_PARA['location'] = '%f,%f'%location
+        REGEO_PARA['location'] = '%f,%f'%(location[1],location[0])
         url = self.REGEO_URL + urlencode(REGEO_PARA)
         return url
     
@@ -180,19 +184,31 @@ class GaodeMap(BaseMap):
         #高德：构建按照矩形区域搜索的URL（只支持1000次每天，box划分肯定超过限制）
         #region = [左下lng,左下lat,右上lng,右上lat]
         '''
-        pass
+        pURL = ' http://restapi.amap.com/v3/place/polygon?'
+        SEARCH_PARA = {
+            'key':self.KEY,
+            'polygon':'左上lng,左上lat;右下lng,右下lat' ,
+            'keywords':keyword,
+            'offset':self.size,
+            'page':index,
+            }
+        SEARCH_PARA['polygon'] = '%f,%f;%f,%f'%(region[0],region[3],region[2],region[1])
+        url = pURL + urlencode(SEARCH_PARA)
+        return url
     
     def getSub(self,region):
         '''
-        #高德：获取实时行政子区域（用得是腾讯的）
+        #高德：获取实时行政子区域（用的是腾讯的）
         '''
+        key = 'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI'
         #腾讯没有对中国进行编码，需要做特殊处理
         if int(region) == 100000:
-            url = 'http://apis.map.qq.com/ws/district/v1/list?key='+self.KEY
+            url = 'http://apis.map.qq.com/ws/district/v1/list?key='+key
         else:
-            url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, self.KEY)
+            url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, key)
         res = self.request(url)
-        stat,msg = self.getStatue(res)
+        #状态获取应也用腾讯的
+        stat,msg = TencentMap.getStatue(self,res)
         if not stat:
             logging.error("获取行政子区域失败 %s,%s"%(msg,url))
             return None
@@ -208,15 +224,62 @@ class GaodeMap(BaseMap):
         if not res:
             return 0
         count = int(res['count'])
-        if 0<count<2200:
+        if 0<count<1000:
             return count
-        if count >= 2200:
-            return -1
-        try:
-            res['cluster']
-            return -1
-        except:
-            return 0
+        #高德溢出和没有的返回是一样的，在行政区域划分应该没有问题
+        #但是在网格划分可能会存在问题
+        return -1
+    
+    def getStatue(self, res):
+        '''
+        #高德：解析结果的状态
+        '''
+        if res == None:
+            return False,"conn error"
+        if int(res['status']) != 1:
+            return False,res['infocode']
+        return True,'ok'    
+    
+    def parser(self, res):
+        '''
+        #高德：解析结果，并做逆地址解析
+        '''
+        pois = [] 
+        datas = res['pois']
+        if len(datas) == 0:
+            return None
+    
+        for i in range(len(datas)):
+            data = datas[i]
+            try:
+                poi = POI()
+                poi.name = data['name']
+                poi.lng,poi.lat = data['location'].split(',')
+                rURL = self._conReUrl((float(poi.lat), float(poi.lng)))
+                rRes = self.request(rURL)
+                stat,msg = self.getStatue(rRes)
+                if not stat:
+                    logging.error("failed request: %s,%s"%(msg,rURL))
+                    return False
+                regeo = rRes['regeocode']
+                try:
+                    poi.stree_num = regeo["streetNumber"]['street']
+                except:
+                    poi.stree_num = ''
+                poi.address = regeo['formatted_address']
+                poi.adcode = regeo['addressComponent']['adcode']
+                poi.country = regeo['addressComponent']['country']
+                poi.province = regeo['addressComponent']['province']
+                poi.city = regeo['addressComponent']['city']
+                poi.district = regeo['addressComponent']['district']
+                poi.stree = regeo['addressComponent']['township']
+                pois.append(poi)       
+            except Exception as e:
+                logging.error("error while parse data")
+                logging.error(e)
+                continue
+        return pois
+    
     
     
         
@@ -231,7 +294,8 @@ class TencentMap(BaseMap):
     
     def __init__(self):
         #self.KEY = '56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7'
-        self.KEY = 'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI'
+        #self.KEY = 'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI'
+        self.KEY = 'SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN'
         self.SEARCH_URL = 'http://apis.map.qq.com/ws/place/v1/search?'
         self.REGEO_URL = 'http://apis.map.qq.com/ws/geocoder/v1/?'
         self.size = 20
@@ -332,6 +396,9 @@ class TencentMap(BaseMap):
         return True,'ok'    
 
     def parser(self, res):
+        '''
+        #腾讯：解析结果，并做逆地址解析
+        '''
         pois = [] 
         datas = res['data']
         if len(datas) == 0:
@@ -347,8 +414,8 @@ class TencentMap(BaseMap):
                 rRes = self.request(rURL)
                 stat,msg = self.getStatue(rRes)
                 if not stat:
-                    logging.warn("failed request: %s,%s"%(rURL, msg))
-                    continue
+                    logging.error("failed request: %s,%s"%(msg,rURL))
+                    return False
                 regeo = rRes['result']
                 poi.stree_num = regeo['address_component']['street_number']
                 poi.address = regeo['address']
@@ -383,7 +450,7 @@ class BaiduMap(BaseMap):
         
     def _conReUrl(self, location):
         '''
-        #逆地址解析URL
+        #百度：逆地址解析URL
         #location = [lat,lng]
         '''
         REGEO_PARA = {
@@ -397,12 +464,16 @@ class BaiduMap(BaseMap):
         
         
     def _conRegUrl(self, keyword, region, index):
+        '''
+        #百度：获取子行政区域
+        #由于百度不支持使用citycode进行搜索，用中文作为区域，相同名称区域会有干扰
+        '''
         pass
     
     
     def _conBoxUrl(self, keyword, region, index):
         '''
-        #构建按照矩形区域搜索的URL
+        #百度：构建按照矩形区域搜索的URL
         #region = [左下lng,左下lat,右上lng,右上lat]
         '''
         SEARCH_PARA = {
@@ -422,7 +493,7 @@ class BaiduMap(BaseMap):
     
     def getCount(self, res):
         '''
-        #返回结果条数，0：无,n：n,-1：溢出。
+        #百度：返回结果条数，0：无,n：n,-1：溢出。
         '''
         if not res:
             return 0
@@ -433,7 +504,7 @@ class BaiduMap(BaseMap):
     
     def getStatue(self, res):
         '''
-        #解析结果的状态
+        #百度：解析结果的状态
         '''
         if res == None:
             return False,"conn error"
@@ -444,7 +515,7 @@ class BaiduMap(BaseMap):
     
     def getSub(self,region):
         '''
-        #获取实时行政子区域
+        #百度：获取实时行政子区域
         '''
         key = '56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7'
         url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, key)
@@ -459,6 +530,9 @@ class BaiduMap(BaseMap):
         return sub
     
     def parser(self, res):
+        '''
+        #百度：解析结果，并进行逆地址解析
+        '''
         pois = [] 
         datas = res['results']
         if len(datas) == 0:
@@ -475,9 +549,8 @@ class BaiduMap(BaseMap):
                 rRes = self.request(rURL)
                 stat,msg = self.getStatue(rRes)
                 if not stat:
-                    print(rURL,msg)
-                    logging.warn("failed request: %s" % (msg))
-                    continue
+                    logging.error("failed request: %s,%s" % (msg,rURL))
+                    return False
                 regeo = rRes['result']
                 poi.stree_num = regeo['addressComponent']['street_number']
                 poi.address = regeo['formatted_address']
