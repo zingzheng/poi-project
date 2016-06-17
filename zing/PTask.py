@@ -13,7 +13,7 @@ from shapely.geometry import Polygon,shape
 from zing.Util import logging
 from zing import MapDi
 
-BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
+BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
 
 
 
@@ -151,7 +151,7 @@ class SubTask(BaseTask):
         return True
 
     
-    
+#--------------  
 
 
 class CutTask(BaseTask):

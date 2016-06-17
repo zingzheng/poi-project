@@ -12,8 +12,7 @@ from pypinyin import lazy_pinyin
 import os 
 import logging
 
-BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
-taskPath = BASE_PATH+'/task.txt'
+BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
 logging.basicConfig(level=logging.DEBUG,
                 format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                 datefmt='%a, %d %b %Y %H:%M:%S',

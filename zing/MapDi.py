@@ -132,27 +132,28 @@ class BaseMap(object):
         #将搜索结果转化为需求的数据。抽象方法。
         '''
         pass
-            
+    
+#------
 
-class TencentMap(BaseMap):
+class GaodeMap(BaseMap):
     '''
-    #具体的地图类：腾讯地图
-    '''                
+    #具体的地图类：高德地图
+    '''
     
     def __init__(self):
-        self.KEY = '56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7'
-        self.SEARCH_URL = 'http://apis.map.qq.com/ws/place/v1/search?'
-        self.REGEO_URL = 'http://apis.map.qq.com/ws/geocoder/v1/?'
-        self.size = 20
+        self.KEY = 'd74aa1ef25769557ba86c90c7a953337'
+        self.SEARCH_URL = 'http://restapi.amap.com/v3/place/text?'
+        self.REGEO_URL = ' http://restapi.amap.com/v3/geocode/regeo?'
+        self.size = 50
         
     def _conReUrl(self, location):
         '''
-        #逆地址解析URL
+        #高德：逆地址解析URL
         #location = [lat,lng]
         '''
         REGEO_PARA = {
             'key':self.KEY,
-            'location':'lat,lng'
+            'location':'lng,lat'
             }
         REGEO_PARA['location'] = '%f,%f'%location
         url = self.REGEO_URL + urlencode(REGEO_PARA)
@@ -160,30 +161,36 @@ class TencentMap(BaseMap):
     
     def _conRegUrl(self, keyword, region, index):
         '''
-        #构建按照行政区域搜索的URL
+        #高德：构建按照行政区域搜索的URL
         '''
         SEARCH_PARA = {
-            'boundary':'region('+region+',0)',
-            'page_size':self.size,
-            'page_index':index,
-            'keyword':keyword,
-            'key':self.KEY
+            'city':region,
+            'citylimit':'true',
+            'offset':self.size,
+            'page':index,
+            'keywords':keyword,
+            'key':self.KEY,
+            'children':'0'
             }
         url = self.SEARCH_URL + urlencode(SEARCH_PARA)
         return url
     
     def _conBoxUrl(self, keyword, region, index):
         '''
-        #构建按照矩形区域搜索的URL
+        #高德：构建按照矩形区域搜索的URL（只支持1000次每天，box划分肯定超过限制）
         #region = [左下lng,左下lat,右上lng,右上lat]
         '''
         pass
     
     def getSub(self,region):
         '''
-        #获取实时行政子区域
+        #高德：获取实时行政子区域（用得是腾讯的）
         '''
-        url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, self.KEY)
+        #腾讯没有对中国进行编码，需要做特殊处理
+        if int(region) == 100000:
+            url = 'http://apis.map.qq.com/ws/district/v1/list?key='+self.KEY
+        else:
+            url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, self.KEY)
         res = self.request(url)
         stat,msg = self.getStatue(res)
         if not stat:
@@ -196,7 +203,109 @@ class TencentMap(BaseMap):
     
     def getCount(self, res):
         '''
-        #返回结果条数，0：无,n：n,-1：溢出。
+        #高德：返回结果条数，0：无,n：n,-1：溢出。
+        '''
+        if not res:
+            return 0
+        count = int(res['count'])
+        if 0<count<2200:
+            return count
+        if count >= 2200:
+            return -1
+        try:
+            res['cluster']
+            return -1
+        except:
+            return 0
+    
+    
+        
+
+    
+#------        
+
+class TencentMap(BaseMap):
+    '''
+    #具体的地图类：腾讯地图
+    '''                
+    
+    def __init__(self):
+        #self.KEY = '56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7'
+        self.KEY = 'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI'
+        self.SEARCH_URL = 'http://apis.map.qq.com/ws/place/v1/search?'
+        self.REGEO_URL = 'http://apis.map.qq.com/ws/geocoder/v1/?'
+        self.size = 20
+        
+    def _conReUrl(self, location):
+        '''
+        #腾讯：逆地址解析URL
+        #location = [lat,lng]
+        '''
+        REGEO_PARA = {
+            'key':self.KEY,
+            'location':'lat,lng'
+            }
+        REGEO_PARA['location'] = '%f,%f'%location
+        url = self.REGEO_URL + urlencode(REGEO_PARA)
+        return url
+    
+    def _conRegUrl(self, keyword, region, index):
+        '''
+        #腾讯：构建按照行政区域搜索的URL
+        '''
+        #腾讯地图没有对中国进行编码，需进行特殊处理
+        if region == 100000:
+            region = '中国'
+        SEARCH_PARA = {
+            'boundary':'region('+region+',0)',
+            'page_size':self.size,
+            'page_index':index,
+            'keyword':keyword,
+            'key':self.KEY
+            }
+        url = self.SEARCH_URL + urlencode(SEARCH_PARA)
+        return url
+    
+    def _conBoxUrl(self, keyword, region, index):
+        '''
+        #腾讯：构建按照矩形区域搜索的URL
+        #region = [左下lng,左下lat,右上lng,右上lat]
+        '''
+        SEARCH_PARA = {
+            'key':self.KEY,
+            'boundary':'rectangle(左下lat,左下lng,右上lat,右上lng)' ,
+            'keyword':'学校',
+            'page_size':'20',
+            'page_index':'1',
+            }
+        SEARCH_PARA['boundary'] = 'rectangle(%f,%f,%f,%f)'%(region[1],region[0],region[3],region[2])
+        SEARCH_PARA['page_index'] = index
+        SEARCH_PARA['keyword'] = keyword
+        url = self.SEARCH_URL + urlencode(SEARCH_PARA)
+        return url
+    
+    def getSub(self,region):
+        '''
+        #腾讯：获取实时行政子区域
+        '''
+        #腾讯没有对中国进行编码，需要做特殊处理
+        if int(region) == 100000:
+            url = 'http://apis.map.qq.com/ws/district/v1/list?key='+self.KEY
+        else:
+            url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, self.KEY)
+        res = self.request(url)
+        stat,msg = self.getStatue(res)
+        if not stat:
+            logging.error("获取行政子区域失败 %s,%s"%(msg,url))
+            return None
+        sub = []
+        for d in res['result'][0]:
+            sub.append(d['id'])
+        return sub
+    
+    def getCount(self, res):
+        '''
+        #腾讯：返回结果条数，0：无,n：n,-1：溢出。
         '''
         if not res:
             return 0
@@ -214,7 +323,7 @@ class TencentMap(BaseMap):
     
     def getStatue(self, res):
         '''
-        #解析结果的状态
+        #腾讯：解析结果的状态
         '''
         if res == None:
             return False,"conn error"
@@ -332,6 +441,23 @@ class BaiduMap(BaseMap):
             return False,res['message']
         return True,'ok'
     
+    
+    def getSub(self,region):
+        '''
+        #获取实时行政子区域
+        '''
+        key = '56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7'
+        url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, key)
+        res = self.request(url)
+        stat,msg = self.getStatue(res)
+        if not stat:
+            logging.error("获取行政子区域失败 %s,%s"%(msg,url))
+            return None
+        sub = []
+        for d in res['result'][0]:
+            sub.append(d['id'])
+        return sub
+    
     def parser(self, res):
         pois = [] 
         datas = res['results']
@@ -377,3 +503,5 @@ def map_fac(mapType):
         return BaiduMap()
     elif mapType == '腾讯':
         return TencentMap()
+    elif mapType == '高德':
+        return GaodeMap()
