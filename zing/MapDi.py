@@ -3,6 +3,8 @@
 Created on 2016年6月14日
 
 @author: zingzheng
+@blog: http://www.zing.ac.cn
+@email: zing.ac@163.com
 '''
 
 import os

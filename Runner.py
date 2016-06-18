@@ -3,6 +3,8 @@
 Created on 2016年6月14日
 
 @author: zingzheng
+@blog: http://www.zing.ac.cn
+@email: zing.ac@163.com
 
 可根据需要在不同目录下创建多个Runner.py注意修改import的路径即可。  
 task.txt文件格式：列和列之间用空格分开，行最后不要有多余的空格，不要有多的空行
@@ -36,7 +38,7 @@ def run():
         # 读取任务文件，并解析为任务类
         with open(taskPath, 'r', encoding = 'utf-8') as f:
             for line in f:
-                if '#' in line:
+                if len(line)==0 or '#' in line:
                     continue
                 args = line.split('\n')[0].split(' ') 
                 tasks.append(PTask.taskFac(args))
@@ -58,7 +60,7 @@ def run():
                 f.write('\n')
         logging.info("任务更新完成....")
         logging.info("sleeping!")
-        time.sleep(60*60)    
+        time.sleep(60*60*2)    
         
 if __name__ == '__main__':
     run()   
