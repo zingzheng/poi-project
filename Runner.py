@@ -38,9 +38,9 @@ def run():
         # 读取任务文件，并解析为任务类
         with open(taskPath, 'r', encoding = 'utf-8') as f:
             for line in f:
-                if len(line)==0 or '#' in line:
+                if len(line) < 5 or '#' in line:
                     continue
-                args = line.split('\n')[0].split(' ') 
+                args = line.split('\n')[0].rstrip().split(' ') 
                 tasks.append(PTask.taskFac(args))
         logging.info("任务读取成功！")
         logging.info("开始执行任务....")
