@@ -38,9 +38,11 @@ class BaseTask(object):
         else:
             self.nex = self.time_to_str(datetime.datetime.now())
             
-        fp = '-'.join([self.map_type, self.keyword, self.region, self.nex])
+        fp = '-'.join([self.map_type, self.keyword, self.region, self.str_now()])
         self.filePath = BASE_PATH + '/res/'+fp+'.txt'
     
+    def str_now(self):
+        return datetime.datetime.now().strftime('%Y%m%d%H')
        
     def str_to_time(self, s):
         '''
@@ -96,7 +98,7 @@ class BaseTask(object):
         '''
         #将结果一次性写入文件
         '''
-        with open(self.filePath,'w',encoding = 'utf-8') as f:
+        with open(self.filePath,'a',encoding = 'utf-8') as f:
             for data in datas:
                 f.write(data)
                 f.write('\n')
@@ -125,7 +127,6 @@ class SubTask(BaseTask):
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
         mapdi = MapDi.map_fac(self.map_type)
-        datas = []
         regions = [self.region]
         while regions:
             print(regions)
@@ -133,11 +134,19 @@ class SubTask(BaseTask):
             page,size,count = 0, mapdi.size, mapdi.size
             while page*size < count:
                 page += 1
-                url = mapdi.conSearchUrl(self.keyword, r, page)
-                res = mapdi.request(url)
-                stat,msg = mapdi.getStatue(res)
-                if not stat:
-                    logging.error("error %s,%s"%(msg,url))
+                while mapdi.SEARCH_KEY:
+                    url = mapdi.conSearchUrl(self.keyword, r, page)
+                    res = mapdi.request(url)
+                    stat,msg = mapdi.getStatue(res)
+                    if stat == 1:
+                        break
+                    elif stat == -1:
+                        logging.error("error %s,%s"%(msg,url))
+                        return False
+                    else:
+                        mapdi.SEARCH_KEY.pop(0)
+                if not mapdi.SEARCH_KEY:
+                    logging.error("抓取失败，key已经用完")
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -148,10 +157,11 @@ class SubTask(BaseTask):
                 else:
                     logging.info("running %s"%(url))
                     pois = mapdi.parser(res)
+                    datas = []
                     for poi in pois:
                         datas.append(poi.toString())
                         print(poi.toString())
-        self.dumpFile(datas)
+                    self.dumpFile(datas)
         return True
 
     
@@ -215,19 +225,25 @@ class CutTask(BaseTask):
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
         mapdi = MapDi.map_fac(self.map_type)
-        datas = []
         while self.bboxs:
             bbox = self.bboxs.pop()
             print(len(bbox))
             page,size,count = 0, mapdi.size, mapdi.size
             while page*size < count:
                 page += 1
-                url = mapdi.conSearchUrl(self.keyword, bbox, page)
-                res = mapdi.request(url)
-                stat,msg = mapdi.getStatue(res)
-                print(res)
-                if not stat:
-                    logging.error("error %s,%s"%(msg,url))
+                while mapdi.SEARCH_KEY:
+                    url = mapdi.conSearchUrl(self.keyword, bbox, page)
+                    res = mapdi.request(url)
+                    stat,msg = mapdi.getStatue(res)
+                    if stat == 1:
+                        break
+                    elif stat == -1:
+                        logging.error("error %s,%s"%(msg,url))
+                        return False
+                    else:
+                        mapdi.SEARCH_KEY.pop(0)
+                if not mapdi.SEARCH_KEY:
+                    logging.error("抓取失败，key用完")
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -237,12 +253,13 @@ class CutTask(BaseTask):
                     break
                 else:
                     logging.info("running %s"%(url))
+                    datas = []
                     pois = mapdi.parser(res)
                     for poi in pois:
                         print(poi.toString())
                         if self.check(poi.address):
                             datas.append(poi.toString())
-        self.dumpFile(datas)
+                    self.dumpFile(datas)
         return True
 
 
