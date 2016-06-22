@@ -145,6 +145,8 @@ class SubTask(BaseTask):
                         return False
                     else:
                         mapdi.SEARCH_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,url))
+                        logging.info("该key失效，自动替换key。")
                 if not mapdi.SEARCH_KEY:
                     logging.error("抓取失败，key已经用完")
                     return False
@@ -162,6 +164,7 @@ class SubTask(BaseTask):
                         datas.append(poi.toString())
                         print(poi.toString())
                     self.dumpFile(datas)
+        self.dumpFile(['FINISH'])
         return True
 
     
@@ -182,7 +185,7 @@ class CutTask(BaseTask):
             self.province, self.city = self.region.split('@')
         self.shape = self._getShape()
         self.bbox = self.shape.bbox
-        self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), [100,50,10][self.region_type])
+        self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), [100,20,10][self.region_type])
     
 
     def _getShape(self):
@@ -213,6 +216,8 @@ class CutTask(BaseTask):
         '''
         #检查地址address是否在任务的region内  
         '''
+        if self.region_type == 0:
+            return True
         for s in self.region.split('@'):
             if s not in address:
                 return False
@@ -227,7 +232,7 @@ class CutTask(BaseTask):
         mapdi = MapDi.map_fac(self.map_type)
         while self.bboxs:
             bbox = self.bboxs.pop()
-            print(len(bbox))
+            print(len(self.bboxs))
             page,size,count = 0, mapdi.size, mapdi.size
             while page*size < count:
                 page += 1
@@ -242,6 +247,8 @@ class CutTask(BaseTask):
                         return False
                     else:
                         mapdi.SEARCH_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,url))
+                        logging.info("该key失效，自动替换key。")
                 if not mapdi.SEARCH_KEY:
                     logging.error("抓取失败，key用完")
                     return False
@@ -260,6 +267,7 @@ class CutTask(BaseTask):
                         if self.check(poi.address):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
+        self.dumpFile(['FINISH'])
         return True
 
 

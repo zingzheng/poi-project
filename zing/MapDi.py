@@ -94,7 +94,7 @@ class BaseMap(object):
         '''
         #发送get请求，若连接失败，自动重试re次。
         '''
-        re = 3
+        re = 5
         res = None
         sleep(1)
         while re:
@@ -103,8 +103,8 @@ class BaseMap(object):
                 f = request.urlopen(url, timeout=5)
                 res = json.loads(f.read().decode('utf-8'))
             except Exception as e:
-                logging.error("erro while conn: %s" %(url))
-                logging.error(e)
+                logging.warn("erro while conn: %s" %(url))
+                logging.warn(e)
                 continue
         return res
     
@@ -146,10 +146,20 @@ class GaodeMap(BaseMap):
     '''
     
     def __init__(self):
-        self.KEY = 'd74aa1ef25769557ba86c90c7a953337'
-        #self.KEY = '42418aff604a1c1ac2368abece1d97ba'
-        #self.KEY = '40c824f549f1a5e019e108725766a019'
-        #self.KEY = '3bf16b36729b31f7e985b55793f3a821'
+        #请填入高德的KEY
+        self.SEARCH_KEY = ['d74aa1ef25769557ba86c90c7a953337',
+                           '42418aff604a1c1ac2368abece1d97ba',
+                           '40c824f549f1a5e019e108725766a019',
+                           '3bf16b36729b31f7e985b55793f3a821']
+        #请填入高德的KEY
+        self.REGEO_KEY = ['d74aa1ef25769557ba86c90c7a953337',
+                       '42418aff604a1c1ac2368abece1d97ba',
+                       '40c824f549f1a5e019e108725766a019',
+                       '3bf16b36729b31f7e985b55793f3a821']
+        #！！！请填入腾讯的KEY
+        self.SUB_KEY = ['56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7',
+                   'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI',
+                   'SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN']    
         self.SEARCH_URL = 'http://restapi.amap.com/v3/place/text?'
         self.REGEO_URL = ' http://restapi.amap.com/v3/geocode/regeo?'
         self.size = 50
@@ -160,7 +170,7 @@ class GaodeMap(BaseMap):
         #location = [lat,lng]
         '''
         REGEO_PARA = {
-            'key':self.KEY,
+            'key':self.REGEO_KEY[0],
             'location':'lng,lat'
             }
         REGEO_PARA['location'] = '%f,%f'%(location[1],location[0])
@@ -177,7 +187,7 @@ class GaodeMap(BaseMap):
             'offset':self.size,
             'page':index,
             'keywords':keyword,
-            'key':self.KEY,
+            'key':self.SEARCH_KEY[0],
             'children':'0'
             }
         url = self.SEARCH_URL + urlencode(SEARCH_PARA)
@@ -190,7 +200,7 @@ class GaodeMap(BaseMap):
         '''
         pURL = ' http://restapi.amap.com/v3/place/polygon?'
         SEARCH_PARA = {
-            'key':self.KEY,
+            'key':self.SEARCH_KEY[0],
             'polygon':'左上lng,左上lat;右下lng,右下lat' ,
             'keywords':keyword,
             'offset':self.size,
@@ -204,17 +214,26 @@ class GaodeMap(BaseMap):
         '''
         #高德：获取实时行政子区域（用的是腾讯的）
         '''
-        key = 'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI'
         #腾讯没有对中国进行编码，需要做特殊处理
-        if int(region) == 100000:
-            url = 'http://apis.map.qq.com/ws/district/v1/list?key='+key
-        else:
-            url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, key)
-        res = self.request(url)
-        #状态获取应也用腾讯的
-        stat,msg = TencentMap.getStatue(self,res)
-        if not stat:
-            logging.error("获取行政子区域失败 %s,%s"%(msg,url))
+        while self.SUB_KEY:
+            if int(region) == 100000:
+                url = 'http://apis.map.qq.com/ws/district/v1/list?key='+self.SUB_KEY[0]
+            else:
+                url = 'http://apis.map.qq.com/ws/district/v1/getchildren?&id=%s&key=%s' % (region, self.SUB_KEY[0])
+            res = self.request(url)
+            #状态获取应也用腾讯的
+            stat,msg = TencentMap.getStatue(self,res)
+            if stat == 1:
+                break
+            elif stat == -1:
+                logging.error("获取行政子区域失败 %s,%s"%(msg,url))
+                return None
+            else:
+                self.SUB_KEY.pop(0)
+                logging.warn("error %s,%s"%(msg,url))
+                logging.info("该key失效，自动替换key。")
+        if not self.SUB_KEY:
+            logging.error("获取行政子区域失败，key超过限制")
             return None
         sub = []
         for d in res['result'][0]:
@@ -239,10 +258,10 @@ class GaodeMap(BaseMap):
         #高德：解析结果的状态
         '''
         if res == None:
-            return False,"conn error"
+            return -1,"conn error"
         if int(res['status']) != 1:
-            return False,res['infocode']
-        return True,'ok'    
+            return 0,res['infocode']
+        return 1,'ok'      
     
     def parser(self, res):
         '''
@@ -259,11 +278,21 @@ class GaodeMap(BaseMap):
                 poi = POI()
                 poi.name = data['name']
                 poi.lng,poi.lat = data['location'].split(',')
-                rURL = self._conReUrl((float(poi.lat), float(poi.lng)))
-                rRes = self.request(rURL)
-                stat,msg = self.getStatue(rRes)
-                if not stat:
-                    logging.error("failed request: %s,%s"%(msg,rURL))
+                while self.REGEO_KEY:
+                    rURL = self._conReUrl((float(poi.lat), float(poi.lng)))
+                    rRes = self.request(rURL)
+                    stat,msg = self.getStatue(rRes)
+                    if stat == 1:
+                        break
+                    elif stat == -1:
+                        logging.error("failed request: %s,%s"%(msg,rURL))
+                        return False
+                    else:
+                        self.REGEO_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,rURL))
+                        logging.info("该key失效，自动替换key。")    
+                if not self.REGEO_KEY:
+                    logging.error("逆地址解析失败，key超过限制")
                     return False
                 regeo = rRes['regeocode']
                 try:
@@ -279,8 +308,8 @@ class GaodeMap(BaseMap):
                 poi.stree = regeo['addressComponent']['township']
                 pois.append(poi)       
             except Exception as e:
-                logging.error("error while parse data")
-                logging.error(e)
+                logging.warn("error while parse data")
+                logging.warn(e)
                 continue
         return pois
     
@@ -379,6 +408,8 @@ class TencentMap(BaseMap):
                 return None
             else:
                 self.SUB_KEY.pop(0)
+                logging.warn("error %s,%s"%(msg,url))
+                logging.info("该key失效，自动替换key。")
         if not self.SUB_KEY:
             logging.error("获取行政子区域失败,key已经用完")
             return None
@@ -443,6 +474,8 @@ class TencentMap(BaseMap):
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,rURL))
+                        logging.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
                     logging.error("逆地址解析失败，key已近用完")
                     return False
@@ -458,8 +491,8 @@ class TencentMap(BaseMap):
                 poi.stree = regeo['address_component']['street']
                 pois.append(poi)       
             except Exception as e:
-                logging.error("error while parse data")
-                logging.error(e)
+                logging.warn("error while parse data")
+                logging.warn(e)
                 continue
         return pois
     
@@ -579,6 +612,8 @@ class BaiduMap(BaseMap):
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,rURL))
+                        logging.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
                     logging.error("逆地址解析失败，key用完")
                     return False
@@ -593,8 +628,8 @@ class BaiduMap(BaseMap):
                 poi.stree = regeo['addressComponent']['street']
                 pois.append(poi)       
             except Exception as e:
-                logging.error("error while parse data")
-                logging.error(e)
+                logging.warn("error while parse data")
+                logging.warn(e)
                 continue
         return pois
 
