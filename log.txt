@@ -204,3 +204,271 @@ Wed, 22 Jun 2016 23:42:18 PTask.py[line:160] INFO running http://restapi.amap.co
 Wed, 22 Jun 2016 23:42:50 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=610000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
 Wed, 22 Jun 2016 23:44:23 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=610000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
 Wed, 22 Jun 2016 23:44:43 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=540000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:44:56 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=530000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:46:34 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=530000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:47:11 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=520000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:47:57 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=510000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:49:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=510000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:50:46 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=510000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:52:25 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=500000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:53:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=460000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:53:50 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=110.324582%2C20.034908
+Wed, 22 Jun 2016 23:53:50 MapDi.py[line:107] WARNING timed out
+Wed, 22 Jun 2016 23:54:07 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=450000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:55:41 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=450000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:55:56 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:57:39 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Wed, 22 Jun 2016 23:59:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:02:25 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:05:15 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:06:35 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=113.351385%2C22.481152
+Thu, 23 Jun 2016 00:06:35 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:07:01 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=113.619771%2C22.903709
+Thu, 23 Jun 2016 00:07:01 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:07:13 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=113.386951%2C22.512437
+Thu, 23 Jun 2016 00:07:13 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:07:38 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=113.767620%2C23.031106
+Thu, 23 Jun 2016 00:07:38 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:08:37 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=6&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:11:55 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=7&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:13:42 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=8&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:14:57 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=9&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:16:11 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=10&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:17:28 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=11&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:18:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=430000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:19:20 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=420000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:19:27 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=114.399490%2C30.504561
+Thu, 23 Jun 2016 00:19:27 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 00:20:32 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=420000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:21:13 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:22:27 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:25:36 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:28:59 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=113.004879%2C34.491766
+Thu, 23 Jun 2016 00:28:59 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:29:04 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:30:17 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=370000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:31:29 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=117.074160%2C36.673120
+Thu, 23 Jun 2016 00:31:29 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:33:38 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=370000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:35:19 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=360000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:35:26 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=115.973510%2C29.705381
+Thu, 23 Jun 2016 00:35:26 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:36:34 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=115.893496%2C28.689099
+Thu, 23 Jun 2016 00:36:34 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:37:06 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=350000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:40:11 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=350000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:40:35 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=118.099610%2C24.437321
+Thu, 23 Jun 2016 00:40:35 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:40:44 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=119.284876%2C26.100761
+Thu, 23 Jun 2016 00:40:44 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 00:42:12 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=118.100189%2C24.570396
+Thu, 23 Jun 2016 00:42:12 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 00:43:39 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=350000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:44:02 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=340000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:47:10 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=340000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:47:39 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=330000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:50:40 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=330000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:53:38 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=330000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:54:18 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 00:57:26 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:00:24 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:03:04 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:05:48 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:06:23 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:07:16 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=40c824f549f1a5e019e108725766a019&location=121.414614%2C31.218177
+Thu, 23 Jun 2016 01:07:16 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 01:09:03 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:10:17 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=121.461846%2C31.216503
+Thu, 23 Jun 2016 01:10:17 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:10:43 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=121.436311%2C31.187815
+Thu, 23 Jun 2016 01:10:43 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:11:50 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:14:29 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:15:26 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=121.655014%2C31.260314
+Thu, 23 Jun 2016 01:15:26 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:16:56 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:17:00 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=230000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:17:38 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=126.619741%2C45.739883
+Thu, 23 Jun 2016 01:17:38 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:18:32 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=220000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:19:29 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=210000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:21:15 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=123.147603%2C39.678119
+Thu, 23 Jun 2016 01:21:15 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:22:06 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=210000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:22:35 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=150000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:23:37 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=140000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:25:02 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=130000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:27:10 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=130000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:27:43 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=120000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:29:37 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=120000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:30:06 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=117.182520%2C39.140177
+Thu, 23 Jun 2016 01:30:06 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:30:19 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:30:56 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=116.385491%2C39.954293
+Thu, 23 Jun 2016 01:30:56 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 01:32:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:34:19 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:36:30 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:38:04 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:39:59 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=6&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:41:47 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=7&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:43:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=8&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 01:44:18 Runner.py[line:51] INFO SUCCESS! 1 高德 0 100000 基金会 0 20160622
+Thu, 23 Jun 2016 01:44:18 Runner.py[line:55] INFO 任务执行结束！
+Thu, 23 Jun 2016 01:44:18 Runner.py[line:56] INFO 开始更新任务状态....
+Thu, 23 Jun 2016 01:44:18 Runner.py[line:61] INFO 任务更新完成....
+Thu, 23 Jun 2016 01:44:18 Runner.py[line:62] INFO sleeping!
+Thu, 23 Jun 2016 03:44:18 Runner.py[line:35] INFO aweak!
+Thu, 23 Jun 2016 03:44:18 Runner.py[line:37] INFO 正在读取任务...
+Thu, 23 Jun 2016 03:44:18 Runner.py[line:45] INFO 任务读取成功！
+Thu, 23 Jun 2016 03:44:18 Runner.py[line:46] INFO 开始执行任务....
+Thu, 23 Jun 2016 03:44:18 Runner.py[line:49] INFO 正在执行： 1 高德 0 100000 基金会 0 20160623
+Thu, 23 Jun 2016 03:44:34 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=820000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:44:37 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=113.539960%2C22.182236
+Thu, 23 Jun 2016 03:44:37 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 03:44:38 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=113.539960%2C22.182236
+Thu, 23 Jun 2016 03:44:38 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 03:44:40 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=40c824f549f1a5e019e108725766a019&location=113.539960%2C22.182236
+Thu, 23 Jun 2016 03:44:40 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 03:44:54 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=810000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:46:28 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=810000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:47:07 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:48:41 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:50:23 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:52:11 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:53:33 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:54:45 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=6&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:55:33 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=121.531117%2C25.018176
+Thu, 23 Jun 2016 03:55:33 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 03:56:09 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=7&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:57:51 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=8&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 03:59:44 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=9&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:01:07 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=10&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:02:38 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=120.303715%2C22.798792
+Thu, 23 Jun 2016 04:02:38 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:03:07 MapDi.py[line:106] WARNING erro while conn: http://restapi.amap.com/v3/place/text?city=710000&page=11&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:03:07 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:03:08 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=11&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:04:38 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=12&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:06:21 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=13&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:07:47 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=14&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:09:17 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=15&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:09:32 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=650000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:11:04 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=650000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:11:15 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=640000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:11:53 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=630000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:12:14 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=620000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:12:53 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=610000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:14:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=610000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:14:48 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=540000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:15:07 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=530000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:16:30 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=530000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:17:12 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=520000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:18:10 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=510000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:19:46 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=510000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:21:30 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=510000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:22:49 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=500000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:23:26 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=460000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:23:57 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=450000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:25:09 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=450000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:25:19 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:26:24 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:27:33 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:29:03 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:30:52 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:32:01 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=113.482480%2C23.178853
+Thu, 23 Jun 2016 04:32:01 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:32:30 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=6&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:34:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=7&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:34:31 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=113.217298%2C23.403545
+Thu, 23 Jun 2016 04:34:31 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:35:05 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=111.590348%2C22.747087
+Thu, 23 Jun 2016 04:35:05 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:36:07 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=8&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:37:38 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=9&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:38:57 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=10&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:39:31 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=114.236710%2C22.550390
+Thu, 23 Jun 2016 04:39:31 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:40:50 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=440000&page=11&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:41:45 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=430000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:43:09 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=420000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:45:00 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=420000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:46:12 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:48:00 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:49:36 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:50:59 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=410000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:51:20 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=111.489032%2C33.131043
+Thu, 23 Jun 2016 04:51:20 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:51:32 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=370000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:53:33 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=370000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:54:39 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=360000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:55:29 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=350000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:57:09 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=350000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:57:53 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=118.597420%2C24.824518
+Thu, 23 Jun 2016 04:57:53 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 04:58:35 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=350000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 04:58:41 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=340000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:00:10 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=340000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:00:19 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=330000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:01:43 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=330000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:03:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=330000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:03:33 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:05:03 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:06:20 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:07:50 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:09:27 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=320000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:09:40 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:11:21 MapDi.py[line:106] WARNING erro while conn: http://restapi.amap.com/v3/place/text?city=310000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:11:21 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 05:11:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:12:14 MapDi.py[line:106] WARNING erro while conn:  http://restapi.amap.com/v3/geocode/regeo?key=3bf16b36729b31f7e985b55793f3a821&location=121.139261%2C31.152162
+Thu, 23 Jun 2016 05:12:14 MapDi.py[line:107] WARNING timed out
+Thu, 23 Jun 2016 05:12:55 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:14:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:16:11 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=310000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:16:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=230000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:17:08 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=220000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:17:43 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=210000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:19:12 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=210000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:19:29 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=150000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:20:15 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=140000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:21:04 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=130000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:22:21 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=130000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:22:40 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=120000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:23:56 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=120000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:24:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:25:37 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:26:55 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:28:21 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:29:44 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:31:04 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=6&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:32:22 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=7&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:33:48 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=110000&page=8&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 05:34:40 Runner.py[line:51] INFO SUCCESS! 1 高德 0 100000 基金会 0 20160623
+Thu, 23 Jun 2016 05:34:40 Runner.py[line:55] INFO 任务执行结束！
+Thu, 23 Jun 2016 05:34:40 Runner.py[line:56] INFO 开始更新任务状态....
+Thu, 23 Jun 2016 05:34:40 Runner.py[line:61] INFO 任务更新完成....
+Thu, 23 Jun 2016 05:34:40 Runner.py[line:62] INFO sleeping!
+Thu, 23 Jun 2016 07:34:40 Runner.py[line:35] INFO aweak!
+Thu, 23 Jun 2016 07:34:40 Runner.py[line:37] INFO 正在读取任务...
+Thu, 23 Jun 2016 07:34:40 Runner.py[line:45] INFO 任务读取成功！
+Thu, 23 Jun 2016 07:34:40 Runner.py[line:46] INFO 开始执行任务....
+Thu, 23 Jun 2016 07:34:40 Runner.py[line:49] INFO 正在执行： 1 高德 0 100000 基金会 0 20160623
+Thu, 23 Jun 2016 07:34:54 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=820000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:34:59 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=d74aa1ef25769557ba86c90c7a953337&location=113.547867%2C22.189916
+Thu, 23 Jun 2016 07:34:59 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 07:35:01 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=42418aff604a1c1ac2368abece1d97ba&location=113.547867%2C22.189916
+Thu, 23 Jun 2016 07:35:01 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 07:35:02 MapDi.py[line:290] WARNING error 10003, http://restapi.amap.com/v3/geocode/regeo?key=40c824f549f1a5e019e108725766a019&location=113.547867%2C22.189916
+Thu, 23 Jun 2016 07:35:02 MapDi.py[line:291] INFO 该key失效，自动替换key。
+Thu, 23 Jun 2016 07:35:16 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=810000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:36:27 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=810000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:37:13 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=1&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:38:25 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=2&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:39:37 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=3&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:40:58 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=4&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:42:11 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=5&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:43:33 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=6&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:44:46 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=7&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:45:57 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=8&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
+Thu, 23 Jun 2016 07:47:15 PTask.py[line:160] INFO running http://restapi.amap.com/v3/place/text?city=710000&page=9&citylimit=true&key=d74aa1ef25769557ba86c90c7a953337&keywords=%E5%9F%BA%E9%87%91%E4%BC%9A&children=0&offset=50
