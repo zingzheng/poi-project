@@ -510,8 +510,16 @@ class BaiduMap(BaseMap):
     def __init__(self):
         #百度地图的SEARCH_KEY 和 REGEO_KEY用的是百度的
         #暂时不支持行政区域划分，故无SUB_KEY
-        self.SEARCH_KEY = ['voRyF7opZzGGETYert5D2PYk']
-        self.REGEO_KEY = ['voRyF7opZzGGETYert5D2PYk']
+        self.SEARCH_KEY = ['voRyF7opZzGGETYert5D2PYk',
+                           'nEGChHmcRFtHuN1XzeNrPSqkUq239G4v',
+                           'vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw',
+                           'ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem',
+                           'U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo']
+        self.REGEO_KEY = ['voRyF7opZzGGETYert5D2PYk',
+                          'nEGChHmcRFtHuN1XzeNrPSqkUq239G4v',
+                          'vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw',
+                          'ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem',
+                          'U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo']
         self.SEARCH_URL = 'http://api.map.baidu.com/place/v2/search?'
         self.REGEO_URL = 'http://api.map.baidu.com/geocoder/v2/?'
         self.size = 20

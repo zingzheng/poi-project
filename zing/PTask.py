@@ -50,16 +50,16 @@ class BaseTask(object):
         boxs有可能是网格，也有可能是
         '''
         boxs = []
-        if not self.reover:
+        if not self.recover:
             return boxs
         else:
             with open(self.recover, 'r') as f:
                 for line in f:
-                    l = line.split('\n')[0].split(' ')
-                    if len(l) == 1:
-                        boxs.append(l[0])
+                    li = line.split('\n')[0].split(' ')
+                    if len(li) == 1:
+                        boxs.append(li[0])
                     else:
-                        boxs.append(l)
+                        boxs.append([float(i) for i in li])
         return boxs
     
     def writeBoxs(self, boxs):
@@ -165,6 +165,9 @@ class SubTask(BaseTask):
         else:
             logging.info('正在从断点恢复。。。')
             regions = self.readBoxs()
+            self.writeBoxs(regions)
+            if os.path.exists(self.recover):
+                os.remove(self.recover)
         while regions:
             print(regions)
             self.writeBoxs(regions)
@@ -277,6 +280,10 @@ class CutTask(BaseTask):
         else:
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
+            self.writeBoxs(self.bboxs)
+            if os.path.exists(self.recover):
+                os.remove(self.recover)
+            
         mapdi = MapDi.map_fac(self.map_type)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
@@ -330,10 +337,14 @@ class CutProTask(CutTask):
     #专门负责将全国任务分解为省份任务
     #省份之间可能会存在区域重叠
     '''
+    def __init__(self,args):
+        super().__init__(args)
+    
     def run(self):
         '''    
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
+        self.bboxs = []
         if not self.recover:
             logging.info('正在切割网格。。。')
             #对每个省份切分网格
@@ -346,6 +357,9 @@ class CutProTask(CutTask):
         else:
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
+            self.writeBoxs(self.bboxs)
+            if os.path.exists(self.recover):
+                os.remove(self.recover)
         mapdi = MapDi.map_fac(self.map_type)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
