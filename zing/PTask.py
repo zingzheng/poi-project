@@ -12,7 +12,7 @@ import zing.Util as myUtil
 import shapefile
 from shapely.geometry import Polygon,shape
 
-from zing.Util import logging
+from zing.Util import logging,getProvinces
 from zing import MapDi
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
@@ -27,20 +27,50 @@ class BaseTask(object):
     '''
     
     def __init__(self,args):
+        self.grid = [100,20,10]
         self.core_type = args[0]
         self.map_type = args[1]
         self.region_type = int(args[2])
         self.region = args[3]
         self.keyword = args[4]
         self.delta = args[5]
-        if len(args) == 7:
-            self.nex = self.up_to_now(args[6])
-        else:
-            self.nex = self.time_to_str(datetime.datetime.now())
-            
+        self.nex = self.up_to_now(args[6])
         fp = '-'.join([self.map_type, self.keyword, self.region, self.str_now()])
-        self.filePath = BASE_PATH + '/res/'+fp+'.txt'
+        if len(args) == 7:
+            self.recover = None
+            self.filePath = BASE_PATH + '/res/'+fp+'.txt'
+        else:
+            self.recover = args[7]
+            self.filePath = args[8]
+        self.boxsPath = BASE_PATH + '/res/'+fp+'.boxs'
+        
+    def readBoxs(self):
+        '''
+        #读取还未完成的任务
+        boxs有可能是网格，也有可能是
+        '''
+        boxs = []
+        if not self.reover:
+            return boxs
+        else:
+            with open(self.recover, 'r') as f:
+                for line in f:
+                    l = line.split('\n')[0].split(' ')
+                    if len(l) == 1:
+                        boxs.append(l[0])
+                    else:
+                        boxs.append(l)
+        return boxs
     
+    def writeBoxs(self, boxs):
+        '''
+        #将未完成的任务写入文件
+        '''
+        with open(self.boxsPath, 'w') as f:
+            for box in boxs:
+                f.write(' '.join([str(i) for i in box]))
+                f.write('\n')
+        
     def str_now(self):
         return datetime.datetime.now().strftime('%Y%m%d%H')
        
@@ -89,8 +119,11 @@ class BaseTask(object):
             return False
     
     def toList(self):
-        return [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
-
+        taskList = [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
+        if not self.recover:
+            taskList.extend([self.boxsPath,self.filePath])
+        return taskList
+    
     def toStr(self):
         return ' '.join([str(s) for s in self.toList()])
     
@@ -127,9 +160,14 @@ class SubTask(BaseTask):
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
         mapdi = MapDi.map_fac(self.map_type)
-        regions = [self.region]
+        if not self.recover:
+            regions = [self.region]
+        else:
+            logging.info('正在从断点恢复。。。')
+            regions = self.readBoxs()
         while regions:
             print(regions)
+            self.writeBoxs(regions)
             r = regions.pop()
             page,size,count = 0, mapdi.size, mapdi.size
             while page*size < count:
@@ -165,6 +203,11 @@ class SubTask(BaseTask):
                         print(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
+        self.recover, self.boxsPath = '', ''
+        if self.recover and  os.path.exists(self.recover):
+            os.remove(self.recover)
+        if os.path.exists(self.boxsPath):
+            os.remove(self.boxsPath)
         return True
 
     
@@ -185,8 +228,7 @@ class CutTask(BaseTask):
             self.province, self.city = self.region.split('@')
         self.shape = self._getShape()
         self.bbox = self.shape.bbox
-        self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), [100,20,10][self.region_type])
-    
+        
 
     def _getShape(self):
         '''
@@ -229,8 +271,15 @@ class CutTask(BaseTask):
         '''    
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
+        if not self.recover:
+            logging.info('正在切割网格。。。')
+            self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), self.grid[self.region_type])
+        else:
+            logging.info('正在从断点恢复。。。')
+            self.bboxs = self.readBoxs()
         mapdi = MapDi.map_fac(self.map_type)
         while self.bboxs:
+            self.writeBoxs(self.bboxs)
             bbox = self.bboxs.pop()
             print(len(self.bboxs))
             page,size,count = 0, mapdi.size, mapdi.size
@@ -268,8 +317,87 @@ class CutTask(BaseTask):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
+        self.recover, self.boxsPath = '', ''
+        if self.recover and  os.path.exists(self.recover):
+            os.remove(self.recover)
+        if os.path.exists(self.boxsPath):
+            os.remove(self.boxsPath)
         return True
 
+
+class CutProTask(CutTask):
+    '''
+    #专门负责将全国任务分解为省份任务
+    #省份之间可能会存在区域重叠
+    '''
+    def run(self):
+        '''    
+        #程序入口，执行该任务，请自行判断任务是否到钟执行
+        '''
+        if not self.recover:
+            logging.info('正在切割网格。。。')
+            #对每个省份切分网格
+            for r in getProvinces():
+                sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm1.shp")
+                index = myUtil.regionIndex(r)
+                shape = sf.shapes()[index]
+                bbox = shape.bbox
+                self.bboxs.extend(myUtil.cut(bbox, Polygon(shape.points), self.grid[1]))
+        else:
+            logging.info('正在从断点恢复。。。')
+            self.bboxs = self.readBoxs()
+        mapdi = MapDi.map_fac(self.map_type)
+        while self.bboxs:
+            self.writeBoxs(self.bboxs)
+            bbox = self.bboxs.pop()
+            print(len(self.bboxs))
+            page,size,count = 0, mapdi.size, mapdi.size
+            while page*size < count:
+                page += 1
+                while mapdi.SEARCH_KEY:
+                    url = mapdi.conSearchUrl(self.keyword, bbox, page)
+                    res = mapdi.request(url)
+                    stat,msg = mapdi.getStatue(res)
+                    if stat == 1:
+                        break
+                    elif stat == -1:
+                        logging.error("error %s,%s"%(msg,url))
+                        return False
+                    else:
+                        mapdi.SEARCH_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,url))
+                        logging.info("该key失效，自动替换key。")
+                if not mapdi.SEARCH_KEY:
+                    logging.error("抓取失败，key用完")
+                    return False
+                count = mapdi.getCount(res)
+                if count == 0:
+                    break
+                elif count == -1:
+                    self.bboxs.extend(myUtil.cut(bbox, None, 2))
+                    break
+                else:
+                    logging.info("running %s"%(url))
+                    datas = []
+                    pois = mapdi.parser(res)
+                    for poi in pois:
+                        print(poi.toString())
+                        if self.check(poi.address):
+                            datas.append(poi.toString())
+                    self.dumpFile(datas)
+        self.dumpFile(['FINISH'])
+        self.recover, self.boxsPath = '', ''
+        if self.recover and  os.path.exists(self.recover):
+            os.remove(self.recover)
+        if os.path.exists(self.boxsPath):
+            os.remove(self.boxsPath)
+        return True
+    
+
+            
+            
+            
+            
 
 def taskFac(args):
     '''
@@ -278,5 +406,7 @@ def taskFac(args):
     s = args[0]
     if int(s) == 0:
         return CutTask(args)
-    else:
+    elif int(s) == 1:
         return SubTask(args)
+    else:
+        return CutProTask(args)
