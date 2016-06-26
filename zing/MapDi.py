@@ -57,7 +57,7 @@ class BaseMap(object):
         self.SEARCH_KEY = []
         self.REGEO_KEY = []
         self.SUB_KEY = []
-    
+        self.sleep_time = 1
     
     def conSearchUrl(self, keyword, region, index):
         '''
@@ -96,7 +96,7 @@ class BaseMap(object):
         '''
         re = 5
         res = None
-        sleep(1)
+        sleep(self.sleep_time)
         while re:
             re-=1
             try:
@@ -163,6 +163,7 @@ class GaodeMap(BaseMap):
         self.SEARCH_URL = 'http://restapi.amap.com/v3/place/text?'
         self.REGEO_URL = ' http://restapi.amap.com/v3/geocode/regeo?'
         self.size = 50
+        self.sleep_time = 0.1
         
     def _conReUrl(self, location):
         '''
@@ -340,6 +341,7 @@ class TencentMap(BaseMap):
         self.SEARCH_URL = 'http://apis.map.qq.com/ws/place/v1/search?'
         self.REGEO_URL = 'http://apis.map.qq.com/ws/geocoder/v1/?'
         self.size = 20
+        self.sleep_time = 0.3
         
     def _conReUrl(self, location):
         '''
@@ -513,6 +515,7 @@ class BaiduMap(BaseMap):
         self.SEARCH_URL = 'http://api.map.baidu.com/place/v2/search?'
         self.REGEO_URL = 'http://api.map.baidu.com/geocoder/v2/?'
         self.size = 20
+        self.sleep_time = 0
     
         
     def _conReUrl(self, location):
