@@ -33,6 +33,7 @@ class POI(object):
     city = 'na'
     district='na'
     stree='na'
+    tel = 'na'
     
     def toString(self):
         poistr = None
@@ -40,7 +41,7 @@ class POI(object):
             poistr = ','.join([str(s) for s in [
                     self.name, self.stree_num, self.lat, self.lng,
                     self.address, self.adcode, self.country,
-                    self.province, self.city, self.district, self.stree]])
+                    self.province, self.city, self.district, self.stree, self.tel]])
         except Exception as e:
             logging.error("error in str poi")
             logging.error(e)
@@ -278,6 +279,10 @@ class GaodeMap(BaseMap):
             try:
                 poi = POI()
                 poi.name = data['name']
+                try:
+                    poi.tel = data['tel']
+                except:
+                    poi.tel = ' '
                 poi.lng,poi.lat = data['location'].split(',')
                 while self.REGEO_KEY:
                     rURL = self._conReUrl((float(poi.lat), float(poi.lng)))
@@ -463,6 +468,10 @@ class TencentMap(BaseMap):
             try:
                 poi = POI()
                 poi.name = data['title']
+                try:
+                    poi.tel = data['tel']
+                except:
+                    poi.tel = ' '
                 poi.lat = float(data['location']['lat'])
                 poi.lng = float(data['location']['lng'])
                 while self.REGEO_KEY:
@@ -610,6 +619,10 @@ class BaiduMap(BaseMap):
             try:
                 poi = POI()
                 poi.name = data['name']
+                try:
+                    poi.tel = data['telephone']
+                except:
+                    poi.tel = ' '
                 poi.lat = float(data['location']['lat'])
                 poi.lng = float(data['location']['lng'])
                 while self.REGEO_KEY:

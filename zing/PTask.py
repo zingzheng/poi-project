@@ -37,7 +37,7 @@ class BaseTask(object):
         self.nex = self.up_to_now(args[6])
         fp = '-'.join([self.map_type, self.keyword, self.region, self.str_now()])
         if len(args) == 7:
-            self.recover = None
+            self.recover = ''
             self.filePath = BASE_PATH + '/res/'+fp+'.txt'
         else:
             self.recover = args[7]
@@ -119,8 +119,8 @@ class BaseTask(object):
             return False
     
     def toList(self):
-        taskList = [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
-        if not self.recover:
+        taskList =  [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
+        if self.boxsPath:
             taskList.extend([self.boxsPath,self.filePath])
         return taskList
     
@@ -206,11 +206,11 @@ class SubTask(BaseTask):
                         print(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        self.recover, self.boxsPath = '', ''
         if self.recover and  os.path.exists(self.recover):
             os.remove(self.recover)
         if os.path.exists(self.boxsPath):
             os.remove(self.boxsPath)
+        self.recover, self.boxsPath, self.filePath = '', '', ''
         return True
 
     
@@ -324,11 +324,13 @@ class CutTask(BaseTask):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        self.recover, self.boxsPath = '', ''
+        
         if self.recover and  os.path.exists(self.recover):
             os.remove(self.recover)
         if os.path.exists(self.boxsPath):
             os.remove(self.boxsPath)
+            
+        self.recover, self.boxsPath, self.filePath = '', '', ''
         return True
 
 
@@ -400,11 +402,11 @@ class CutProTask(CutTask):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        self.recover, self.boxsPath = '', ''
         if self.recover and  os.path.exists(self.recover):
             os.remove(self.recover)
         if os.path.exists(self.boxsPath):
             os.remove(self.boxsPath)
+        self.recover, self.boxsPath, self.filePath = '', '', ''
         return True
     
 

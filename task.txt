@@ -1,1 +1,1 @@
-2 百度 0 100000 公安局 4 20160626 D:\workspace\py-space\poi-project\zing/../res/百度-公安局-100000-2016062620.boxs D:\workspace\py-space\poi-project\zing/../res/百度-公安局-100000-2016062620.txt
+2 百度 0 100000 公安局 4 20160627 /Users/zingzheng/Documents/workspace/poi-project/zing/../res/百度-公安局-100000-2016062714.boxs /Users/zingzheng/Documents/workspace/poi-project/zing/../res/百度-公安局-100000-2016062714.txt
