@@ -68,7 +68,10 @@ class BaseTask(object):
         '''
         with open(self.boxsPath, 'w') as f:
             for box in boxs:
-                f.write(' '.join([str(i) for i in box]))
+                if type(box) == type('10000'):
+                    f.write(box)
+                else:
+                    f.write(' '.join([str(i) for i in box]))
                 f.write('\n')
         
     def str_now(self):

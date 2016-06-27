@@ -2161,3 +2161,803 @@ Mon, 27 Jun 2016 14:27:16 Runner.py[line:43] INFO ÂºÄÂßãÊõ¥Êñ∞‰ªªÂä°Áä∂ÊÄÅ....
 Mon, 27 Jun 2016 14:27:16 Runner.py[line:48] INFO ‰ªªÂä°Êõ¥Êñ∞ÂÆåÊàê....
 Mon, 27 Jun 2016 14:27:16 Runner.py[line:73] INFO ‰ªªÂä°ÊâßË°åÁªìÊùüÔºÅ
 Mon, 27 Jun 2016 14:27:16 Runner.py[line:74] INFO sleeping!
+Mon, 27 Jun 2016 21:57:28 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 21:57:28 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 21:57:29 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 21:57:29 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 21:57:29 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062721.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 21:57:29 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 21:57:29 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 21:57:29 PTask.py[line:360] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 21:57:31 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.485313%2C30.576759%2C120.731018&ak=voRyF7opZzGGETYert5D2PYk&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 21:57:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.526821%2C120.684650&output=json
+Mon, 27 Jun 2016 21:57:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 21:58:06 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.540210%2C120.689479&output=json
+Mon, 27 Jun 2016 21:58:06 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 21:58:23 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.474515%2C120.641783&output=json
+Mon, 27 Jun 2016 21:58:23 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 21:58:28 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.456218%2C120.589035&output=json
+Mon, 27 Jun 2016 21:58:28 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 21:58:52 PTask.py[line:384] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.485313%2C30.576759%2C120.731018&ak=voRyF7opZzGGETYert5D2PYk&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 21:58:52 PTask.py[line:385] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 21:58:58 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.485313%2C30.576759%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 21:59:40 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.439798%2C120.501702&output=json
+Mon, 27 Jun 2016 21:59:40 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:00:16 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.527229%2C120.615023&output=json
+Mon, 27 Jun 2016 22:00:16 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:00:24 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.504739%2C120.620647&output=json
+Mon, 27 Jun 2016 22:00:24 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:00:26 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.485313%2C30.576759%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=2&output=json
+Mon, 27 Jun 2016 22:00:31 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.456812%2C120.705527&output=json
+Mon, 27 Jun 2016 22:00:31 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:00:41 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.460746%2C120.598008&output=json
+Mon, 27 Jun 2016 22:00:41 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:00:58 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.468777%2C120.516898&output=json
+Mon, 27 Jun 2016 22:00:58 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:01:04 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.452539%2C120.562264&output=json
+Mon, 27 Jun 2016 22:01:04 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:01:14 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.485313%2C30.374768%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:01:14 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:01:14 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.485313%2C30.374768%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:02:12 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:03:36 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:03:36 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:03:36 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:04:04 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.997721%2C120.597340&output=json
+Mon, 27 Jun 2016 22:04:04 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:04:20 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.045126%2C120.571437&output=json
+Mon, 27 Jun 2016 22:04:20 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:04:26 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.030699%2C120.561673&output=json
+Mon, 27 Jun 2016 22:04:26 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:04:31 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.017986%2C120.567463&output=json
+Mon, 27 Jun 2016 22:04:31 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:04:46 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=2&output=json
+Mon, 27 Jun 2016 22:05:16 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.079355%2C120.666857&output=json
+Mon, 27 Jun 2016 22:05:16 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:05:22 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.088937%2C120.620937&output=json
+Mon, 27 Jun 2016 22:05:22 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:05:54 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=3&output=json
+Mon, 27 Jun 2016 22:05:54 MapDi.py[line:108] WARNING timed out
+Mon, 27 Jun 2016 22:05:54 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=3&output=json
+Mon, 27 Jun 2016 22:06:03 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.984819%2C120.590696&output=json
+Mon, 27 Jun 2016 22:06:03 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:06:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.123493%2C120.549748&output=json
+Mon, 27 Jun 2016 22:06:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:06:58 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.085441%2C120.490051&output=json
+Mon, 27 Jun 2016 22:06:58 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:07:12 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=4&output=json
+Mon, 27 Jun 2016 22:07:19 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.002636%2C120.582698&output=json
+Mon, 27 Jun 2016 22:07:19 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:07:49 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.112143%2C120.618436&output=json
+Mon, 27 Jun 2016 22:07:49 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:08:33 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=5&output=json
+Mon, 27 Jun 2016 22:08:33 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:08:34 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=5&output=json
+Mon, 27 Jun 2016 22:08:59 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.018912%2C120.552938&output=json
+Mon, 27 Jun 2016 22:08:59 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:09:05 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.005670%2C120.570494&output=json
+Mon, 27 Jun 2016 22:09:05 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:09:16 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.012738%2C120.571824&output=json
+Mon, 27 Jun 2016 22:09:16 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:09:26 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.989553%2C120.577331&output=json
+Mon, 27 Jun 2016 22:09:26 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:09:32 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.485313%2C30.172778%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=6&output=json
+Mon, 27 Jun 2016 22:09:38 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.768796%2C120.485313%2C29.970787%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:10:07 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.940419%2C120.561180&output=json
+Mon, 27 Jun 2016 22:10:07 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:10:12 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.566805%2C120.485313%2C29.768796%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:10:22 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.598903%2C120.720514&output=json
+Mon, 27 Jun 2016 22:10:22 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:10:33 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.364814%2C120.485313%2C29.566805%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:10:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.530543%2C120.730898&output=json
+Mon, 27 Jun 2016 22:10:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:10:53 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=29.162824%2C120.485313%2C29.364814%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:10:53 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:10:53 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.162824%2C120.485313%2C29.364814%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:11:06 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.322977%2C120.503462&output=json
+Mon, 27 Jun 2016 22:11:06 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:11:10 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.960833%2C120.485313%2C29.162824%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:11:17 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.007268%2C120.576612&output=json
+Mon, 27 Jun 2016 22:11:17 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:11:18 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.758842%2C120.485313%2C28.960833%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:11:25 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.860160%2C120.728775&output=json
+Mon, 27 Jun 2016 22:11:25 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:11:50 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.765013%2C120.609912&output=json
+Mon, 27 Jun 2016 22:11:50 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:11:55 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.765013%2C120.609912&output=json
+Mon, 27 Jun 2016 22:11:55 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:11:59 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.556851%2C120.485313%2C28.758842%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:12:22 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.152870%2C120.485313%2C28.354860%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:12:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.174327%2C120.489844&output=json
+Mon, 27 Jun 2016 22:12:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:13:32 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:13:44 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.017901%2C120.665292&output=json
+Mon, 27 Jun 2016 22:13:44 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:14:27 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.046764%2C120.666277&output=json
+Mon, 27 Jun 2016 22:14:27 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:14:48 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:14:56 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.130174%2C120.489107&output=json
+Mon, 27 Jun 2016 22:14:56 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:15:22 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.040514%2C120.632854&output=json
+Mon, 27 Jun 2016 22:15:22 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:15:32 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.046283%2C120.648475&output=json
+Mon, 27 Jun 2016 22:15:32 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:15:40 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.050872%2C120.627825&output=json
+Mon, 27 Jun 2016 22:15:40 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:15:59 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.006038%2C120.694370&output=json
+Mon, 27 Jun 2016 22:15:59 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:16:17 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=2&output=json
+Mon, 27 Jun 2016 22:17:05 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.011084%2C120.638131&output=json
+Mon, 27 Jun 2016 22:17:05 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:17:40 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.988829%2C120.667983&output=json
+Mon, 27 Jun 2016 22:17:40 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:17:45 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=3&output=json
+Mon, 27 Jun 2016 22:18:31 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.958609%2C120.605339&output=json
+Mon, 27 Jun 2016 22:18:31 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:18:39 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.959420%2C120.605558&output=json
+Mon, 27 Jun 2016 22:18:39 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:18:58 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.006389%2C120.535208&output=json
+Mon, 27 Jun 2016 22:18:58 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:19:10 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.965201%2C120.585738&output=json
+Mon, 27 Jun 2016 22:19:10 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:19:23 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=4&output=json
+Mon, 27 Jun 2016 22:20:51 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=5&output=json
+Mon, 27 Jun 2016 22:21:00 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.023697%2C120.698972&output=json
+Mon, 27 Jun 2016 22:21:00 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:21:43 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.983713%2C120.687265&output=json
+Mon, 27 Jun 2016 22:21:43 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:21:50 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=6&output=json
+Mon, 27 Jun 2016 22:22:16 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.003603%2C120.665322&output=json
+Mon, 27 Jun 2016 22:22:16 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:22:37 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.998335%2C120.603776&output=json
+Mon, 27 Jun 2016 22:22:37 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:22:53 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=7&output=json
+Mon, 27 Jun 2016 22:22:53 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:22:57 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=7&output=json
+Mon, 27 Jun 2016 22:23:15 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.995303%2C120.539897&output=json
+Mon, 27 Jun 2016 22:23:15 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:23:36 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.984036%2C120.571149&output=json
+Mon, 27 Jun 2016 22:23:36 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:23:49 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.982017%2C120.569672&output=json
+Mon, 27 Jun 2016 22:23:49 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:24:33 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.101564%2C120.605932&output=json
+Mon, 27 Jun 2016 22:24:33 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:24:43 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=8&output=json
+Mon, 27 Jun 2016 22:24:43 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:24:44 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=8&output=json
+Mon, 27 Jun 2016 22:24:55 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.051291%2C120.648108&output=json
+Mon, 27 Jun 2016 22:24:55 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:25:10 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.047643%2C120.660643&output=json
+Mon, 27 Jun 2016 22:25:10 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:25:35 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.019937%2C120.689545&output=json
+Mon, 27 Jun 2016 22:25:35 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:25:40 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.019937%2C120.689545&output=json
+Mon, 27 Jun 2016 22:25:40 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:25:56 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.004877%2C120.698866&output=json
+Mon, 27 Jun 2016 22:25:56 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:26:23 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=9&output=json
+Mon, 27 Jun 2016 22:26:59 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.007730%2C120.648705&output=json
+Mon, 27 Jun 2016 22:26:59 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:27:05 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.009599%2C120.625372&output=json
+Mon, 27 Jun 2016 22:27:05 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:27:10 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.999469%2C120.596957&output=json
+Mon, 27 Jun 2016 22:27:10 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:27:27 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.485313%2C28.152870%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=10&output=json
+Mon, 27 Jun 2016 22:27:51 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.984991%2C120.632378&output=json
+Mon, 27 Jun 2016 22:27:51 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:27:57 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.954482%2C120.657917&output=json
+Mon, 27 Jun 2016 22:27:57 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:28:11 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.989186%2C120.628051&output=json
+Mon, 27 Jun 2016 22:28:11 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:28:44 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:28:44 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:28:45 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:29:00 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.779300%2C120.650582&output=json
+Mon, 27 Jun 2016 22:29:00 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:29:06 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.795890%2C120.632061&output=json
+Mon, 27 Jun 2016 22:29:06 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:29:21 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.946712%2C120.685101&output=json
+Mon, 27 Jun 2016 22:29:21 MapDi.py[line:108] WARNING timed out
+Mon, 27 Jun 2016 22:30:14 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:30:55 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.800003%2C120.662638&output=json
+Mon, 27 Jun 2016 22:30:55 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:31:01 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.779300%2C120.650582&output=json
+Mon, 27 Jun 2016 22:31:01 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:31:25 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.834380%2C120.582261&output=json
+Mon, 27 Jun 2016 22:31:25 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:31:36 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=2&output=json
+Mon, 27 Jun 2016 22:31:41 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.795178%2C120.557230&output=json
+Mon, 27 Jun 2016 22:31:41 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:31:49 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.795178%2C120.557230&output=json
+Mon, 27 Jun 2016 22:31:49 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:32:12 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.915112%2C120.713316&output=json
+Mon, 27 Jun 2016 22:32:12 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:32:53 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.840713%2C120.626548&output=json
+Mon, 27 Jun 2016 22:32:53 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:33:06 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=3&output=json
+Mon, 27 Jun 2016 22:33:06 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:33:06 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=3&output=json
+Mon, 27 Jun 2016 22:33:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.786541%2C120.647685&output=json
+Mon, 27 Jun 2016 22:33:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:33:51 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.807959%2C120.609696&output=json
+Mon, 27 Jun 2016 22:33:51 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:34:03 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.795163%2C120.589528&output=json
+Mon, 27 Jun 2016 22:34:03 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:34:10 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.936759%2C120.568670&output=json
+Mon, 27 Jun 2016 22:34:10 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:34:15 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.936759%2C120.568670&output=json
+Mon, 27 Jun 2016 22:34:15 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:34:23 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.791385%2C120.550785&output=json
+Mon, 27 Jun 2016 22:34:23 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:34:53 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=4&output=json
+Mon, 27 Jun 2016 22:35:16 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.840556%2C120.681906&output=json
+Mon, 27 Jun 2016 22:35:16 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:35:27 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.819504%2C120.697994&output=json
+Mon, 27 Jun 2016 22:35:27 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:35:48 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.778992%2C120.656344&output=json
+Mon, 27 Jun 2016 22:35:48 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:36:08 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=5&output=json
+Mon, 27 Jun 2016 22:36:08 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:36:09 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.485313%2C27.950879%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=5&output=json
+Mon, 27 Jun 2016 22:36:14 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.778863%2C120.624185&output=json
+Mon, 27 Jun 2016 22:36:14 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:36:22 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.851812%2C120.504846&output=json
+Mon, 27 Jun 2016 22:36:22 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:36:33 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.769383%2C120.668787&output=json
+Mon, 27 Jun 2016 22:36:33 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:36:54 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.546897%2C120.485313%2C27.748888%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:37:32 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.712082%2C120.620323&output=json
+Mon, 27 Jun 2016 22:37:32 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:37:41 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.690846%2C120.627052&output=json
+Mon, 27 Jun 2016 22:37:41 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:37:54 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.546897%2C120.485313%2C27.748888%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:38:36 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.610279%2C120.570500&output=json
+Mon, 27 Jun 2016 22:38:36 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:38:57 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.573521%2C120.489819&output=json
+Mon, 27 Jun 2016 22:38:57 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:39:02 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.573521%2C120.489819&output=json
+Mon, 27 Jun 2016 22:39:02 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:39:08 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.569329%2C120.486534&output=json
+Mon, 27 Jun 2016 22:39:08 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:39:13 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.344907%2C120.485313%2C27.546897%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:39:27 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.484194%2C120.584843&output=json
+Mon, 27 Jun 2016 22:39:27 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:39:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.452583%2C120.654925&output=json
+Mon, 27 Jun 2016 22:39:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:39:47 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.452583%2C120.654925&output=json
+Mon, 27 Jun 2016 22:39:47 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:39:56 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.439053%2C120.626688&output=json
+Mon, 27 Jun 2016 22:39:56 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:40:13 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.142916%2C120.485313%2C27.344907%2C120.731018&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:40:28 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.778750%2C120.239609%2C30.980741%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:40:33 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.879240%2C120.416928&output=json
+Mon, 27 Jun 2016 22:40:33 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:40:42 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.876199%2C120.268340&output=json
+Mon, 27 Jun 2016 22:40:42 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:41:41 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.879116%2C120.435344&output=json
+Mon, 27 Jun 2016 22:41:41 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:41:42 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.778750%2C120.239609%2C30.980741%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:41:55 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.891391%2C120.438698&output=json
+Mon, 27 Jun 2016 22:41:55 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:42:04 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.576759%2C120.239609%2C30.778750%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:42:17 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.726382%2C120.273747&output=json
+Mon, 27 Jun 2016 22:42:17 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:42:48 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.239609%2C30.576759%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:42:48 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:42:53 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.239609%2C30.576759%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:42:53 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:42:54 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.239609%2C30.576759%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:43:02 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.451194%2C120.456412&output=json
+Mon, 27 Jun 2016 22:43:02 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:43:27 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.498190%2C120.460676&output=json
+Mon, 27 Jun 2016 22:43:27 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:44:02 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.519973%2C120.432379&output=json
+Mon, 27 Jun 2016 22:44:02 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:44:20 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.505567%2C120.352060&output=json
+Mon, 27 Jun 2016 22:44:20 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:44:28 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C120.239609%2C30.576759%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:44:46 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.492607%2C120.402205&output=json
+Mon, 27 Jun 2016 22:44:46 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:44:54 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.239609%2C30.374768%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:45:07 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.266368%2C120.450337&output=json
+Mon, 27 Jun 2016 22:45:07 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:45:15 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.266368%2C120.450337&output=json
+Mon, 27 Jun 2016 22:45:15 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:45:45 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.238555%2C120.391937&output=json
+Mon, 27 Jun 2016 22:45:45 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:45:54 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.308089%2C120.311225&output=json
+Mon, 27 Jun 2016 22:45:54 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:46:08 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.311221%2C120.250850&output=json
+Mon, 27 Jun 2016 22:46:08 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:46:17 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.321437%2C120.271816&output=json
+Mon, 27 Jun 2016 22:46:17 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:46:43 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.239609%2C30.374768%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:47:18 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.175001%2C120.286103&output=json
+Mon, 27 Jun 2016 22:47:18 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:47:32 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.355623%2C120.301092&output=json
+Mon, 27 Jun 2016 22:47:32 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:47:37 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.356180%2C120.268974&output=json
+Mon, 27 Jun 2016 22:47:37 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:47:50 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.306635%2C120.389688&output=json
+Mon, 27 Jun 2016 22:47:50 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:48:06 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.239609%2C30.374768%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=2&output=json
+Mon, 27 Jun 2016 22:48:55 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.234314%2C120.435546&output=json
+Mon, 27 Jun 2016 22:48:55 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:49:23 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.239609%2C30.374768%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=3&output=json
+Mon, 27 Jun 2016 22:49:32 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.324528%2C120.450022&output=json
+Mon, 27 Jun 2016 22:49:32 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:50:42 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.172778%2C120.239609%2C30.374768%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=4&output=json
+Mon, 27 Jun 2016 22:50:54 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.219758%2C120.289181&output=json
+Mon, 27 Jun 2016 22:50:54 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:51:03 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.213218%2C120.281033&output=json
+Mon, 27 Jun 2016 22:51:03 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:51:31 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.970787%2C120.239609%2C30.172778%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:52:01 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.120926%2C120.414917&output=json
+Mon, 27 Jun 2016 22:52:01 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:52:07 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.151596%2C120.367764&output=json
+Mon, 27 Jun 2016 22:52:07 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:52:23 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.768796%2C120.239609%2C29.970787%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:52:33 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.914841%2C120.308072&output=json
+Mon, 27 Jun 2016 22:52:33 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:53:00 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.914845%2C120.308069&output=json
+Mon, 27 Jun 2016 22:53:00 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:53:09 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.566805%2C120.239609%2C29.768796%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:53:41 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.646207%2C120.277716&output=json
+Mon, 27 Jun 2016 22:53:41 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:54:13 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.364814%2C120.239609%2C29.566805%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:54:18 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.162824%2C120.239609%2C29.364814%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:54:45 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.296256%2C120.251172&output=json
+Mon, 27 Jun 2016 22:54:45 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:55:25 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.319768%2C120.441571&output=json
+Mon, 27 Jun 2016 22:55:25 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:55:38 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=29.162824%2C120.239609%2C29.364814%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:56:18 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.295383%2C120.277001&output=json
+Mon, 27 Jun 2016 22:56:18 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:56:27 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.184239%2C120.401127&output=json
+Mon, 27 Jun 2016 22:56:27 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:56:40 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.960833%2C120.239609%2C29.162824%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:56:45 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.051959%2C120.440352&output=json
+Mon, 27 Jun 2016 22:56:45 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:57:09 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.013813%2C120.240492&output=json
+Mon, 27 Jun 2016 22:57:09 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:57:18 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.053766%2C120.450883&output=json
+Mon, 27 Jun 2016 22:57:18 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:57:59 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.051798%2C120.440253&output=json
+Mon, 27 Jun 2016 22:57:59 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:58:19 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.960833%2C120.239609%2C29.162824%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 22:58:33 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=29.053767%2C120.450883&output=json
+Mon, 27 Jun 2016 22:58:33 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:58:37 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.758842%2C120.239609%2C28.960833%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:58:43 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.955826%2C120.389036&output=json
+Mon, 27 Jun 2016 22:58:43 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:58:58 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=28.556851%2C120.239609%2C28.758842%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:59:10 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.746622%2C120.483310&output=json
+Mon, 27 Jun 2016 22:59:10 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:59:17 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.950879%2C120.239609%2C28.152870%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 22:59:26 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.146514%2C120.295496&output=json
+Mon, 27 Jun 2016 22:59:26 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:59:32 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=28.146765%2C120.295030&output=json
+Mon, 27 Jun 2016 22:59:32 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 22:59:58 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.748888%2C120.239609%2C27.950879%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:00:40 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.546897%2C120.239609%2C27.748888%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:01:53 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.639854%2C120.245296&output=json
+Mon, 27 Jun 2016 23:01:53 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:02:06 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.596433%2C120.432747&output=json
+Mon, 27 Jun 2016 23:02:06 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:02:10 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.546897%2C120.239609%2C27.748888%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 23:02:23 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.344907%2C120.239609%2C27.546897%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:02:32 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.519944%2C120.414315&output=json
+Mon, 27 Jun 2016 23:02:32 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:03:44 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.461334%2C120.302302&output=json
+Mon, 27 Jun 2016 23:03:44 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:03:45 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.344907%2C120.239609%2C27.546897%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 23:03:52 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=27.142916%2C120.239609%2C27.344907%2C120.485313&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:03:59 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.190895%2C120.417117&output=json
+Mon, 27 Jun 2016 23:03:59 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:04:10 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=27.166153%2C120.426998&output=json
+Mon, 27 Jun 2016 23:04:10 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:04:18 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.778750%2C119.993904%2C30.980741%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:04:37 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.888302%2C120.093809&output=json
+Mon, 27 Jun 2016 23:04:37 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:04:51 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.841878%2C120.098596&output=json
+Mon, 27 Jun 2016 23:04:51 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:05:00 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.887839%2C120.093152&output=json
+Mon, 27 Jun 2016 23:05:00 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:05:17 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.919990%2C120.109687&output=json
+Mon, 27 Jun 2016 23:05:17 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:05:22 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.919990%2C120.109687&output=json
+Mon, 27 Jun 2016 23:05:22 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:05:44 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?bounds=30.778750%2C119.993904%2C30.980741%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 23:05:44 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:05:45 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.778750%2C119.993904%2C30.980741%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 23:06:02 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.846829%2C120.166658&output=json
+Mon, 27 Jun 2016 23:06:02 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:06:31 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.891589%2C120.129473&output=json
+Mon, 27 Jun 2016 23:06:31 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:06:46 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.880942%2C120.099980&output=json
+Mon, 27 Jun 2016 23:06:46 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:07:17 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.778750%2C119.993904%2C30.980741%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=2&output=json
+Mon, 27 Jun 2016 23:07:30 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.891619%2C120.135352&output=json
+Mon, 27 Jun 2016 23:07:30 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:07:36 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.865039%2C120.102707&output=json
+Mon, 27 Jun 2016 23:07:36 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:07:46 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.884708%2C120.092802&output=json
+Mon, 27 Jun 2016 23:07:46 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:08:00 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.845993%2C120.166376&output=json
+Mon, 27 Jun 2016 23:08:00 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:08:06 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.576759%2C119.993904%2C30.778750%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:08:30 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.686043%2C120.111578&output=json
+Mon, 27 Jun 2016 23:08:30 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:08:50 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.374768%2C119.993904%2C30.576759%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:08:55 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.484644%2C120.218474&output=json
+Mon, 27 Jun 2016 23:08:55 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:09:07 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.449401%2C120.091086&output=json
+Mon, 27 Jun 2016 23:09:07 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:09:14 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.378610%2C120.063232&output=json
+Mon, 27 Jun 2016 23:09:14 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:09:34 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.416576%2C120.022177&output=json
+Mon, 27 Jun 2016 23:09:34 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:09:40 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.388504%2C120.186409&output=json
+Mon, 27 Jun 2016 23:09:40 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:10:02 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.409003%2C120.153401&output=json
+Mon, 27 Jun 2016 23:10:02 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:10:20 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=0&output=json
+Mon, 27 Jun 2016 23:10:26 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.298380%2C120.175604&output=json
+Mon, 27 Jun 2016 23:10:26 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:10:31 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.298380%2C120.175604&output=json
+Mon, 27 Jun 2016 23:10:31 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:10:37 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.310794%2C120.155451&output=json
+Mon, 27 Jun 2016 23:10:37 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:10:48 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.288206%2C120.148770&output=json
+Mon, 27 Jun 2016 23:10:48 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:10:59 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.294933%2C120.236992&output=json
+Mon, 27 Jun 2016 23:10:59 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:11:12 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.329939%2C120.227078&output=json
+Mon, 27 Jun 2016 23:11:12 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:11:33 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_num=1&output=json
+Mon, 27 Jun 2016 23:11:39 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&location=30.279242%2C120.211486&output=json
+Mon, 27 Jun 2016 23:11:39 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:12:33 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:12:33 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:12:34 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:12:34 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:12:34 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:12:34 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:12:34 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:12:34 PTask.py[line:360] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:12:40 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:12:40 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:12:43 PTask.py[line:384] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:12:43 PTask.py[line:385] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:12:45 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:12:58 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.298380%2C120.175604&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:12:58 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:13:18 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.329939%2C120.227078&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:13:18 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:13:48 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=1&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:14:22 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.318206%2C120.171881&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:14:22 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:14:50 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=2&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:15:53 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=3&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:16:04 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.300495%2C120.141643&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:16:04 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:16:39 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.347893%2C120.192641&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:16:39 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:16:52 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.338660%2C120.158102&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:16:52 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:16:58 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.329895%2C120.148033&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:16:58 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:17:05 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=4&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&page_size=20
+Mon, 27 Jun 2016 23:17:26 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.324821%2C120.121674&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:17:26 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:17:36 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=30.335390%2C120.122751&output=json&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:17:36 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:17:55 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:17:55 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:17:56 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:17:56 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:17:56 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:17:56 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:17:56 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:17:56 PTask.py[line:360] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:18:11 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&page_num=0&page_size=20
+Mon, 27 Jun 2016 23:18:11 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:18:11 PTask.py[line:384] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&page_num=0&page_size=20
+Mon, 27 Jun 2016 23:18:11 PTask.py[line:385] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:18:15 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&page_num=0&page_size=20
+Mon, 27 Jun 2016 23:18:20 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&location=30.341169%2C120.183571&output=json
+Mon, 27 Jun 2016 23:18:20 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:18:25 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&location=30.341169%2C120.183571&output=json
+Mon, 27 Jun 2016 23:18:25 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:18:43 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&location=30.292516%2C120.156913&output=json
+Mon, 27 Jun 2016 23:18:43 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:19:52 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:19:52 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:19:53 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:19:53 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:19:53 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:19:53 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:19:53 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:19:53 PTask.py[line:360] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:19:57 PTask.py[line:384] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:19:57 PTask.py[line:385] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:19:58 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:20:12 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=ODQrPGkcaobMY6Ryu9dxAXGPTVgXdtZL&output=json&location=30.288206%2C120.148770
+Mon, 27 Jun 2016 23:20:12 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:20:41 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:20:41 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:20:42 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:20:42 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:20:42 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:20:42 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:20:42 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:20:42 PTask.py[line:360] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:20:47 PTask.py[line:384] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?output=json&page_size=20&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:20:47 PTask.py[line:385] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:20:53 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/place/v2/search?output=json&page_size=20&page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:20:53 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:20:54 PTask.py[line:396] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_size=20&page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:21:31 MapDi.py[line:107] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?output=json&ak=voRyF7opZzGGETYert5D2PYk&location=30.294933%2C120.236992
+Mon, 27 Jun 2016 23:21:31 MapDi.py[line:108] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:22:31 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:22:31 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:22:32 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:22:32 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:22:32 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:22:32 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:22:32 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:23:57 PTask.py[line:201] INFO running http://apis.map.qq.com/ws/place/v1/search?page_index=1&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&boundary=region%28820000%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Mon, 27 Jun 2016 23:28:11 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:28:11 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:28:12 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:28:12 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:28:12 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:28:12 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:28:12 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:29:38 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:29:38 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:29:39 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:29:39 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:29:39 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:29:39 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:29:39 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:29:39 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:30:08 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?page_size=20&boundary=region%28820000%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1
+Mon, 27 Jun 2016 23:35:31 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:35:31 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:35:32 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:35:32 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:35:32 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:35:32 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:35:32 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:35:32 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:35:58 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=1&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&boundary=region%28820000%2C0%29
+Mon, 27 Jun 2016 23:36:45 MapDi.py[line:489] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&location=22.135600%2C113.565640
+Mon, 27 Jun 2016 23:36:45 MapDi.py[line:490] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:36:46 MapDi.py[line:489] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&location=22.188620%2C113.551490
+Mon, 27 Jun 2016 23:36:46 MapDi.py[line:490] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:36:47 MapDi.py[line:489] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&location=22.183770%2C113.555300
+Mon, 27 Jun 2016 23:36:47 MapDi.py[line:490] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:36:47 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:36:48 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=2&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&boundary=region%28820000%2C0%29
+Mon, 27 Jun 2016 23:36:48 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:36:49 PTask.py[line:192] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/place/v1/search?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=1&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&boundary=region%28810000%2C0%29
+Mon, 27 Jun 2016 23:36:49 PTask.py[line:193] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:36:51 PTask.py[line:192] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/place/v1/search?key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&page_index=1&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&boundary=region%28650000%2C0%29
+Mon, 27 Jun 2016 23:36:51 PTask.py[line:193] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:36:53 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&page_index=1&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&boundary=region%28659004%2C0%29
+Mon, 27 Jun 2016 23:36:53 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:36:54 PTask.py[line:192] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/place/v1/search?key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&page_index=1&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&boundary=region%28659003%2C0%29
+Mon, 27 Jun 2016 23:36:54 PTask.py[line:193] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:36:54 PTask.py[line:195] ERROR ◊•»° ß∞‹£¨key“—æ≠”√ÕÍ
+Mon, 27 Jun 2016 23:36:54 Runner.py[line:71] ERROR FAILED! 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:36:54 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:36:54 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:36:54 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:36:54 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:36:54 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:36:54 PTask.py[line:363] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:36:58 PTask.py[line:387] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&q=%E5%85%AC%E5%AE%89%E5%B1%80&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&page_size=20&page_num=0
+Mon, 27 Jun 2016 23:36:58 PTask.py[line:388] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:37:59 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:37:59 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:38:00 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659003%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=1&page_size=20
+Mon, 27 Jun 2016 23:38:02 MapDi.py[line:489] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&location=39.862740%2C79.063800
+Mon, 27 Jun 2016 23:38:02 MapDi.py[line:490] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:11 MapDi.py[line:107] WARNING erro while conn: http://apis.map.qq.com/ws/geocoder/v1/?key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&location=39.862740%2C79.063800
+Mon, 27 Jun 2016 23:38:11 MapDi.py[line:108] WARNING timed out
+Mon, 27 Jun 2016 23:38:11 MapDi.py[line:489] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&location=39.684930%2C78.855730
+Mon, 27 Jun 2016 23:38:11 MapDi.py[line:490] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:12 MapDi.py[line:489] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&location=40.028690%2C79.420790
+Mon, 27 Jun 2016 23:38:12 MapDi.py[line:490] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:12 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:13 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659002%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=1&page_size=20
+Mon, 27 Jun 2016 23:38:13 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:14 PTask.py[line:192] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659001%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=1&page_size=20
+Mon, 27 Jun 2016 23:38:14 PTask.py[line:193] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:15 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659001%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&page_index=1&page_size=20
+Mon, 27 Jun 2016 23:38:15 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:15 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&page_index=1&page_size=20
+Mon, 27 Jun 2016 23:38:15 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:16 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&page_index=2&page_size=20
+Mon, 27 Jun 2016 23:38:16 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:17 PTask.py[line:192] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&page_index=3&page_size=20
+Mon, 27 Jun 2016 23:38:17 PTask.py[line:193] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:18 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&page_index=3&page_size=20
+Mon, 27 Jun 2016 23:38:18 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:19 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&page_index=4&page_size=20
+Mon, 27 Jun 2016 23:38:19 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:19 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&page_index=5&page_size=20
+Mon, 27 Jun 2016 23:38:19 MapDi.py[line:492] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:38:20 PTask.py[line:192] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&page_index=1&page_size=20
+Mon, 27 Jun 2016 23:38:20 PTask.py[line:193] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:20 PTask.py[line:195] ERROR ◊•»° ß∞‹£¨key“—æ≠”√ÕÍ
+Mon, 27 Jun 2016 23:38:20 Runner.py[line:71] ERROR FAILED! 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:38:20 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:38:20 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:38:20 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:38:20 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:38:20 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:38:20 PTask.py[line:363] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:38:26 PTask.py[line:387] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_num=0&page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:38:26 PTask.py[line:388] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:38:27 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&page_num=0&page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:40:11 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:40:11 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:40:12 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:40:12 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:40:12 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:40:12 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:40:12 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:40:12 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:40:13 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_size=20&boundary=region%28654200%2C0%29&page_index=1
+Mon, 27 Jun 2016 23:40:14 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&location=46.522030%2C83.610220
+Mon, 27 Jun 2016 23:40:14 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:40:15 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI&location=44.683140%2C85.472010
+Mon, 27 Jun 2016 23:40:15 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:40:16 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN&location=46.743520%2C83.000780
+Mon, 27 Jun 2016 23:40:16 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:40:16 MapDi.py[line:495] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:41:47 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:41:47 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:41:48 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:41:48 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:41:48 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:41:48 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:41:48 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:41:48 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:41:49 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?page_size=20&boundary=region%28654200%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1
+Mon, 27 Jun 2016 23:41:50 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?location=46.742840%2C82.978760&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:41:50 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:41:52 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?location=46.522030%2C83.610220&key=JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI
+Mon, 27 Jun 2016 23:41:52 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:41:54 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?location=46.743520%2C83.000780&key=SRBBZ-LAMRX-UQU43-ZSNWH-B257J-WQFTN
+Mon, 27 Jun 2016 23:41:54 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:41:54 MapDi.py[line:495] ERROR ƒÊµÿ÷∑Ω‚Œˆ ß∞‹£¨key“—Ω¸”√ÕÍ
+Mon, 27 Jun 2016 23:42:43 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:42:43 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:42:44 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:42:44 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:42:44 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:42:44 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:42:44 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:42:44 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:42:45 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&page_size=20&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7&page_index=1
+Mon, 27 Jun 2016 23:42:49 MapDi.py[line:493] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?location=46.743520%2C83.000780&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:42:49 MapDi.py[line:494] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:43:24 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:43:24 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:43:25 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:43:25 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:43:25 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:43:25 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:43:25 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:43:25 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:43:26 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&boundary=region%28654200%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:43:40 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?location=44.553020%2C83.918520&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:43:40 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:44:05 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:44:05 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:44:06 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:44:06 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:44:06 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:44:06 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:44:06 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:44:06 PTask.py[line:169] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:44:07 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_index=1&boundary=region%28654200%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:46:51 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_index=2&boundary=region%28654200%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:47:15 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_index=3&boundary=region%28654200%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:47:18 MapDi.py[line:492] WARNING error ¥Àkey√ø√Î«Î«Û¡ø“—¥ÔµΩ…œœﬁ,http://apis.map.qq.com/ws/geocoder/v1/?location=46.156460%2C83.214960&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:47:18 MapDi.py[line:493] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:47:37 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&page_index=4&boundary=region%28654200%2C0%29&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:48:28 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:48:28 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:48:29 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:48:29 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:48:29 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:48:29 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:48:29 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:48:29 PTask.py[line:363] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:48:33 PTask.py[line:387] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Mon, 27 Jun 2016 23:48:33 PTask.py[line:388] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:48:37 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Mon, 27 Jun 2016 23:48:45 MapDi.py[line:109] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&output=json&location=30.341169%2C120.183571
+Mon, 27 Jun 2016 23:48:45 MapDi.py[line:110] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:49:17 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:49:17 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:49:18 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:49:18 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:49:18 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:49:18 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:49:18 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:49:18 PTask.py[line:363] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:49:19 PTask.py[line:387] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&output=json
+Mon, 27 Jun 2016 23:49:19 PTask.py[line:388] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:49:24 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&output=json
+Mon, 27 Jun 2016 23:49:33 MapDi.py[line:110] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&output=json&location=30.298380%2C120.175604
+Mon, 27 Jun 2016 23:49:33 MapDi.py[line:111] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:49:38 MapDi.py[line:110] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&output=json&location=30.298380%2C120.175604
+Mon, 27 Jun 2016 23:49:38 MapDi.py[line:111] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:49:43 MapDi.py[line:110] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&output=json&location=30.298380%2C120.175604
+Mon, 27 Jun 2016 23:49:43 MapDi.py[line:111] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:50:00 MapDi.py[line:110] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&output=json&location=30.286629%2C120.170235
+Mon, 27 Jun 2016 23:50:00 MapDi.py[line:111] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:50:45 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:50:45 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:50:46 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:50:46 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:50:46 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:50:46 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:50:46 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:50:46 PTask.py[line:363] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:50:48 PTask.py[line:387] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&page_size=20&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:50:48 PTask.py[line:388] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:50:49 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=0&page_size=20&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:50:56 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&page_num=1&page_size=20&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Mon, 27 Jun 2016 23:51:34 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:51:34 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:51:35 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:51:35 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:51:35 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 2 ∞Ÿ∂» 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/∞Ÿ∂»-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\res\∞Ÿ∂»-π´∞≤æ÷-100000-2016062714.txt
+Mon, 27 Jun 2016 23:51:35 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:51:35 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:51:35 PTask.py[line:363] INFO ’˝‘⁄¥”∂œµ„ª÷∏¥°£°£°£
+Mon, 27 Jun 2016 23:51:35 PTask.py[line:387] WARNING error ÃÏ≈‰∂Ó≥¨œﬁ£¨œﬁ÷∆∑√Œ ,http://api.map.baidu.com/place/v2/search?page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&ak=voRyF7opZzGGETYert5D2PYk&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0
+Mon, 27 Jun 2016 23:51:35 PTask.py[line:388] INFO ∏√key ß–ß£¨◊‘∂ØÃÊªªkey°£
+Mon, 27 Jun 2016 23:51:35 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0
+Mon, 27 Jun 2016 23:51:47 MapDi.py[line:108] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?output=json&location=30.329939%2C120.227078&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:51:47 MapDi.py[line:109] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:51:52 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=1
+Mon, 27 Jun 2016 23:52:05 MapDi.py[line:108] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?output=json&location=30.283552%2C120.161574&ak=voRyF7opZzGGETYert5D2PYk
+Mon, 27 Jun 2016 23:52:05 MapDi.py[line:109] WARNING <urlopen error timed out>
+Mon, 27 Jun 2016 23:52:11 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=2
+Mon, 27 Jun 2016 23:52:26 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=3
+Mon, 27 Jun 2016 23:52:48 PTask.py[line:399] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=30.273773%2C120.116756%2C30.374768%2C120.239609&output=json&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=4
+Mon, 27 Jun 2016 23:53:31 Runner.py[line:60] INFO aweak!
+Mon, 27 Jun 2016 23:53:31 Runner.py[line:31] INFO ’˝‘⁄∂¡»°»ŒŒÒ...
+Mon, 27 Jun 2016 23:53:32 Runner.py[line:39] INFO »ŒŒÒ∂¡»°≥…π¶£°
+Mon, 27 Jun 2016 23:53:32 Runner.py[line:62] INFO ø™ º÷¥––»ŒŒÒ....
+Mon, 27 Jun 2016 23:53:32 Runner.py[line:65] INFO ’˝‘⁄÷¥––£∫ 1 Ã⁄—∂ 0 100000 π´∞≤æ÷ 4 20160627 D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.boxs D:\workspace\py-space\poi-project\zing/../res/Ã⁄—∂-π´∞≤æ÷-100000-2016062723.txt
+Mon, 27 Jun 2016 23:53:32 Runner.py[line:43] INFO ø™ º∏¸–¬»ŒŒÒ◊¥Ã¨....
+Mon, 27 Jun 2016 23:53:32 Runner.py[line:48] INFO »ŒŒÒ∏¸–¬ÕÍ≥…....
+Mon, 27 Jun 2016 23:53:34 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28820000%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:53:42 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28820000%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=2&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:53:46 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659004%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:53:48 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659003%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:53:50 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659002%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:53:52 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28659001%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:00 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:05 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=2&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:13 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=3&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:18 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=4&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:23 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654300%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=5&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:30 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=1&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:35 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=2&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:40 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=3&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Mon, 27 Jun 2016 23:54:45 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=4&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7

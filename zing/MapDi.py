@@ -97,12 +97,13 @@ class BaseMap(object):
         '''
         re = 5
         res = None
-        sleep(self.sleep_time)
         while re:
+            sleep(self.sleep_time)
             re-=1
             try:
                 f = request.urlopen(url, timeout=5)
                 res = json.loads(f.read().decode('utf-8'))
+                break
             except Exception as e:
                 logging.warn("erro while conn: %s" %(url))
                 logging.warn(e)
@@ -346,7 +347,7 @@ class TencentMap(BaseMap):
         self.SEARCH_URL = 'http://apis.map.qq.com/ws/place/v1/search?'
         self.REGEO_URL = 'http://apis.map.qq.com/ws/geocoder/v1/?'
         self.size = 20
-        self.sleep_time = 0.3
+        self.sleep_time = 0.2
         
     def _conReUrl(self, location):
         '''
@@ -523,12 +524,14 @@ class BaiduMap(BaseMap):
                            'nEGChHmcRFtHuN1XzeNrPSqkUq239G4v',
                            'vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw',
                            'ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem',
-                           'U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo']
+                           'U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo',
+                           'ODQrPGkcaobMY6Ryu9dxAXGPTVgXdtZL']
         self.REGEO_KEY = ['voRyF7opZzGGETYert5D2PYk',
                           'nEGChHmcRFtHuN1XzeNrPSqkUq239G4v',
                           'vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw',
                           'ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem',
-                          'U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo']
+                          'U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo',
+                          'ODQrPGkcaobMY6Ryu9dxAXGPTVgXdtZL']
         self.SEARCH_URL = 'http://api.map.baidu.com/place/v2/search?'
         self.REGEO_URL = 'http://api.map.baidu.com/geocoder/v2/?'
         self.size = 20
