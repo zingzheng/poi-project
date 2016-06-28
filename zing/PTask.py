@@ -203,6 +203,8 @@ class SubTask(BaseTask):
                 else:
                     logging.info("running %s"%(url))
                     pois = mapdi.parser(res)
+                    if pois == False:
+                        return False
                     datas = []
                     for poi in pois:
                         datas.append(poi.toString())
@@ -321,6 +323,8 @@ class CutTask(BaseTask):
                     logging.info("running %s"%(url))
                     datas = []
                     pois = mapdi.parser(res)
+                    if pois == False:
+                        return False
                     for poi in pois:
                         print(poi.toString())
                         if self.check(poi.address):
@@ -399,6 +403,8 @@ class CutProTask(CutTask):
                     logging.info("running %s"%(url))
                     datas = []
                     pois = mapdi.parser(res)
+                    if pois == False:
+                        return False
                     for poi in pois:
                         print(poi.toString())
                         if self.check(poi.address):

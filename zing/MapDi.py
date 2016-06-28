@@ -293,14 +293,14 @@ class GaodeMap(BaseMap):
                         break
                     elif stat == -1:
                         logging.error("逆地址解析失败: %s,%s"%(msg,rURL))
-                        return pois
+                        return False
                     else:
                         self.REGEO_KEY.pop(0)
                         logging.warn("error %s,%s"%(msg,rURL))
                         logging.info("该key失效，自动替换key。")    
                 if not self.REGEO_KEY:
                     logging.error("逆地址解析失败，key超过限制")
-                    return pois
+                    return False
                 regeo = rRes['regeocode']
                 try:
                     poi.stree_num = regeo["streetNumber"]['street']
@@ -483,14 +483,14 @@ class TencentMap(BaseMap):
                         break
                     elif stat == -1:
                         logging.error("failed request: %s,%s"%(msg,rURL))
-                        return pois
+                        return False
                     else:
                         self.REGEO_KEY.pop(0)
                         logging.warn("error %s,%s"%(msg,rURL))
                         logging.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
                     logging.error("逆地址解析失败，key已近用完")
-                    return pois
+                    return False
                     
                 regeo = rRes['result']
                 poi.stree_num = regeo['address_component']['street_number']
@@ -636,14 +636,14 @@ class BaiduMap(BaseMap):
                         break
                     elif stat == -1:
                         logging.error("逆地址解析失败: %s,%s" % (msg,rURL))
-                        return pois
+                        return False
                     else:
                         self.REGEO_KEY.pop(0)
                         logging.warn("error %s,%s"%(msg,rURL))
                         logging.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
                     logging.error("逆地址解析失败，key用完")
-                    return pois
+                    return False
                 regeo = rRes['result']
                 poi.stree_num = regeo['addressComponent']['street_number']
                 poi.address = regeo['formatted_address']
