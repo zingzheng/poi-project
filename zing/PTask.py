@@ -35,7 +35,7 @@ class BaseTask(object):
         self.keyword = args[4]
         self.delta = args[5]
         self.nex = self.up_to_now(args[6])
-        fp = '-'.join([self.map_type, self.keyword, self.region, self.str_now()])
+        fp = '-'.join([self.core_type, self.map_type, self.keyword, self.region, self.str_now()])
         if len(args) == 7:
             self.recover = ''
             self.filePath = BASE_PATH + '/res/'+fp+'.txt'
@@ -75,7 +75,7 @@ class BaseTask(object):
                 f.write('\n')
         
     def str_now(self):
-        return datetime.datetime.now().strftime('%Y%m%d%H')
+        return datetime.datetime.now().strftime('%Y%m%d%H%M')
        
     def str_to_time(self, s):
         '''
@@ -211,8 +211,6 @@ class SubTask(BaseTask):
                         print(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        if self.recover and  os.path.exists(self.recover):
-            os.remove(self.recover)
         if os.path.exists(self.boxsPath):
             os.remove(self.boxsPath)
         self.recover, self.boxsPath, self.filePath = '', '', ''
@@ -332,8 +330,6 @@ class CutTask(BaseTask):
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
         
-        if self.recover and  os.path.exists(self.recover):
-            os.remove(self.recover)
         if os.path.exists(self.boxsPath):
             os.remove(self.boxsPath)
             
@@ -411,8 +407,6 @@ class CutProTask(CutTask):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        if self.recover and  os.path.exists(self.recover):
-            os.remove(self.recover)
         if os.path.exists(self.boxsPath):
             os.remove(self.boxsPath)
         self.recover, self.boxsPath, self.filePath = '', '', ''
