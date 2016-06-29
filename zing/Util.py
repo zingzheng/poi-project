@@ -82,7 +82,7 @@ def cut(bbox, region_polygon ,n):
         n:切分为n*n块
     return:
         [bbox]
-    '''
+    '''   
     l_lng,l_lat,r_lng,r_lat = bbox
     d_lng = (r_lng - l_lng)*1.0 / n
     d_lat = (r_lat - l_lat)*1.0 / n
@@ -93,6 +93,24 @@ def cut(bbox, region_polygon ,n):
             n_l_lat = l_lat + j * d_lat
             n_r_lng = n_l_lng + d_lng
             n_r_lat = n_l_lat + d_lat
+            
+            if (n_l_lat >= 18.15 and n_r_lat <= 27.2 and
+                n_l_lng >= 73.55 and n_r_lng <= 97) \
+                or (n_l_lat >= 18.15 and n_r_lat <= 39.3 and
+                    n_l_lng >= 124 and n_r_lng <= 135) \
+                or (n_l_lat >= 45.5 and n_r_lat <= 53.6 and
+                    n_l_lng >= 91.2 and n_r_lng <= 114.75):
+                continue
+            
+            elif (n_l_lat >= 23.5 and n_r_lat <= 41.5 and
+                n_l_lng >= 99.0 and n_r_lng <= 116.5) \
+                or (n_l_lat >= 30.5 and n_r_lat <= 42.6 and
+                    n_l_lng >= 80.5 and n_r_lng <= 97.5) \
+                or (n_l_lat >= 42.5 and n_r_lat <= 48.8 and
+                    n_l_lng >= 120 and n_r_lng <= 129.5):
+                bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                continue
+            
             if region_polygon == None:
                 bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
             else:
