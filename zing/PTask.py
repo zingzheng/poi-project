@@ -15,8 +15,8 @@ from shapely.geometry import Polygon,shape
 from zing.Util import logging,getProvinces
 from zing import MapDi
 
-BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
-
+BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/../res/'
+R_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
 
 
 
@@ -38,11 +38,14 @@ class BaseTask(object):
         fp = '-'.join([self.core_type, self.map_type, self.keyword, self.region, self.str_now()])
         if len(args) == 7:
             self.recover = ''
-            self.filePath = BASE_PATH + '/res/'+fp+'.txt'
+            self.filePath = fp+'.txt'
+        elif len(args) == 8:
+            self.recover = args[7]
+            self.filePath = fp+'.txt'
         else:
             self.recover = args[7]
             self.filePath = args[8]
-        self.boxsPath = BASE_PATH + '/res/'+fp+'.boxs'
+        self.boxsPath = fp+'.boxs'
         
     def readBoxs(self):
         '''
@@ -53,7 +56,7 @@ class BaseTask(object):
         if not self.recover:
             return boxs
         else:
-            with open(self.recover, 'r') as f:
+            with open(BASE_PATH+self.recover, 'r') as f:
                 for line in f:
                     li = line.split('\n')[0].split(' ')
                     if len(li) == 1:
@@ -66,7 +69,7 @@ class BaseTask(object):
         '''
         #将未完成的任务写入文件
         '''
-        with open(self.boxsPath, 'w') as f:
+        with open(BASE_PATH+self.boxsPath, 'w') as f:
             for box in boxs:
                 if type(box) == type('10000'):
                     f.write(box)
@@ -134,7 +137,7 @@ class BaseTask(object):
         '''
         #将结果一次性写入文件
         '''
-        with open(self.filePath,'a',encoding = 'utf-8') as f:
+        with open(BASE_PATH+self.filePath,'a',encoding = 'utf-8') as f:
             for data in datas:
                 f.write(data)
                 f.write('\n')
@@ -169,8 +172,8 @@ class SubTask(BaseTask):
             logging.info('正在从断点恢复。。。')
             regions = self.readBoxs()
             self.writeBoxs(regions)
-            if os.path.exists(self.recover):
-                os.remove(self.recover)
+            if self.recover and 'BASE' not in self.recover and os.path.exists(BASE_PATH+self.recover):
+                os.remove(BASE_PATH+self.recover)
         while regions:
             print(regions)
             self.writeBoxs(regions)
@@ -211,8 +214,8 @@ class SubTask(BaseTask):
                         print(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        if os.path.exists(self.boxsPath):
-            os.remove(self.boxsPath)
+        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
+            os.remove(BASE_PATH+self.boxsPath)
         self.recover, self.boxsPath, self.filePath = '', '', ''
         return True
 
@@ -241,15 +244,15 @@ class CutTask(BaseTask):
         #获取当前任务目标地区的多边形范围
         '''
         if self.region_type == 0:
-            sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm0.shp")
+            sf = shapefile.Reader(R_PATH + "/GADM/CHN_adm0.shp")
             shape = sf.shapes()[0]
         elif self.region_type == 1:
-            sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm1.shp")
+            sf = shapefile.Reader(R_PATH + "/GADM/CHN_adm1.shp")
             index = myUtil.regionIndex(self.province)
             shape = sf.shapes()[index]
         else:
-            sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm2.shp")
-            sf_properties = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm2.dbf")
+            sf = shapefile.Reader(R_PATH + "/GADM/CHN_adm2.shp")
+            sf_properties = shapefile.Reader(R_PATH + "/GADM/CHN_adm2.dbf")
             shapes = sf.shapes()
             records = sf_properties.records()
             for i in range(len(records)):
@@ -279,14 +282,15 @@ class CutTask(BaseTask):
         '''
         if not self.recover:
             logging.info('正在切割网格。。。')
-            self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), self.grid[self.region_type])
+            if self.region_type == 0:
+                isall = True
+            self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), self.grid[self.region_type], isall)
         else:
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
             self.writeBoxs(self.bboxs)
-            if os.path.exists(self.recover):
-                os.remove(self.recover)
-            
+            if self.recover and 'BASE' not in self.recover and  os.path.exists(BASE_PATH+self.recover):
+                os.remove(BASE_PATH + self.recover)
         mapdi = MapDi.map_fac(self.map_type)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
@@ -330,7 +334,7 @@ class CutTask(BaseTask):
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
         
-        if os.path.exists(self.boxsPath):
+        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
             os.remove(self.boxsPath)
             
         self.recover, self.boxsPath, self.filePath = '', '', ''
@@ -354,7 +358,7 @@ class CutProTask(CutTask):
             logging.info('正在切割网格。。。')
             #对每个省份切分网格
             for r in getProvinces():
-                sf = shapefile.Reader(BASE_PATH + "/GADM/CHN_adm1.shp")
+                sf = shapefile.Reader(R_PATH + "/GADM/CHN_adm1.shp")
                 index = myUtil.regionIndex(r)
                 shape = sf.shapes()[index]
                 bbox = shape.bbox
@@ -363,8 +367,8 @@ class CutProTask(CutTask):
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
             self.writeBoxs(self.bboxs)
-            if os.path.exists(self.recover):
-                os.remove(self.recover)
+            if self.recover and 'BASE' not in self.recover and os.path.exists(BASE_PATH+self.recover):
+                os.remove(BASE_PATH+self.recover)
         mapdi = MapDi.map_fac(self.map_type)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
@@ -407,8 +411,8 @@ class CutProTask(CutTask):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        if os.path.exists(self.boxsPath):
-            os.remove(self.boxsPath)
+        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
+            os.remove(BASE_PATH+self.boxsPath)
         self.recover, self.boxsPath, self.filePath = '', '', ''
         return True
     

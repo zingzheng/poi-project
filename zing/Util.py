@@ -39,6 +39,15 @@ logging.getLogger('').addHandler(console)
 # 
 # 
 # 
+# def showRegion(points):
+#     '''
+#     #同时展示多边形和矩形，方便比较
+#     ''' 
+#     y = [p[0] for p in points]
+#     x = [p[1] for p in points]
+#     plt.plot(y,x, 'x')
+#     plt.show()
+# 
 # def showBboxs(bboxs):
 #     '''
 #     #将由多个矩形可视化，暂时只能以两点表示矩形
@@ -53,8 +62,8 @@ logging.getLogger('').addHandler(console)
 #         by.append(bbox[2])
 #     plt.plot(by,bx, 'o')
 #     plt.show()
-#     
-#   
+# #     
+# #   
 # def showUp(points,bboxs):
 #     '''
 #     #同时展示多边形和矩形，方便比较
@@ -73,7 +82,7 @@ logging.getLogger('').addHandler(console)
 
     
 
-def cut(bbox, region_polygon ,n):
+def cut(bbox, region_polygon ,n, isall = False):
     '''
     #网格切分
     para：
@@ -94,29 +103,37 @@ def cut(bbox, region_polygon ,n):
             n_r_lng = n_l_lng + d_lng
             n_r_lat = n_l_lat + d_lat
             
-            if (n_l_lat >= 18.15 and n_r_lat <= 27.2 and
-                n_l_lng >= 73.55 and n_r_lng <= 97) \
-                or (n_l_lat >= 18.15 and n_r_lat <= 39.3 and
-                    n_l_lng >= 124 and n_r_lng <= 135) \
-                or (n_l_lat >= 45.5 and n_r_lat <= 53.6 and
-                    n_l_lng >= 91.2 and n_r_lng <= 114.75):
-                continue
-            
-            elif (n_l_lat >= 23.5 and n_r_lat <= 41.5 and
-                n_l_lng >= 99.0 and n_r_lng <= 116.5) \
-                or (n_l_lat >= 30.5 and n_r_lat <= 42.6 and
-                    n_l_lng >= 80.5 and n_r_lng <= 97.5) \
-                or (n_l_lat >= 42.5 and n_r_lat <= 48.8 and
-                    n_l_lng >= 120 and n_r_lng <= 129.5):
-                bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
-                continue
-            
             if region_polygon == None:
                 bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
             else:
+                #若全国抓取，需要补缺口
+                if isall: 
+                    if n_l_lat>=22 and n_l_lng>=112.1 and n_r_lat<34.5 and n_r_lng<114.5:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    if n_l_lat>=22.7 and n_l_lng>=114.5 and n_r_lat<34.5 and n_r_lng<116.4:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    if n_l_lat>=23.4 and n_l_lng>=116.4 and n_r_lat<34.5 and n_r_lng<117.6:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    if n_l_lat>=24.5 and n_l_lng>=117.6 and n_r_lat<34.5 and n_r_lng<118.8:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    if n_l_lat>=25.2 and n_l_lng>=118.8 and n_r_lat<34.5 and n_r_lng<120:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    if n_l_lat>=28 and n_l_lng>=120 and n_r_lat<32.7 and n_r_lng<121.9:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    if n_l_lat>=27.3 and n_l_lng>=120.1 and n_r_lat<33.6 and n_r_lng<121.3:
+                        bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+                        continue
+                    
                 rect = box(n_l_lng,n_l_lat,n_r_lng,n_r_lat)
                 if rect.intersects(region_polygon):
                     bboxs.append([n_l_lng,n_l_lat,n_r_lng,n_r_lat])
+    #showBboxs(bboxs)
     return bboxs
 
 

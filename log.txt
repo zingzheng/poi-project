@@ -2961,3 +2961,381 @@ Mon, 27 Jun 2016 23:54:30 PTask.py[line:204] INFO running http://apis.map.qq.com
 Mon, 27 Jun 2016 23:54:35 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=2&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
 Mon, 27 Jun 2016 23:54:40 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=3&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
 Mon, 27 Jun 2016 23:54:45 PTask.py[line:204] INFO running http://apis.map.qq.com/ws/place/v1/search?boundary=region%28654200%2C0%29&keyword=%E5%85%AC%E5%AE%89%E5%B1%80&page_index=4&page_size=20&key=56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7
+Wed, 29 Jun 2016 22:05:48 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:05:48 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:05:49 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:05:49 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:05:49 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292205.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292205.txt
+Wed, 29 Jun 2016 22:05:49 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:05:49 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:05:49 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 22:06:29 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:06:29 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:06:29 Runner.py[line:77] ERROR error in runner: [Errno 2] No such file or directory: 'D:\\workspace\\py-space\\poi-project/task.txt'
+Wed, 29 Jun 2016 22:06:57 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:06:57 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:06:58 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:06:58 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:06:58 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292206.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292206.txt
+Wed, 29 Jun 2016 22:06:58 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:06:58 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:06:58 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 22:10:36 PTask.py[line:309] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/place/v2/search?page_num=0&ak=voRyF7opZzGGETYert5D2PYk&page_size=20&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json
+Wed, 29 Jun 2016 22:10:36 PTask.py[line:310] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:36 PTask.py[line:321] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&page_size=20&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json
+Wed, 29 Jun 2016 22:10:36 MapDi.py[line:658] WARNING error while parse data
+Wed, 29 Jun 2016 22:10:36 MapDi.py[line:659] WARNING 'location'
+Wed, 29 Jun 2016 22:10:36 PTask.py[line:321] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&page_size=20&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=ODQrPGkcaobMY6Ryu9dxAXGPTVgXdtZL&output=json
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:10:37 MapDi.py[line:645] ERROR 逆地址解析失败，key用完
+Wed, 29 Jun 2016 22:10:37 Runner.py[line:71] ERROR FAILED! 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292206.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292206.txt
+Wed, 29 Jun 2016 22:10:37 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:10:37 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:10:37 Runner.py[line:73] INFO 任务执行结束！
+Wed, 29 Jun 2016 22:10:37 Runner.py[line:74] INFO sleeping!
+Wed, 29 Jun 2016 22:13:24 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:13:24 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:13:43 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:13:43 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:13:44 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:13:44 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:13:44 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292213.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292213.txt
+Wed, 29 Jun 2016 22:13:44 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:13:44 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:13:44 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 22:27:07 PTask.py[line:309] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&output=json&page_size=20&page_num=0&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926
+Wed, 29 Jun 2016 22:27:07 PTask.py[line:310] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:27:07 PTask.py[line:321] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json&page_size=20&page_num=0&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:658] WARNING error while parse data
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:659] WARNING 'location'
+Wed, 29 Jun 2016 22:27:07 PTask.py[line:321] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json&page_size=20&page_num=0&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?output=json&ak=voRyF7opZzGGETYert5D2PYk&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?output=json&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?output=json&ak=vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?output=json&ak=ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:27:07 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:27:08 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?output=json&ak=U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:27:08 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:27:25 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:27:25 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:27:26 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:27:26 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:27:26 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292227.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292213.txt
+Wed, 29 Jun 2016 22:27:26 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:27:26 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:27:26 PTask.py[line:284] INFO 正在从断点恢复。。。
+Wed, 29 Jun 2016 22:29:40 PTask.py[line:309] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/place/v2/search?bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Wed, 29 Jun 2016 22:29:40 PTask.py[line:310] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:29:40 PTask.py[line:321] INFO running http://api.map.baidu.com/place/v2/search?bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json
+Wed, 29 Jun 2016 22:38:54 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:38:54 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:38:55 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:38:55 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:38:55 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292238.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292238.txt
+Wed, 29 Jun 2016 22:38:55 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:38:55 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:38:55 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 22:46:40 PTask.py[line:311] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/place/v2/search?bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Wed, 29 Jun 2016 22:46:40 PTask.py[line:312] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:40 PTask.py[line:323] INFO running http://api.map.baidu.com/place/v2/search?bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:658] WARNING error while parse data
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:659] WARNING 'location'
+Wed, 29 Jun 2016 22:46:40 PTask.py[line:323] INFO running http://api.map.baidu.com/place/v2/search?bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&page_num=0&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?ak=voRyF7opZzGGETYert5D2PYk&output=json&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?ak=vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw&output=json&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?ak=ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem&output=json&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:46:40 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:44 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?ak=U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo&output=json&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:46:44 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:47 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?ak=ODQrPGkcaobMY6Ryu9dxAXGPTVgXdtZL&output=json&location=48.177453%2C134.663036
+Wed, 29 Jun 2016 22:46:47 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:46:47 MapDi.py[line:645] ERROR 逆地址解析失败，key用完
+Wed, 29 Jun 2016 22:46:47 Runner.py[line:71] ERROR FAILED! 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292238.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292238.txt
+Wed, 29 Jun 2016 22:46:47 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:46:47 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:46:47 Runner.py[line:73] INFO 任务执行结束！
+Wed, 29 Jun 2016 22:46:47 Runner.py[line:74] INFO sleeping!
+Wed, 29 Jun 2016 22:47:52 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:47:52 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:47:53 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:47:53 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:47:53 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292247.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292247.txt
+Wed, 29 Jun 2016 22:47:53 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:47:53 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:47:53 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 22:55:25 PTask.py[line:311] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&output=json&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0
+Wed, 29 Jun 2016 22:55:25 PTask.py[line:312] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:25 PTask.py[line:323] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&page_size=20&output=json&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0
+Wed, 29 Jun 2016 22:55:25 MapDi.py[line:658] WARNING error while parse data
+Wed, 29 Jun 2016 22:55:25 MapDi.py[line:659] WARNING 'location'
+Wed, 29 Jun 2016 22:55:26 PTask.py[line:323] INFO running http://api.map.baidu.com/place/v2/search?ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&page_size=20&output=json&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0
+Wed, 29 Jun 2016 22:55:26 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Wed, 29 Jun 2016 22:55:26 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:26 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=nEGChHmcRFtHuN1XzeNrPSqkUq239G4v&output=json
+Wed, 29 Jun 2016 22:55:26 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=vFmjvubCh09v6nOs7sOVkbsV5LGeWvzw&output=json
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=ThiTRyaQHsKYZBuWBN1O7Hqz2VG8BYem&output=json
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=U5QSU99Gpf7xNTOwUd82MGwg6ffDjgUo&output=json
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:642] WARNING error 天配额超限，限制访问,http://api.map.baidu.com/geocoder/v2/?location=48.177453%2C134.663036&ak=ODQrPGkcaobMY6Ryu9dxAXGPTVgXdtZL&output=json
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:643] INFO 该key失效，自动替换key。
+Wed, 29 Jun 2016 22:55:27 MapDi.py[line:645] ERROR 逆地址解析失败，key用完
+Wed, 29 Jun 2016 22:55:27 Runner.py[line:71] ERROR FAILED! 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292247.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292247.txt
+Wed, 29 Jun 2016 22:55:27 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:55:27 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:55:27 Runner.py[line:73] INFO 任务执行结束！
+Wed, 29 Jun 2016 22:55:27 Runner.py[line:74] INFO sleeping!
+Wed, 29 Jun 2016 22:56:00 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 22:56:00 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 22:56:01 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 22:56:01 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 22:56:01 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292256.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292256.txt
+Wed, 29 Jun 2016 22:56:01 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 22:56:01 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 22:56:01 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:22:20 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:22:20 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:22:21 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:22:21 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:22:21 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292322.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292322.txt
+Wed, 29 Jun 2016 23:22:21 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:22:21 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:22:21 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:22:23 Runner.py[line:77] ERROR error in runner: 'Polygon' object is not iterable
+Wed, 29 Jun 2016 23:22:23 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:22:23 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292324.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292322.txt
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:24:34 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:24:34 PTask.py[line:286] INFO 正在从断点恢复。。。
+Wed, 29 Jun 2016 23:24:35 Runner.py[line:77] ERROR error in runner: [Errno 2] No such file or directory: 'D:\\workspace\\py-space\\poi-project\\zing/../res/0-百度-公安局-100000-201606292322.boxs'
+Wed, 29 Jun 2016 23:24:35 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:24:35 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:24:50 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:24:50 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:24:51 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:24:51 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:24:51 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292324.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292324.txt
+Wed, 29 Jun 2016 23:24:51 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:24:51 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:24:51 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:24:53 Runner.py[line:77] ERROR error in runner: 'Polygon' object is not iterable
+Wed, 29 Jun 2016 23:24:53 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:24:53 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:25:32 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:25:32 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:25:33 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:25:33 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:25:33 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292325.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292325.txt
+Wed, 29 Jun 2016 23:25:33 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:25:33 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:25:33 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:25:34 Runner.py[line:77] ERROR error in runner: 'Polygon' object has no attribute 'points'
+Wed, 29 Jun 2016 23:25:34 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:25:34 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:26:54 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:26:54 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292326.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292325.txt
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:26:55 PTask.py[line:287] INFO 正在从断点恢复。。。
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:77] ERROR error in runner: [Errno 2] No such file or directory: 'D:\\workspace\\py-space\\poi-project\\zing/../res/0-百度-公安局-100000-201606292325.boxs'
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:26:55 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:27:22 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:27:22 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:27:23 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:27:23 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:27:23 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292327.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292327.txt
+Wed, 29 Jun 2016 23:27:23 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:28:15 Runner.py[line:77] ERROR error in runner: 'Polygon' object has no attribute 'points'
+Wed, 29 Jun 2016 23:28:15 Runner.py[line:43] INFO 开始更新任务状态....
+Wed, 29 Jun 2016 23:28:15 Runner.py[line:48] INFO 任务更新完成....
+Wed, 29 Jun 2016 23:35:32 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:35:32 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:35:33 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:35:33 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:35:33 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292335.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292335.txt
+Wed, 29 Jun 2016 23:35:33 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:49:46 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:49:46 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:49:47 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:49:47 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:49:47 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292349.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292349.txt
+Wed, 29 Jun 2016 23:49:47 PTask.py[line:281] INFO 正在切割网格。。。
+Wed, 29 Jun 2016 23:50:08 Runner.py[line:60] INFO aweak!
+Wed, 29 Jun 2016 23:50:08 Runner.py[line:31] INFO 正在读取任务...
+Wed, 29 Jun 2016 23:50:09 Runner.py[line:39] INFO 任务读取成功！
+Wed, 29 Jun 2016 23:50:09 Runner.py[line:62] INFO 开始执行任务....
+Wed, 29 Jun 2016 23:50:09 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160629 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292350.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606292350.txt
+Wed, 29 Jun 2016 23:50:09 PTask.py[line:281] INFO 正在切割网格。。。
+Thu, 30 Jun 2016 00:02:22 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926
+Thu, 30 Jun 2016 00:02:22 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 00:02:22 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 00:02:22 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926
+Thu, 30 Jun 2016 00:02:34 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 00:02:34 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 00:02:35 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 00:02:35 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 00:02:35 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606300002.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606300002.txt
+Thu, 30 Jun 2016 00:02:35 PTask.py[line:281] INFO 正在切割网格。。。
+Thu, 30 Jun 2016 00:22:11 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&output=json
+Thu, 30 Jun 2016 00:22:11 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 00:22:11 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 00:27:58 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 00:27:58 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 00:27:59 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 00:27:59 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 00:27:59 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606300027.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606300027.txt
+Thu, 30 Jun 2016 00:27:59 PTask.py[line:281] INFO 正在切割网格。。。
+Thu, 30 Jun 2016 00:36:52 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Thu, 30 Jun 2016 00:36:52 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 00:36:52 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 00:36:52 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Thu, 30 Jun 2016 00:36:53 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.542595%2C134.161764%2C47.896611%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Thu, 30 Jun 2016 00:36:54 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.896611%2C133.549601%2C48.250627%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Thu, 30 Jun 2016 00:36:55 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.542595%2C133.549601%2C47.896611%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Thu, 30 Jun 2016 00:36:55 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?output=json&page_num=0&page_size=20&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.188580%2C133.549601%2C47.542595%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80
+Thu, 30 Jun 2016 00:39:13 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 00:39:13 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 00:39:14 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 00:39:14 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 00:39:14 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606300039.boxs D:\workspace\py-space\poi-project\zing/../res/0-百度-公安局-100000-201606300039.txt
+Thu, 30 Jun 2016 00:39:14 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 00:39:14 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 00:39:14 PTask.py[line:281] INFO 正在切割网格。。。
+Thu, 30 Jun 2016 00:46:00 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:00 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 00:46:00 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 00:46:00 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:03 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=47.542595%2C134.161764%2C47.896611%2C134.773926&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:04 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=47.896611%2C133.549601%2C48.250627%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:10 MapDi.py[line:108] WARNING erro while conn: http://api.map.baidu.com/geocoder/v2/?location=48.006597%2C134.147725&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:10 MapDi.py[line:109] WARNING <urlopen error timed out>
+Thu, 30 Jun 2016 00:46:10 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=47.542595%2C133.549601%2C47.896611%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:15 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=47.188580%2C133.549601%2C47.542595%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 00:46:16 PTask.py[line:322] INFO running http://api.map.baidu.com/place/v2/search?page_size=20&bounds=46.834564%2C133.549601%2C47.188580%2C134.161764&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json
+Thu, 30 Jun 2016 01:05:19 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:05:19 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:05:19 Runner.py[line:77] ERROR error in runner: Unable to open D:\workspace\py-space\poi-project\zing/../res//GADM/CHN_adm0.shp
+Thu, 30 Jun 2016 01:08:10 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:08:10 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:08:11 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 01:08:11 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 01:08:11 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 0-百度-公安局-100000-201606300108.boxs 0-百度-公安局-100000-201606300108.txt
+Thu, 30 Jun 2016 01:08:11 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:08:11 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:08:11 PTask.py[line:289] INFO 正在从断点恢复。。。
+Thu, 30 Jun 2016 01:08:11 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=46.834564%2C133.549601%2C47.188580%2C134.161764
+Thu, 30 Jun 2016 01:08:18 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=46.480549%2C133.549601%2C46.834564%2C134.161764
+Thu, 30 Jun 2016 01:08:22 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=45.772518%2C133.549601%2C46.126533%2C134.161764
+Thu, 30 Jun 2016 01:08:22 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 01:08:22 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 01:08:23 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=47.896611%2C132.937439%2C48.250627%2C133.549601
+Thu, 30 Jun 2016 01:08:23 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=47.542595%2C132.937439%2C47.896611%2C133.549601
+Thu, 30 Jun 2016 01:08:30 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=47.188580%2C132.937439%2C47.542595%2C133.549601
+Thu, 30 Jun 2016 01:08:33 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=46.834564%2C132.937439%2C47.188580%2C133.549601
+Thu, 30 Jun 2016 01:08:34 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=46.480549%2C132.937439%2C46.834564%2C133.549601
+Thu, 30 Jun 2016 01:08:35 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=46.126533%2C132.937439%2C46.480549%2C133.549601
+Thu, 30 Jun 2016 01:08:35 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=45.772518%2C132.937439%2C46.126533%2C133.549601
+Thu, 30 Jun 2016 01:08:43 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=45.418502%2C132.937439%2C45.772518%2C133.549601
+Thu, 30 Jun 2016 01:08:44 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=47.896611%2C132.325277%2C48.250627%2C132.937439
+Thu, 30 Jun 2016 01:08:44 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 01:08:44 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 01:08:48 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?ak=voRyF7opZzGGETYert5D2PYk&page_size=20&page_num=0&q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&bounds=47.542595%2C132.325277%2C47.896611%2C132.937439
+Thu, 30 Jun 2016 01:09:22 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:09:22 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:09:23 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 01:09:23 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 01:09:23 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 0-百度-公安局-100000-201606300109.boxs 0-百度-公安局-100000-201606300108.txt
+Thu, 30 Jun 2016 01:09:23 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:09:23 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:09:23 PTask.py[line:289] INFO 正在从断点恢复。。。
+Thu, 30 Jun 2016 01:09:23 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.542595%2C132.325277%2C47.896611%2C132.937439&output=json&page_num=0&page_size=20
+Thu, 30 Jun 2016 01:09:25 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.188580%2C132.325277%2C47.542595%2C132.937439&output=json&page_num=0&page_size=20
+Thu, 30 Jun 2016 01:10:10 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:10:10 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:10:11 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 01:10:11 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 01:10:11 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 0-百度-公安局-100000-201606300110.boxs 0-百度-公安局-100000-201606300108.txt
+Thu, 30 Jun 2016 01:10:11 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:10:11 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:10:11 PTask.py[line:289] INFO 正在从断点恢复。。。
+Thu, 30 Jun 2016 01:10:12 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?bounds=47.188580%2C132.325277%2C47.542595%2C132.937439&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Thu, 30 Jun 2016 01:10:26 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?bounds=46.834564%2C132.325277%2C47.188580%2C132.937439&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Thu, 30 Jun 2016 01:10:30 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?bounds=46.126533%2C132.325277%2C46.480549%2C132.937439&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Thu, 30 Jun 2016 01:10:31 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?bounds=45.772518%2C132.325277%2C46.126533%2C132.937439&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Thu, 30 Jun 2016 01:10:31 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?bounds=45.418502%2C132.325277%2C45.772518%2C132.937439&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Thu, 30 Jun 2016 01:10:35 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?bounds=45.064487%2C132.325277%2C45.418502%2C132.937439&page_num=0&ak=voRyF7opZzGGETYert5D2PYk&output=json&q=%E5%85%AC%E5%AE%89%E5%B1%80&page_size=20
+Thu, 30 Jun 2016 01:11:33 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:11:33 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:11:33 Runner.py[line:77] ERROR error in runner: list index out of range
+Thu, 30 Jun 2016 01:12:14 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:12:14 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:12:15 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 01:12:15 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 01:12:15 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 0-百度-公安局-100000-201606300112.boxs 0-百度-公安局-100000-201606300112.txt
+Thu, 30 Jun 2016 01:12:15 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:12:15 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:12:15 PTask.py[line:284] INFO 正在切割网格。。。
+Thu, 30 Jun 2016 01:18:33 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&bounds=48.250627%2C134.161764%2C48.604642%2C134.773926&page_size=20
+Thu, 30 Jun 2016 01:18:33 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 01:18:33 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 01:18:34 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&bounds=47.896611%2C134.161764%2C48.250627%2C134.773926&page_size=20
+Thu, 30 Jun 2016 01:18:37 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&bounds=47.542595%2C134.161764%2C47.896611%2C134.773926&page_size=20
+Thu, 30 Jun 2016 01:18:38 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&bounds=47.896611%2C133.549601%2C48.250627%2C134.161764&page_size=20
+Thu, 30 Jun 2016 01:18:39 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?q=%E5%85%AC%E5%AE%89%E5%B1%80&output=json&ak=voRyF7opZzGGETYert5D2PYk&page_num=0&bounds=47.542595%2C133.549601%2C47.896611%2C134.161764&page_size=20
+Thu, 30 Jun 2016 01:22:36 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:22:36 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 0-百度-公安局-100000-201606300122.boxs 0-百度-公安局-100000-201606300122.txt
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:22:37 PTask.py[line:289] INFO 正在从断点恢复。。。
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:77] ERROR error in runner: [Errno 2] No such file or directory: 'D:\\workspace\\py-space\\poi-project\\zing/../res/BASE-100.box'
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:22:37 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:23:16 Runner.py[line:60] INFO aweak!
+Thu, 30 Jun 2016 01:23:16 Runner.py[line:31] INFO 正在读取任务...
+Thu, 30 Jun 2016 01:23:17 Runner.py[line:39] INFO 任务读取成功！
+Thu, 30 Jun 2016 01:23:17 Runner.py[line:62] INFO 开始执行任务....
+Thu, 30 Jun 2016 01:23:17 Runner.py[line:65] INFO 正在执行： 0 百度 0 100000 公安局 4 20160630 0-百度-公安局-100000-201606300123.boxs 0-百度-公安局-100000-201606300123.txt
+Thu, 30 Jun 2016 01:23:17 Runner.py[line:43] INFO 开始更新任务状态....
+Thu, 30 Jun 2016 01:23:17 Runner.py[line:48] INFO 任务更新完成....
+Thu, 30 Jun 2016 01:23:17 PTask.py[line:289] INFO 正在从断点恢复。。。
+Thu, 30 Jun 2016 01:23:17 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.542595%2C133.549601%2C47.896611%2C134.161764&output=json
+Thu, 30 Jun 2016 01:23:18 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.188580%2C133.549601%2C47.542595%2C134.161764&output=json
+Thu, 30 Jun 2016 01:23:19 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=46.834564%2C133.549601%2C47.188580%2C134.161764&output=json
+Thu, 30 Jun 2016 01:23:19 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=46.480549%2C133.549601%2C46.834564%2C134.161764&output=json
+Thu, 30 Jun 2016 01:23:20 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=45.772518%2C133.549601%2C46.126533%2C134.161764&output=json
+Thu, 30 Jun 2016 01:23:20 MapDi.py[line:658] WARNING error while parse data
+Thu, 30 Jun 2016 01:23:20 MapDi.py[line:659] WARNING 'location'
+Thu, 30 Jun 2016 01:23:21 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.896611%2C132.937439%2C48.250627%2C133.549601&output=json
+Thu, 30 Jun 2016 01:23:21 PTask.py[line:325] INFO running http://api.map.baidu.com/place/v2/search?page_num=0&page_size=20&q=%E5%85%AC%E5%AE%89%E5%B1%80&ak=voRyF7opZzGGETYert5D2PYk&bounds=47.542595%2C132.937439%2C47.896611%2C133.549601&output=json
