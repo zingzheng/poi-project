@@ -35,17 +35,18 @@ class BaseTask(object):
         self.keyword = args[4]
         self.delta = args[5]
         self.nex = self.up_to_now(args[6])
-        fp = '-'.join([self.core_type, self.map_type, self.keyword, self.region, self.str_now()])
+        self.fp = '-'.join([self.core_type, self.map_type, self.keyword, self.region, self.str_now()])
         if len(args) == 7:
             self.recover = ''
-            self.filePath = fp+'.txt'
+            self.filePath = self.fp+'.txt'
         elif len(args) == 8:
             self.recover = args[7]
-            self.filePath = fp+'.txt'
+            self.filePath = self.fp+'.txt'
         else:
             self.recover = args[7]
             self.filePath = args[8]
-        self.boxsPath = fp+'.boxs'
+        #等任务执行时再分配boxsPath
+        self.boxsPath = ''
         
     def readBoxs(self):
         '''
@@ -69,6 +70,7 @@ class BaseTask(object):
         '''
         #将未完成的任务写入文件
         '''
+        self.boxsPath = self.fp+'.boxs'
         with open(BASE_PATH+self.boxsPath, 'w') as f:
             for box in boxs:
                 if type(box) == type('10000'):
@@ -126,6 +128,8 @@ class BaseTask(object):
     
     def toList(self):
         taskList =  [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
+        print('~~~~~~~~~~~~')
+        print(self.boxsPath)
         if self.boxsPath:
             taskList.extend([self.boxsPath,self.filePath])
         return taskList
