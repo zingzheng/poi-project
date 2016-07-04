@@ -102,7 +102,7 @@ class BaseMap(object):
             re-=1
             try:
                 f = request.urlopen(url, timeout=5)
-                res = json.loads(f.read().decode('utf-8').replace('\x08',''))
+                res = json.loads(f.read().decode('utf-8'),strict=False)
                 break
             except Exception as e:
                 logging.warn("erro while conn: %s" %(url))
@@ -590,6 +590,8 @@ class BaiduMap(BaseMap):
         count = int(res['total'])
         if count >= 400:
             count = -1
+        if count < 0:
+            return 0-count
         return count
     
     def getStatue(self, res):

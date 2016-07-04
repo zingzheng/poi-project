@@ -128,7 +128,6 @@ class BaseTask(object):
     
     def toList(self):
         taskList =  [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
-        print('~~~~~~~~~~~~')
         print(self.boxsPath)
         if self.boxsPath:
             taskList.extend([self.boxsPath,self.filePath])
