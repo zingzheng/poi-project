@@ -128,7 +128,6 @@ class BaseTask(object):
     
     def toList(self):
         taskList =  [self.core_type,self.map_type,self.region_type, self.region, self.keyword, self.delta, self.nex]
-        print(self.boxsPath)
         if self.boxsPath:
             taskList.extend([self.boxsPath,self.filePath])
         return taskList
@@ -142,7 +141,7 @@ class BaseTask(object):
         '''
         with open(BASE_PATH+self.filePath,'a',encoding = 'utf-8') as f:
             for data in datas:
-                f.write(data)
+                f.write(self.keyword + ',' + data)
                 f.write('\n')
     
     def run(self):

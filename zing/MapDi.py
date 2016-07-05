@@ -34,6 +34,8 @@ class POI(object):
     district='na'
     stree='na'
     tel = 'na'
+    poiType = ''
+    price = ''
     
     def toString(self):
         poistr = None
@@ -41,7 +43,8 @@ class POI(object):
             poistr = ','.join([str(s) for s in [
                     self.name, self.stree_num, self.lat, self.lng,
                     self.address, self.adcode, self.country,
-                    self.province, self.city, self.district, self.stree, self.tel]])
+                    self.province, self.city, self.district,
+                    self.stree, self.tel, self.poiType, self.price]])
         except Exception as e:
             logging.error("error in str poi")
             logging.error(e)
@@ -572,6 +575,7 @@ class BaiduMap(BaseMap):
             'q':'学校',
             'page_size':self.size,
             'page_num':'0',
+            'scope':2,
             'output':'json'
             }
         SEARCH_PARA['q'] = keyword
@@ -628,6 +632,11 @@ class BaiduMap(BaseMap):
                     poi.tel = data['telephone']
                 except:
                     poi.tel = ' '
+                try:
+                    poi.poiType = data['detail_info']['type']
+                    poi.price = data['detail_info']['price']
+                except:
+                    poi.poiType,poi.price='',''
                 poi.lat = float(data['location']['lat'])
                 poi.lng = float(data['location']['lng'])
                 while self.REGEO_KEY:
