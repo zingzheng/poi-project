@@ -12,6 +12,7 @@ from shapely.geometry import box
 from pypinyin import lazy_pinyin
 import os 
 import logging
+import math
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
 logging.basicConfig(level=logging.DEBUG,
@@ -80,6 +81,47 @@ logging.getLogger('').addHandler(console)
 #     plt.plot(by,bx, 'o')
 #     plt.show()
 
+
+def cutC(bbox,region_polygon,radius):
+    '''
+    #圆形划分
+    para：
+        bbox：最大的方格(l_lng,l_lat,r_lng,r_lat)
+        region_polygon:实际的区域多边形，用于排除和实际区域无交集的方格
+        radius:半径，最大值50000米
+    return：
+        bboxs = [(lng,lag),(),...]
+    
+    '''
+    bboxs=[]
+    m_lng,m_lat = bbox[0],bbox[1]
+    #圆半径为r，内接正方形边长为 2*0.866r，因此两个圆心的距离为2*0.866r
+    r = 2 * 0.866 * radius
+    d_lat = getDLat(r)
+    m_lat += d_lat/2.0
+    while m_lat <= bbox[3]:
+        #计算沿着纬度m_lat移动redius，经度的变化d_lng
+        d_lng = getDlng(r, m_lat)
+        m_lng += d_lng/2.0
+        while m_lng < bbox[2]:
+            ##判断圆心是否在多边形内
+            if True:
+                bboxs.append([m_lng,m_lat])
+            m_lng += d_lng
+        m_lat += d_lat
+    return bboxs
+        
+def getDLat(d):
+    #本初子午线长度40009km
+    cc = 40009.0
+    return d / cc *360.0
+
+def getDlng(d, lat):
+    #赤道上1度的距离是111km
+    cc = 111.0
+    return d / cc * math.cos(math.radians(lat))
+    
+                
     
 
 def cut(bbox, region_polygon ,n, isall = False):
