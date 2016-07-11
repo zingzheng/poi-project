@@ -592,10 +592,10 @@ class BaiduMap(BaseMap):
         if not res:
             return 0
         count = int(res['total'])
-        if count >= 400:
-            count = -1
         if count < 0:
             return 0-count
+        if count >= 400:
+            count = -1
         return count
     
     def getStatue(self, res):
