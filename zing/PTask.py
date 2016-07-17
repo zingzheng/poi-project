@@ -224,6 +224,93 @@ class SubTask(BaseTask):
     
 #--------------  
 
+class CircleTask(BaseTask):
+    '''
+    #以圆形区域划分的任务类
+    #当前仅支持国家
+    '''
+    def __init__(self,args):
+        super().__init__(args)
+        self.shape = self._getShape(self.region)
+        self.bbox = self.shape.bbox
+        
+    
+    def _getShape(self, region):
+        '''
+        #获取当前任务目标地区的多边形范围
+        '''
+        sf = shapefile.Reader(R_PATH+'GADM/WORLD/TM_WORLD_BORDERS-0.3.shp')
+        shapeRec = None
+        for shapeRec in sf.iterShapeRecords():
+            if shapeRec.record[4] == region: # country name stored in 5-th field ['TW', 'TW', 'TWN', 158, 'Taiwan', 0, 0, 0, 0, 120.946, 23.754]
+                return shapeRec.shape
+    
+    # todo
+    def run(self):
+        '''    
+        #程序入口，执行该任务，请自行判断任务是否到钟执行
+        '''
+        if not self.recover:
+            logging.info('正在切割圆形网格。。。')
+            self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), 5)
+        else:
+            logging.info('正在从断点恢复。。。')
+            self.bboxs = self.readBoxs()
+            self.writeBoxs(self.bboxs)
+            if self.recover and 'BASE' not in self.recover and  os.path.exists(BASE_PATH+self.recover):
+                os.remove(BASE_PATH + self.recover)
+        mapdi = MapDi.map_fac(self.map_type)
+        while self.bboxs:
+            self.writeBoxs(self.bboxs)
+            bbox = self.bboxs.pop()
+            print(len(self.bboxs))
+            page,size,count = 0, mapdi.size, mapdi.size
+            while page*size < count:
+                page += 1
+                while mapdi.SEARCH_KEY:
+                    url = mapdi.conSearchUrl(self.keyword, bbox, page)
+                    res = mapdi.request(url)
+                    stat,msg = mapdi.getStatue(res)
+                    if stat == 1:
+                        break
+                    elif stat == -1:
+                        logging.error("error %s,%s"%(msg,url))
+                        return False
+                    else:
+                        mapdi.SEARCH_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,url))
+                        logging.info("该key失效，自动替换key。")
+                if not mapdi.SEARCH_KEY:
+                    logging.error("抓取失败，key用完")
+                    return False
+                count = mapdi.getCount(res)
+                if count == 0:
+                    break
+                elif count == -1:
+                    self.bboxs.extend(myUtil.cut(bbox, None, 2))
+                    break
+                else:
+                    logging.info("running %s"%(url))
+                    datas = []
+                    pois = mapdi.parser(res)
+                    if pois == False:
+                        return False
+                    for poi in pois:
+                        print(poi.toString())
+                        if self.check(poi.address):
+                            datas.append(poi.toString())
+                    self.dumpFile(datas)
+        self.dumpFile(['FINISH'])
+        
+        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
+            os.remove(self.boxsPath)
+            
+        self.recover, self.boxsPath, self.filePath = '', '', ''
+        return True
+    
+    
+
+#----------------
 
 class CutTask(BaseTask):
     '''

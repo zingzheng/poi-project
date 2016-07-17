@@ -105,7 +105,9 @@ def cutC(bbox,region_polygon,radius):
         m_lng += d_lng/2.0
         while m_lng < bbox[2]:
             ##判断圆心是否在多边形内
-            if True:
+            rect = box(m_lng - radius/1.41,m_lat - radius/1.41,
+                       m_lng + radius/1.41,m_lat + radius/1.41)
+            if rect.intersects(region_polygon):
                 bboxs.append([m_lng,m_lat])
             m_lng += d_lng
         m_lat += d_lat
