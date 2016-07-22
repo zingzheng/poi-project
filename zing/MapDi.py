@@ -12,6 +12,7 @@ import json
 from time import sleep
 from urllib.parse import urlencode
 from urllib import request
+import googlemaps
 
 from zing.Util import logging
 
@@ -370,7 +371,7 @@ class TencentMap(BaseMap):
         #腾讯：构建按照行政区域搜索的URL
         '''
         #腾讯地图没有对中国进行编码，需进行特殊处理
-        if region == 100000:
+        if region == '100000':
             region = '中国'
         SEARCH_PARA = {
             'boundary':'region('+region+',0)',
@@ -671,6 +672,105 @@ class BaiduMap(BaseMap):
                 continue
         return pois
 
+#-----------------------
+
+class GoogleMap(BaseMap):
+    
+    '''
+    #具体的地图类：谷歌地图地图
+    ''' 
+    def __init__(self):
+        #只支持圆形区域划分
+        self.SEARCH_KEY = ['AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos']
+    
+        
+    def regeo(self, location):
+        '''
+        #谷歌：逆地址解析URL
+        #location google的地址id
+        '''
+        gclient = googlemaps.Client(key=SEARCH_KEY[0])
+        resGeo = gclient.place(location)
+        return resGeo
+        
+        
+    
+    
+    def places(self, keyword, region, radius):
+        gclient = googlemaps.Client(key=SEARCH_KEY[0])
+        res = gclient.places_radar(location=region, radius=radius, keyword=keyword)
+        return res
+
+    
+    def getStatue(self, res):
+        '''
+        #谷歌：解析结果的状态
+        '''
+        if res == None:
+            return -1,"conn error"
+        if int(res['status']) != 0:
+            return 0,res['message']
+        return 1,'ok'
+    
+
+    
+    def parser(self, res):
+        '''
+        #谷歌：解析结果，并进行逆地址解析
+        '''
+        pois = [] 
+        datas = res['results']
+        if len(datas) == 0:
+            return None
+    
+        for data in datas:
+            try:
+                poi = POI()
+                poi.name = data['name']
+                try:
+                    poi.tel = data['telephone']
+                except:
+                    poi.tel = ' '
+                try:
+                    poi.poiType = data['detail_info']['type']
+                    poi.price = data['detail_info']['price']
+                except:
+                    poi.poiType,poi.price='',''
+                poi.lat = float(data['location']['lat'])
+                poi.lng = float(data['location']['lng'])
+                while self.REGEO_KEY:
+                    rURL = self._conReUrl((poi.lat, poi.lng))
+                    rRes = self.request(rURL)
+                    stat,msg = self.getStatue(rRes)
+                    if stat == 1:
+                        break
+                    elif stat == -1:
+                        logging.error("逆地址解析失败: %s,%s" % (msg,rURL))
+                        return False
+                    else:
+                        self.REGEO_KEY.pop(0)
+                        logging.warn("error %s,%s"%(msg,rURL))
+                        logging.info("该key失效，自动替换key。")
+                if not self.REGEO_KEY:
+                    logging.error("逆地址解析失败，key用完")
+                    return False
+                regeo = rRes['result']
+                poi.stree_num = regeo['addressComponent']['street_number']
+                poi.address = regeo['formatted_address']
+                poi.adcode = regeo['addressComponent']['adcode']
+                poi.country = regeo['addressComponent']['country']
+                poi.province = regeo['addressComponent']['province']
+                poi.city = regeo['addressComponent']['city']
+                poi.district = regeo['addressComponent']['district']
+                poi.stree = regeo['addressComponent']['street']
+                pois.append(poi)       
+            except Exception as e:
+                logging.warn("error while parse data")
+                logging.warn(e)
+                continue
+        return pois
+    
+    
     
 def map_fac(mapType):
     '''
@@ -682,3 +782,5 @@ def map_fac(mapType):
         return TencentMap()
     elif mapType == '高德':
         return GaodeMap()
+    elif mapType == '谷歌':
+        return GoogleMap()

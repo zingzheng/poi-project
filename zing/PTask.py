@@ -233,6 +233,7 @@ class CircleTask(BaseTask):
         super().__init__(args)
         self.shape = self._getShape(self.region)
         self.bbox = self.shape.bbox
+        self.radius = 5
         
     
     def _getShape(self, region):
@@ -252,7 +253,7 @@ class CircleTask(BaseTask):
         '''
         if not self.recover:
             logging.info('正在切割圆形网格。。。')
-            self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), 5)
+            self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), self.radius)
         else:
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
@@ -264,42 +265,31 @@ class CircleTask(BaseTask):
             self.writeBoxs(self.bboxs)
             bbox = self.bboxs.pop()
             print(len(self.bboxs))
-            page,size,count = 0, mapdi.size, mapdi.size
-            while page*size < count:
-                page += 1
-                while mapdi.SEARCH_KEY:
-                    url = mapdi.conSearchUrl(self.keyword, bbox, page)
-                    res = mapdi.request(url)
-                    stat,msg = mapdi.getStatue(res)
-                    if stat == 1:
-                        break
-                    elif stat == -1:
-                        logging.error("error %s,%s"%(msg,url))
-                        return False
-                    else:
-                        mapdi.SEARCH_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,url))
-                        logging.info("该key失效，自动替换key。")
-                if not mapdi.SEARCH_KEY:
-                    logging.error("抓取失败，key用完")
+            while mapdi.SEARCH_KEY:
+                res = mapdi.places(self.keyword, bbox, self.radius)
+                stat,msg = mapdi.getStatue(res)
+                if stat == 1:
+                    break
+                elif stat == -1:
+                    logging.error("error %s,%s"%(msg))
                     return False
-                count = mapdi.getCount(res)
-                if count == 0:
-                    break
-                elif count == -1:
-                    self.bboxs.extend(myUtil.cut(bbox, None, 2))
-                    break
                 else:
-                    logging.info("running %s"%(url))
-                    datas = []
-                    pois = mapdi.parser(res)
-                    if pois == False:
-                        return False
-                    for poi in pois:
-                        print(poi.toString())
-                        if self.check(poi.address):
-                            datas.append(poi.toString())
-                    self.dumpFile(datas)
+                    mapdi.SEARCH_KEY.pop(0)
+                    logging.warn("error %s,%s"%(msg))
+                    logging.info("该key失效，自动替换key。")
+            if not mapdi.SEARCH_KEY:
+                logging.error("抓取失败，key用完")
+                return False
+
+            datas = []
+            pois = mapdi.parser(res)
+            if pois == False:
+                return False
+            for poi in pois:
+                print(poi.toString())
+                if self.check(poi.address):
+                    datas.append(poi.toString())
+            self.dumpFile(datas)
         self.dumpFile(['FINISH'])
         
         if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
