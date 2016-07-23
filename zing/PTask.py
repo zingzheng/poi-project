@@ -227,26 +227,28 @@ class SubTask(BaseTask):
 class CircleTask(BaseTask):
     '''
     #以圆形区域划分的任务类
-    #当前仅支持国家
+    #当前仅支持谷歌查找国家区域
     '''
     def __init__(self,args):
         super().__init__(args)
         self.shape = self._getShape(self.region)
         self.bbox = self.shape.bbox
-        self.radius = 5
+        self.radius = 10
         
     
     def _getShape(self, region):
         '''
         #获取当前任务目标地区的多边形范围
         '''
-        sf = shapefile.Reader(R_PATH+'GADM/WORLD/TM_WORLD_BORDERS-0.3.shp')
+        sf = shapefile.Reader(R_PATH+'/GADM/WORLD/TM_WORLD_BORDERS-0.3.shp')
         shapeRec = None
         for shapeRec in sf.iterShapeRecords():
             if shapeRec.record[4] == region: # country name stored in 5-th field ['TW', 'TW', 'TWN', 158, 'Taiwan', 0, 0, 0, 0, 120.946, 23.754]
                 return shapeRec.shape
     
-    # todo
+    def _getSub(self,location):
+        pass
+    
     def run(self):
         '''    
         #程序入口，执行该任务，请自行判断任务是否到钟执行
@@ -254,6 +256,7 @@ class CircleTask(BaseTask):
         if not self.recover:
             logging.info('正在切割圆形网格。。。')
             self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), self.radius)
+            myUtil.showUp(self.shape.points,self.bboxs)
         else:
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
@@ -266,7 +269,8 @@ class CircleTask(BaseTask):
             bbox = self.bboxs.pop()
             print(len(self.bboxs))
             while mapdi.SEARCH_KEY:
-                res = mapdi.places(self.keyword, bbox, self.radius)
+                res = mapdi.places(self.keyword, bbox[:2], bbox[2])
+                print(res)
                 stat,msg = mapdi.getStatue(res)
                 if stat == 1:
                     break
@@ -280,15 +284,20 @@ class CircleTask(BaseTask):
             if not mapdi.SEARCH_KEY:
                 logging.error("抓取失败，key用完")
                 return False
-
+            
+            ##递归
+            if mapdi.getCount(res) == -1:
+                self.bboxs.extend(myUtil.reCutC(bbox))
+                continue
+            
             datas = []
             pois = mapdi.parser(res)
             if pois == False:
                 return False
             for poi in pois:
-                print(poi.toString())
-                if self.check(poi.address):
-                    datas.append(poi.toString())
+                poi = ','.join(poi)
+                print(poi)
+                datas.append(poi)
             self.dumpFile(datas)
         self.dumpFile(['FINISH'])
         
@@ -505,10 +514,12 @@ def taskFac(args):
     '''
     #静态方法，任务工厂类
     '''
-    s = args[0]
-    if int(s) == 0:
+    s = int(args[0])
+    if s == 0:
         return CutTask(args)
-    elif int(s) == 1:
+    elif s == 1:
         return SubTask(args)
-    else:
+    elif s == 2:
         return CutProTask(args)
+    elif s == 3:
+        return CircleTask(args)

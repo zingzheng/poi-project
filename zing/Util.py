@@ -82,6 +82,42 @@ logging.getLogger('').addHandler(console)
 #     plt.show()
 
 
+# def showUp(points,bboxs):
+#     '''
+#     #同时展示多边形和圆心，方便比较
+#     ''' 
+#     y = [p[0] for p in points]
+#     x = [p[1] for p in points]
+#     plt.plot(y,x, 'x')
+#     bx,by=[],[]
+#     for bbox in bboxs:
+#         bx.append(bbox[1])
+#         by.append(bbox[0])
+#     plt.plot(by,bx, 'o')
+#     plt.show()
+
+
+def reCutC(bbox):
+    '''
+    #递归划分
+    '''
+    bboxs = []
+    r = bbox[2]/1.414
+    d_lat = getDLat(r)
+    n_lat = bbox[1] + r
+    d_lng = getDlng(r, n_lat)
+    bboxs.append([bbox[0]-d_lng,n_lat,bbox[2]/2])
+    bboxs.append([bbox[0]+d_lng,n_lat,bbox[2]/2])
+    
+    n_lat = bbox[1] - r
+    d_lng = getDlng(r, n_lat)
+    bboxs.append([bbox[0]-d_lng,n_lat,bbox[2]/2])
+    bboxs.append([bbox[0]+d_lng,n_lat,bbox[2]/2])
+    
+    return bboxs
+    
+
+
 def cutC(bbox,region_polygon,radius):
     '''
     #圆形划分
@@ -94,6 +130,7 @@ def cutC(bbox,region_polygon,radius):
     
     '''
     bboxs=[]
+    print(bbox)
     m_lng,m_lat = bbox[0],bbox[1]
     #圆半径为r，内接正方形边长为 2*0.866r，因此两个圆心的距离为2*0.866r
     r = 2 * 0.866 * radius
@@ -102,15 +139,16 @@ def cutC(bbox,region_polygon,radius):
     while m_lat <= bbox[3]:
         #计算沿着纬度m_lat移动redius，经度的变化d_lng
         d_lng = getDlng(r, m_lat)
-        m_lng += d_lng/2.0
+        m_lng =bbox[0] + d_lng/2.0
         while m_lng < bbox[2]:
             ##判断圆心是否在多边形内
             rect = box(m_lng - radius/1.41,m_lat - radius/1.41,
                        m_lng + radius/1.41,m_lat + radius/1.41)
             if rect.intersects(region_polygon):
-                bboxs.append([m_lng,m_lat])
+                bboxs.append([m_lng,m_lat,radius])
             m_lng += d_lng
         m_lat += d_lat
+    
     return bboxs
         
 def getDLat(d):

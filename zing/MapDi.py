@@ -681,7 +681,11 @@ class GoogleMap(BaseMap):
     ''' 
     def __init__(self):
         #只支持圆形区域划分
-        self.SEARCH_KEY = ['AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos']
+        self.gclient = None
+        self.SEARCH_KEY = ['AIzaSyDsjSwLtFLs007PRBCc-m9RCCYSehvKbuk',
+                           'AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos']
+        self.REGEO_KEY = ['AIzaSyDsjSwLtFLs007PRBCc-m9RCCYSehvKbuk',
+                           'AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos']
     
         
     def regeo(self, location):
@@ -689,18 +693,17 @@ class GoogleMap(BaseMap):
         #谷歌：逆地址解析URL
         #location google的地址id
         '''
-        gclient = googlemaps.Client(key=SEARCH_KEY[0])
+        gclient = googlemaps.Client(key=self.REGEO_KEY[0])
         resGeo = gclient.place(location)
+        #return json.loads(resGeo,strict=False)
         return resGeo
-        
-        
     
     
     def places(self, keyword, region, radius):
-        gclient = googlemaps.Client(key=SEARCH_KEY[0])
-        res = gclient.places_radar(location=region, radius=radius, keyword=keyword)
+        gclient = googlemaps.Client(key=self.SEARCH_KEY[0])
+        res = gclient.places_radar(location=region, radius=radius*1000, keyword=keyword)
+        #return json.loads(res,strict=False)
         return res
-
     
     def getStatue(self, res):
         '''
@@ -708,10 +711,14 @@ class GoogleMap(BaseMap):
         '''
         if res == None:
             return -1,"conn error"
-        if int(res['status']) != 0:
-            return 0,res['message']
+        if res['status'] not in ("OK","ZERO_RESULTS"):
+            return 0,res['status']
         return 1,'ok'
     
+    def getCount(self, res):
+        if len(res['results'])>=200:
+            return -1
+        return len(res['results'])
 
     
     def parser(self, res):
@@ -721,48 +728,33 @@ class GoogleMap(BaseMap):
         pois = [] 
         datas = res['results']
         if len(datas) == 0:
-            return None
+            return []
     
         for data in datas:
             try:
-                poi = POI()
-                poi.name = data['name']
-                try:
-                    poi.tel = data['telephone']
-                except:
-                    poi.tel = ' '
-                try:
-                    poi.poiType = data['detail_info']['type']
-                    poi.price = data['detail_info']['price']
-                except:
-                    poi.poiType,poi.price='',''
-                poi.lat = float(data['location']['lat'])
-                poi.lng = float(data['location']['lng'])
+                poi = []
+                place_id = data['place_id']
                 while self.REGEO_KEY:
-                    rURL = self._conReUrl((poi.lat, poi.lng))
-                    rRes = self.request(rURL)
+                    rRes = self.regeo(place_id)
+                    print(rRes)
                     stat,msg = self.getStatue(rRes)
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("逆地址解析失败: %s,%s" % (msg,rURL))
+                        logging.error("逆地址解析失败: %s,%s" % (msg,place_id))
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,rURL))
+                        logging.warn("error %s,%s"%(msg,place_id))
                         logging.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
                     logging.error("逆地址解析失败，key用完")
                     return False
                 regeo = rRes['result']
-                poi.stree_num = regeo['addressComponent']['street_number']
-                poi.address = regeo['formatted_address']
-                poi.adcode = regeo['addressComponent']['adcode']
-                poi.country = regeo['addressComponent']['country']
-                poi.province = regeo['addressComponent']['province']
-                poi.city = regeo['addressComponent']['city']
-                poi.district = regeo['addressComponent']['district']
-                poi.stree = regeo['addressComponent']['street']
+                poi.append(regeo['name'] if regeo['name'] else ' ')
+                poi.append(str(data['geometry']['location']['lat']))
+                poi.append(str(data['geometry']['location']['lng']))
+                poi.append(regeo['formatted_address'])
                 pois.append(poi)       
             except Exception as e:
                 logging.warn("error while parse data")
