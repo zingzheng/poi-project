@@ -256,7 +256,7 @@ class CircleTask(BaseTask):
         if not self.recover:
             logging.info('正在切割圆形网格。。。')
             self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), self.radius)
-            myUtil.showUp(self.shape.points,self.bboxs)
+            #myUtil.showUp(self.shape.points,self.bboxs)
         else:
             logging.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
