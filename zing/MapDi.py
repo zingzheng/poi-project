@@ -693,29 +693,48 @@ class GoogleMap(BaseMap):
         #谷歌：逆地址解析URL
         #location google的地址id
         '''
-        gclient = googlemaps.Client(key=self.REGEO_KEY[0])
-        resGeo = gclient.place(location)
+        resGeo = None
+        retry = 5
+        while retry:
+            try:
+                gclient = googlemaps.Client(key=self.REGEO_KEY[0])
+                resGeo = gclient.place(location)
+                break
+            except Exception as e:
+                logging.warn("erro in google https, retrying")
+                retry-=1
+        
         #return json.loads(resGeo,strict=False)
         return resGeo
     
     
     def places(self, keyword, region, radius):
-        gclient = googlemaps.Client(key=self.SEARCH_KEY[0])
-        res = gclient.places_radar(location=region, radius=radius*1000, keyword=keyword)
-        #return json.loads(res,strict=False)
+        res = None
+        retry = 5
+        while retry:
+            try:
+                gclient = googlemaps.Client(key=self.SEARCH_KEY[0])
+                res = gclient.places_radar(location=region, radius=radius*1000, keyword=keyword)
+                break
+            except Exception as e:
+                logging.warn("erro in google https, retrying")
+                retry-=1
         return res
     
     def getStatue(self, res):
         '''
         #谷歌：解析结果的状态
         '''
+        #google的特殊处理
         if res == None:
-            return -1,"conn error"
+            return 1,"conn error"
         if res['status'] not in ("OK","ZERO_RESULTS"):
             return 0,res['status']
         return 1,'ok'
     
     def getCount(self, res):
+        if res == None:
+            return 0
         if len(res['results'])>=200:
             return -1
         return len(res['results'])

@@ -275,11 +275,11 @@ class CircleTask(BaseTask):
                 if stat == 1:
                     break
                 elif stat == -1:
-                    logging.error("error %s,%s"%(msg))
+                    logging.error("error %s"%(msg))
                     return False
                 else:
                     mapdi.SEARCH_KEY.pop(0)
-                    logging.warn("error %s,%s"%(msg))
+                    logging.warn("error %s"%(msg))
                     logging.info("该key失效，自动替换key。")
             if not mapdi.SEARCH_KEY:
                 logging.error("抓取失败，key用完")
