@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//router/controller.py=utf-8
+encoding//webserver/routers.py=utf-8
 encoding//zing/MapDi.py=utf-8
 encoding//zing/PTask.py=utf-8
 encoding//zing/Util.py=utf-8

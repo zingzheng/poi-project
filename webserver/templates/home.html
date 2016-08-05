@@ -6,7 +6,9 @@
 <body>
 	<h1 style="font-style:italic">Home</h1>
    
-   hello world!
+   hello {{ session['username'] }} ! 
+   
+   <a href="/signout">signout</a>
 	
 </body>
 </html>
