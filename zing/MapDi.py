@@ -683,9 +683,13 @@ class GoogleMap(BaseMap):
         #只支持圆形区域划分
         self.gclient = None
         self.SEARCH_KEY = ['AIzaSyDsjSwLtFLs007PRBCc-m9RCCYSehvKbuk',
-                           'AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos']
+                           'AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos',
+                           'AIzaSyDP99bu1sOsudZLONBM6FECFY8r-76FDDw',
+                           'AIzaSyDE7Qzrq0Yog8l1KBmwFmMBbHtMNKSeJbg']
         self.REGEO_KEY = ['AIzaSyDsjSwLtFLs007PRBCc-m9RCCYSehvKbuk',
-                           'AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos']
+                           'AIzaSyDsf-Lf6_NSgUq2WSjL3BMyka9XEvhPaos',
+                           'AIzaSyDP99bu1sOsudZLONBM6FECFY8r-76FDDw',
+                           'AIzaSyDE7Qzrq0Yog8l1KBmwFmMBbHtMNKSeJbg']
     
         
     def regeo(self, location):
