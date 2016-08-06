@@ -5,8 +5,13 @@
 
 from flask import *
 import os
+from webserver.mydao import *
+from webserver.mybean import *
+from contextlib import closing
 
 app = Flask(__name__)
+
+
 
 
 
@@ -20,15 +25,25 @@ def authCheck():
         return False
         
 
-@app.route('/', methods=['GET', 'POST'])
+@app.before_request
+def before_request():
+    #权限校验
+    if request.endpoint not in ['signin','signin_page'] and not authCheck():
+        return redirect(url_for('signin'))
+
+
+@app.teardown_request
+def teardown_request(exception):
+    pass
+
+
+@app.route('/index', methods=['GET', 'POST'])
 def home():
     '''
     #主页
     '''
-    if authCheck():
-        return render_template('home.html')
-    else:
-        return redirect(url_for('signin'))
+    return render_template('home.html',jobs = JobInfoDao().select())
+
     
 
 @app.route('/signin', methods=['GET'])
@@ -48,7 +63,7 @@ def signin():
     if username=='admin' and password=='admin':
         session['username'] = username
         flash('signin success')
-        return render_template('home.html')
+        return redirect('/index')
     return render_template('signin.html', error='Bad username or password', username=username)
 
 @app.route('/signout')
@@ -59,7 +74,20 @@ def signout():
     session.pop('username', None)
     return redirect(url_for('signin'))
 
+@app.route('/addJob')
+def addJob():
+    job = JobInfoBean()
+    job.core_type = 'cut'
+    job.map_type = 'baidu'
+    job.region_type = '1'
+    job.region = 'china'
+    job.keyword = 'school'
+    JobInfoDao().insert(job)
+    return redirect('/index')
+    
+
 if __name__ == '__main__':
     app.secret_key = 'A0Zr98j/3sdfasdf09(N]LWX/,?RT'
     app.debug = True
+    init_all_db()
     app.run(host='0.0.0.0')

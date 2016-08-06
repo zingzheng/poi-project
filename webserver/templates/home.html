@@ -2,5 +2,13 @@
 {% block body %}
 
     <h1>welcome to use POI</h1>
+    
+    {% for job in jobs %}
+    	{{job}}
+    	</br>
+    {% endfor %}
+    
+    
+    <a href="{{ url_for('addJob') }}">addJob</a>
   
 {% endblock %}
