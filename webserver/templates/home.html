@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Home</title>
-</head>
-<body>
-	<h1 style="font-style:italic">Home</h1>
-   
-   hello {{ session['username'] }} ! 
-   
-   <a href="/signout">signout</a>
-	
-</body>
-</html>
+{% extends "layout.html" %}
+{% block body %}
+
+    <h1>welcome to use POI</h1>
+  
+{% endblock %}
