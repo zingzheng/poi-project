@@ -23,7 +23,6 @@ def authCheck():
         return True
     else:
         return False
-        
 
 @app.before_request
 def before_request():
@@ -31,20 +30,17 @@ def before_request():
     if request.endpoint not in ['signin','signin_page'] and not authCheck():
         return redirect(url_for('signin'))
 
-
 @app.teardown_request
 def teardown_request(exception):
     pass
 
 
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     '''
     #主页
     '''
     return render_template('home.html',jobs = JobInfoDao().select())
-
-    
 
 @app.route('/signin', methods=['GET'])
 def signin_page():
@@ -63,7 +59,7 @@ def signin():
     if username=='admin' and password=='admin':
         session['username'] = username
         flash('signin success')
-        return redirect('/index')
+        return redirect('/')
     return render_template('signin.html', error='Bad username or password', username=username)
 
 @app.route('/signout')
@@ -74,16 +70,16 @@ def signout():
     session.pop('username', None)
     return redirect(url_for('signin'))
 
-@app.route('/addJob')
+@app.route('/addJob', methods=['post'])
 def addJob():
     job = JobInfoBean()
-    job.core_type = 'cut'
-    job.map_type = 'baidu'
-    job.region_type = '1'
-    job.region = 'china'
-    job.keyword = 'school'
+    job.core_type = request.form['core_type']
+    job.map_type = request.form['map_type']
+    job.region_type = request.form['region_type']
+    job.region = request.form['region']
+    job.keyword = request.form['keyword']
     JobInfoDao().insert(job)
-    return redirect('/index')
+    return redirect('/')
     
 
 if __name__ == '__main__':

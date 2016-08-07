@@ -1,14 +1,73 @@
+<meta charset="UTF-8">
 {% extends "layout.html" %}
 {% block body %}
-
+{% if session.username %}
     <h1>welcome to use POI</h1>
     
-    {% for job in jobs %}
-    	{{job}}
-    	</br>
-    {% endfor %}
+    <table border='1'>
+    	<h2>任务列表：</h2>
+    	<tr>
+    		<th>id</th><th>地图类型</th><th>切割方法</th><th>搜索范围</th><th>搜索区域</th><th>关键词</th>
+    	</tr>
+    	{% for job in jobs %}
+    	<tr>
+    		<td>{{job[0]}}</td>
+    		<td>{{job[2]}}</td>
+    		<td>{{job[1]}}</td>
+    		<td>{{job[3]}}</td>
+    		<td>{{job[4]}}</td>
+    		<td>{{job[5]}}</td>
+    	</tr>
+    	{% endfor %}
+	</table>    
     
-    
-    <a href="{{ url_for('addJob') }}">addJob</a>
-  
+	<table border='1'>
+	<h2>添加任务：</h2>
+	  <form action='/addJob' method=post>
+		<tr>
+			<td>map_type: </td>
+			<td>
+				<select name="map_type" id="map_type_select">
+					<option value="百度地图">百度地图</option>
+					<option value="谷歌地图">谷歌地图</option>
+					<option value="腾讯地图">腾讯地图</option>
+					<option value="高德地图">高德地图</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>core_type: </td>
+			<td>
+			    <select name="core_type" id="core_type_select">
+					<option value="网格切分">网格切分</option>
+					<option value="行政划分">行政划分</option>
+					<option value="圆形划分">圆形划分</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>region_type: </td>
+			<td>
+			    <select name="region_type" id="region_type_select">
+					<option value="国">国</option>
+					<option value="省">省</option>
+					<option value="市">市</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>region: </td>
+			<td><input type=text size=10 name=region></td>
+		</tr>
+		<tr>
+			<td>keyword: </td>
+			<td><input type=text size=10 name=keyword></td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td align='right'><input type=submit value=submit></td>
+		</tr>
+	  </from>
+	</table>
+{% endif %}
 {% endblock %}
