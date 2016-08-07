@@ -8,6 +8,7 @@
     	<h2>任务列表：</h2>
     	<tr>
     		<th>id</th><th>地图类型</th><th>切割方法</th><th>搜索范围</th><th>搜索区域</th><th>关键词</th>
+    		<th>创建者</th><th>创建时间</th><th>结束时间</th><th>状态</th>
     	</tr>
     	{% for job in jobs %}
     	<tr>
@@ -17,9 +18,17 @@
     		<td>{{job[3]}}</td>
     		<td>{{job[4]}}</td>
     		<td>{{job[5]}}</td>
+    		<td>{{job[6]}}</td>
+            <td>{{job[7]}}</td>
+            <td>{{job[8]}}</td>
+            <td>{{job[9]}}</td>
+    		
     	</tr>
     	{% endfor %}
-	</table>    
+	</table>
+	    
+    </br>
+    </br>
     
 	<table border='1'>
 	<h2>添加任务：</h2>

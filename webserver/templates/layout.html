@@ -4,7 +4,7 @@
 </head>
 <title>POI</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
+<div class=page  style="width:70%">
   <center><h1>POI-server</h1></center>
   <div class=metanav>
   {% if not session.username %}
@@ -17,5 +17,11 @@
   {% for message in get_flashed_messages() %}
     <div class=flash>{{ message }}</div>
   {% endfor %}
+  {% if error %}
+    <p style="color:red">{{ error }}</p>
+  {% endif %}
+  
   {% block body %}{% endblock %}
+  
+
 </div>

@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//webserver/adapter.py=utf-8
 encoding//webserver/mybean.py=utf-8
 encoding//webserver/mydao.py=utf-8
 encoding//webserver/routers.py=utf-8

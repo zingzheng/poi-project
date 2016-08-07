@@ -4,5 +4,9 @@ create table JobInfo (
   map_type text not null,
   region_type text not null,
   region text not null,
-  keyword not null
+  keyword text not null,
+  owner text not null,
+  createTime text not null,
+  finishTime text not null,
+  status text not null
 );

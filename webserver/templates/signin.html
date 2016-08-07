@@ -1,9 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 
-      {% if error %}
-	  <p style="color:red">{{ error }}</p>
-	  {% endif %}
+
 	  <form action="/signin" method="post">
 	    <h1>Please sign in:</h1>
 	    <p><input name="username" placeholder="Username" value="{{ username }}"></p>

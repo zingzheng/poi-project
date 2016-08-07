@@ -5,9 +5,12 @@
 
 from flask import *
 import os
+import datetime
 from webserver.mydao import *
 from webserver.mybean import *
+from webserver.adapter import *
 from contextlib import closing
+
 
 app = Flask(__name__)
 
@@ -27,7 +30,7 @@ def authCheck():
 @app.before_request
 def before_request():
     #权限校验
-    if request.endpoint not in ['signin','signin_page'] and not authCheck():
+    if request.endpoint not in ['static','signin','signin_page'] and not authCheck():
         return redirect(url_for('signin'))
 
 @app.teardown_request
@@ -78,7 +81,12 @@ def addJob():
     job.region_type = request.form['region_type']
     job.region = request.form['region']
     job.keyword = request.form['keyword']
+    job.owner = session['username']
+    job.createTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    job.finishTime = '--'
+    job.status = 'running'
     JobInfoDao().insert(job)
+    #POIAdapter(job).go()
     return redirect('/')
     
 

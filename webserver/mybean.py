@@ -15,14 +15,20 @@ class JobInfoBean(object):
         self.region_type = ''
         self.region = ''
         self.keyword = ''
+        self.owner = ''
+        self.createTime = ''
+        self.finishTime = ''
+        self.status = ''
     
     def getKeys(self):
         return ('core_type','map_type','region_type',
-                'region','keyword')
+                'region','keyword','owner',
+                'createTime','finishTime','status')
         
     def getValues(self):
         return (self.core_type,self.map_type,self.region_type,
-                self.region,self.keyword)
+                self.region,self.keyword,self.owner,
+                self.createTime,self.finishTime,self.status)
         
     def sp(self):
         return self.getKeys()+self.getValues()

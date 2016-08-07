@@ -34,8 +34,8 @@ class JobInfoDao(BaseDao):
         
     def insert(self,job):
         with closing(JobInfoDao().connect_db()) as db:
-            db.cursor().execute("insert into JobInfo(%s,%s,%s,%s,%s)\
-                values('%s','%s','%s','%s','%s')" % job.sp())
+            db.cursor().execute("insert into JobInfo(%s,%s,%s,%s,%s,%s,%s,%s,%s)\
+                values('%s','%s','%s','%s','%s','%s','%s','%s','%s')" % job.sp())
             db.commit()
             
     def select(self):
@@ -54,6 +54,6 @@ def init_all_db():
     
     
 if __name__ == '__main__':
-    pass
+    init_all_db()
      
                 
