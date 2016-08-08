@@ -15,6 +15,12 @@ class JobInfoBean(object):
         self.region_type = ''
         self.region = ''
         self.keyword = ''
+        #---
+        self.delta = ''
+        self.nex = ''
+        self.recover = ''
+        self.res = ''
+        #---
         self.owner = ''
         self.createTime = ''
         self.finishTime = ''
@@ -29,6 +35,15 @@ class JobInfoBean(object):
         return (self.core_type,self.map_type,self.region_type,
                 self.region,self.keyword,self.owner,
                 self.createTime,self.finishTime,self.status)
+        
+    def mix(self):
+        keys = self.getKeys()
+        values = self.getValues()
+        m = []
+        for i in range(len(keys)):
+            m.append(keys[i])
+            m.append(values[i])
+        return m
         
     def sp(self):
         return self.getKeys()+self.getValues()

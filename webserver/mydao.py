@@ -38,6 +38,12 @@ class JobInfoDao(BaseDao):
                 values('%s','%s','%s','%s','%s','%s','%s','%s','%s')" % job.sp())
             db.commit()
             
+    def update(self,job):
+        with closing(JobInfoDao().connect_db()) as db:
+            db.cursor().execute("update JobInfo set %s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s' \
+                where id = %s" % job.mix().append(job.id))
+            db.commit()
+            
     def select(self):
         rows = None
         with closing(JobInfoDao().connect_db()) as db:

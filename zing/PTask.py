@@ -218,7 +218,7 @@ class SubTask(BaseTask):
         self.dumpFile(['FINISH'])
         if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
             os.remove(BASE_PATH+self.boxsPath)
-        self.recover, self.boxsPath, self.filePath = '', '', ''
+        self.recover, self.boxsPath= '', ''
         return True
 
     
@@ -304,7 +304,7 @@ class CircleTask(BaseTask):
         if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
             os.remove(BASE_PATH+self.boxsPath)
             
-        self.recover, self.boxsPath, self.filePath = '', '', ''
+        self.recover, self.boxsPath = '', ''
         return True
     
     
@@ -425,7 +425,7 @@ class CutTask(BaseTask):
         if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
             os.remove(BASE_PATH+self.boxsPath)
             
-        self.recover, self.boxsPath, self.filePath = '', '', ''
+        self.recover, self.boxsPath = '', ''
         return True
 
 
@@ -501,7 +501,7 @@ class CutProTask(CutTask):
         self.dumpFile(['FINISH'])
         if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
             os.remove(BASE_PATH+self.boxsPath)
-        self.recover, self.boxsPath, self.filePath = '', '', ''
+        self.recover, self.boxsPath = '', ''
         return True
     
 
