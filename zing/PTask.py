@@ -12,10 +12,10 @@ import zing.Util as myUtil
 import shapefile
 from shapely.geometry import Polygon,shape
 
-from zing.Util import logging,getProvinces
+from zing.Util import getLogger,getProvinces
 from zing import MapDi
 
-BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/../res/'
+RES_PATH = os.path.split(os.path.realpath(__file__))[0] + '/../res/'
 R_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
 
 
@@ -48,6 +48,8 @@ class BaseTask(object):
         #等任务执行时再分配boxsPath
         self.boxsPath = ''
         
+        self.logger = getLogger('res/'+self.filePath+'.log')
+        
     def readBoxs(self):
         '''
         #读取还未完成的任务
@@ -57,7 +59,7 @@ class BaseTask(object):
         if not self.recover:
             return boxs
         else:
-            with open(BASE_PATH+self.recover, 'r') as f:
+            with open(RES_PATH+self.recover, 'r') as f:
                 for line in f:
                     li = line.split('\n')[0].split(' ')
                     if len(li) == 1:
@@ -71,7 +73,7 @@ class BaseTask(object):
         #将未完成的任务写入文件
         '''
         self.boxsPath = self.fp+'.boxs'
-        with open(BASE_PATH+self.boxsPath, 'w') as f:
+        with open(RES_PATH+self.boxsPath, 'w') as f:
             for box in boxs:
                 if type(box) == type('10000'):
                     f.write(box)
@@ -139,7 +141,7 @@ class BaseTask(object):
         '''
         #将结果一次性写入文件
         '''
-        with open(BASE_PATH+self.filePath,'a',encoding = 'utf-8') as f:
+        with open(RES_PATH+self.filePath,'a',encoding = 'utf-8') as f:
             for data in datas:
                 f.write(self.keyword + ',' + data)
                 f.write('\n')
@@ -167,15 +169,15 @@ class SubTask(BaseTask):
         '''    
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
-        mapdi = MapDi.map_fac(self.map_type)
+        mapdi = MapDi.map_fac(self.map_type,self.logger)
         if not self.recover:
             regions = [self.region]
         else:
-            logging.info('正在从断点恢复。。。')
+            self.logger.info('正在从断点恢复。。。')
             regions = self.readBoxs()
             self.writeBoxs(regions)
-            if self.recover and 'BASE' not in self.recover and os.path.exists(BASE_PATH+self.recover):
-                os.remove(BASE_PATH+self.recover)
+            if self.recover and 'BASE' not in self.recover and os.path.exists(RES_PATH+self.recover):
+                os.remove(RES_PATH+self.recover)
         while regions:
             print(regions)
             self.writeBoxs(regions)
@@ -190,14 +192,14 @@ class SubTask(BaseTask):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("error %s,%s"%(msg,url))
+                        self.logger.error("error %s,%s"%(msg,url))
                         return False
                     else:
                         mapdi.SEARCH_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,url))
-                        logging.info("该key失效，自动替换key。")
+                        self.logger.warn("error %s,%s"%(msg,url))
+                        self.logger.info("该key失效，自动替换key。")
                 if not mapdi.SEARCH_KEY:
-                    logging.error("抓取失败，key已经用完")
+                    self.logger.error("抓取失败，key已经用完")
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -206,7 +208,7 @@ class SubTask(BaseTask):
                     regions.extend(mapdi.getSub(r))
                     break
                 else:
-                    logging.info("running %s"%(url))
+                    self.logger.info("running %s"%(url))
                     pois = mapdi.parser(res)
                     if pois == False:
                         return False
@@ -216,8 +218,8 @@ class SubTask(BaseTask):
                         print(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
-            os.remove(BASE_PATH+self.boxsPath)
+        if self.boxsPath and os.path.exists(RES_PATH+self.boxsPath):
+            os.remove(RES_PATH+self.boxsPath)
         self.recover, self.boxsPath= '', ''
         return True
 
@@ -254,16 +256,16 @@ class CircleTask(BaseTask):
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
         if not self.recover:
-            logging.info('正在切割圆形网格。。。')
+            self.logger.info('正在切割圆形网格。。。')
             self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), self.radius)
             #myUtil.showUp(self.shape.points,self.bboxs)
         else:
-            logging.info('正在从断点恢复。。。')
+            self.logger.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
             self.writeBoxs(self.bboxs)
-            if self.recover and 'BASE' not in self.recover and  os.path.exists(BASE_PATH+self.recover):
-                os.remove(BASE_PATH + self.recover)
-        mapdi = MapDi.map_fac(self.map_type)
+            if self.recover and 'BASE' not in self.recover and  os.path.exists(RES_PATH+self.recover):
+                os.remove(RES_PATH + self.recover)
+        mapdi = MapDi.map_fac(self.map_type,self.logger)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
             bbox = self.bboxs.pop()
@@ -275,14 +277,14 @@ class CircleTask(BaseTask):
                 if stat == 1:
                     break
                 elif stat == -1:
-                    logging.error("error %s"%(msg))
+                    self.logger.error("error %s"%(msg))
                     return False
                 else:
                     mapdi.SEARCH_KEY.pop(0)
-                    logging.warn("error %s"%(msg))
-                    logging.info("该key失效，自动替换key。")
+                    self.logger.warn("error %s"%(msg))
+                    self.logger.info("该key失效，自动替换key。")
             if not mapdi.SEARCH_KEY:
-                logging.error("抓取失败，key用完")
+                self.logger.error("抓取失败，key用完")
                 return False
             
             ##递归
@@ -301,8 +303,8 @@ class CircleTask(BaseTask):
             self.dumpFile(datas)
         self.dumpFile(['FINISH'])
         
-        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
-            os.remove(BASE_PATH+self.boxsPath)
+        if self.boxsPath and os.path.exists(RES_PATH+self.boxsPath):
+            os.remove(RES_PATH+self.boxsPath)
             
         self.recover, self.boxsPath = '', ''
         return True
@@ -369,17 +371,17 @@ class CutTask(BaseTask):
         #程序入口，执行该任务，请自行判断任务是否到钟执行
         '''
         if not self.recover:
-            logging.info('正在切割网格。。。')
+            self.logger.info('正在切割网格。。。')
             if self.region_type == 0:
                 isall = True
             self.bboxs = myUtil.cut(self.bbox, Polygon(self.shape.points), self.grid[self.region_type], isall)
         else:
-            logging.info('正在从断点恢复。。。')
+            self.logger.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
             self.writeBoxs(self.bboxs)
-            if self.recover and 'BASE' not in self.recover and  os.path.exists(BASE_PATH+self.recover):
-                os.remove(BASE_PATH + self.recover)
-        mapdi = MapDi.map_fac(self.map_type)
+            if self.recover and 'BASE' not in self.recover and  os.path.exists(RES_PATH+self.recover):
+                os.remove(RES_PATH + self.recover)
+        mapdi = MapDi.map_fac(self.map_type,self.logger)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
             bbox = self.bboxs.pop()
@@ -394,14 +396,14 @@ class CutTask(BaseTask):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("error %s,%s"%(msg,url))
+                        self.logger.error("error %s,%s"%(msg,url))
                         return False
                     else:
                         mapdi.SEARCH_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,url))
-                        logging.info("该key失效，自动替换key。")
+                        self.logger.warn("error %s,%s"%(msg,url))
+                        self.logger.info("该key失效，自动替换key。")
                 if not mapdi.SEARCH_KEY:
-                    logging.error("抓取失败，key用完")
+                    self.logger.error("抓取失败，key用完")
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -410,7 +412,7 @@ class CutTask(BaseTask):
                     self.bboxs.extend(myUtil.cut(bbox, None, 2))
                     break
                 else:
-                    logging.info("running %s"%(url))
+                    self.logger.info("running %s"%(url))
                     datas = []
                     pois = mapdi.parser(res)
                     if pois == False:
@@ -422,8 +424,8 @@ class CutTask(BaseTask):
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
         
-        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
-            os.remove(BASE_PATH+self.boxsPath)
+        if self.boxsPath and os.path.exists(RES_PATH+self.boxsPath):
+            os.remove(RES_PATH+self.boxsPath)
             
         self.recover, self.boxsPath = '', ''
         return True
@@ -443,7 +445,7 @@ class CutProTask(CutTask):
         '''
         self.bboxs = []
         if not self.recover:
-            logging.info('正在切割网格。。。')
+            self.logger.info('正在切割网格。。。')
             #对每个省份切分网格
             for r in getProvinces():
                 sf = shapefile.Reader(R_PATH + "/GADM/CHN_adm1.shp")
@@ -452,12 +454,12 @@ class CutProTask(CutTask):
                 bbox = shape.bbox
                 self.bboxs.extend(myUtil.cut(bbox, Polygon(shape.points), self.grid[1]))
         else:
-            logging.info('正在从断点恢复。。。')
+            self.logger.info('正在从断点恢复。。。')
             self.bboxs = self.readBoxs()
             self.writeBoxs(self.bboxs)
-            if self.recover and 'BASE' not in self.recover and os.path.exists(BASE_PATH+self.recover):
-                os.remove(BASE_PATH+self.recover)
-        mapdi = MapDi.map_fac(self.map_type)
+            if self.recover and 'BASE' not in self.recover and os.path.exists(RES_PATH+self.recover):
+                os.remove(RES_PATH+self.recover)
+        mapdi = MapDi.map_fac(self.map_type,self.logger)
         while self.bboxs:
             self.writeBoxs(self.bboxs)
             bbox = self.bboxs.pop()
@@ -472,14 +474,14 @@ class CutProTask(CutTask):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("error %s,%s"%(msg,url))
+                        self.logger.error("error %s,%s"%(msg,url))
                         return False
                     else:
                         mapdi.SEARCH_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,url))
-                        logging.info("该key失效，自动替换key。")
+                        self.logger.warn("error %s,%s"%(msg,url))
+                        self.logger.info("该key失效，自动替换key。")
                 if not mapdi.SEARCH_KEY:
-                    logging.error("抓取失败，key用完")
+                    self.logger.error("抓取失败，key用完")
                     return False
                 count = mapdi.getCount(res)
                 if count == 0:
@@ -488,7 +490,7 @@ class CutProTask(CutTask):
                     self.bboxs.extend(myUtil.cut(bbox, None, 2))
                     break
                 else:
-                    logging.info("running %s"%(url))
+                    self.logger.info("running %s"%(url))
                     datas = []
                     pois = mapdi.parser(res)
                     if pois == False:
@@ -499,8 +501,8 @@ class CutProTask(CutTask):
                             datas.append(poi.toString())
                     self.dumpFile(datas)
         self.dumpFile(['FINISH'])
-        if self.boxsPath and os.path.exists(BASE_PATH+self.boxsPath):
-            os.remove(BASE_PATH+self.boxsPath)
+        if self.boxsPath and os.path.exists(RES_PATH+self.boxsPath):
+            os.remove(RES_PATH+self.boxsPath)
         self.recover, self.boxsPath = '', ''
         return True
     

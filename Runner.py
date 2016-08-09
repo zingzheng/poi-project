@@ -19,63 +19,69 @@ task.txt文件格式：列和列之间用空格分开，行最后不要有多余
 import os
 import time
 from zing import PTask
-from zing.Util import logging
+from zing.Util import getLogger
 
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
-taskPath = BASE_PATH+'/task.txt'
 
+class runner():
+    def __init__(self): 
+        self.taskPath = BASE_PATH+'/task.txt'
+        self.logger  = getLogger('runner.log','runner')
 
-def readTask():
-    tasks = []
-    logging.info("正在读取任务...")
-    # 读取任务文件，并解析为任务类
-    with open(taskPath, 'r', encoding = 'utf-8') as f:
-        for line in f:
-            if len(line) < 5 or '#' in line:
-                continue
-            args = line.split('\n')[0].rstrip().split(' ')
-            tasks.append(PTask.taskFac(args))
-    logging.info("任务读取成功！")
-    return tasks
+    def readTask(self):
+        tasks = []
+        self.logger.info("正在读取任务...")
+        # 读取任务文件，并解析为任务类
+        with open(self.taskPath, 'r', encoding = 'utf-8') as f:
+            for line in f:
+                if len(line) < 5 or '#' in line:
+                    continue
+                args = line.split('\n')[0].rstrip().split(' ')
+                tasks.append(PTask.taskFac(args))
+        self.logger.info("任务读取成功！")
+        return tasks
 
-def writeTask(tasks):
-    logging.info("开始更新任务状态....")
-    with open(taskPath, 'w', encoding = 'utf-8') as f:
-        for task in tasks:
-            f.write(task.toStr())
-            f.write('\n')
-    logging.info("任务更新完成....")
-    
-    
-
-
-
-def run():
-    '''
-    #启动方法
-    '''
-    try:
-        while True:
-            logging.info("aweak!")
-            tasks = readTask()
-            logging.info("开始执行任务....")
+    def writeTask(self,tasks):
+        self.logger.info("开始更新任务状态....")
+        with open(self.taskPath, 'w', encoding = 'utf-8') as f:
             for task in tasks:
-                if task.isTime():
-                    logging.info('正在执行： %s'%(task.toStr()))
-                    writeTask(tasks)
-                    if task.run():
-                        logging.info('SUCCESS! %s' %(task.toStr()))
-                        task.goNex()
-                    else:
-                        logging.error('FAILED! %s' %(task.toStr()))
-                    writeTask(tasks)
-            logging.info("任务执行结束！")
-            logging.info("sleeping!")
-            time.sleep(60*60*2)
-    except Exception as e:
-        logging.error('error in runner: %s'%(e))
-        writeTask(tasks)    
+                f.write(task.toStr())
+                f.write('\n')
+        self.logger.info("任务更新完成....")
+    
+    
+
+
+
+    def run(self):
+        '''
+        #启动方法
+        '''
+        try:
+            while True:
+                self.logger.info("aweak!")
+                tasks = self.readTask()
+                self.logger.info("开始执行任务....")
+                for task in tasks:
+                    if task.isTime():
+                        self.logger.info('正在执行： %s'%(task.toStr()))
+                        task.logger.info('正在执行： %s'%(task.toStr()))
+                        self.writeTask(tasks)
+                        if task.run():
+                            self.logger.info('SUCCESS! %s' %(task.toStr()))
+                            task.logger.info('SUCCESS! %s' %(task.toStr()))
+                            task.goNex()
+                        else:
+                            self.logger.error('FAILED! %s' %(task.toStr()))
+                            task.logger.error('FAILED! %s' %(task.toStr()))
+                        self.writeTask(tasks)
+                self.logger.info("任务执行结束！")
+                self.logger.info("sleeping!")
+                time.sleep(60*60*2)
+        except Exception as e:
+            self.logger.error('error in runner: %s'%(e))
+            self.writeTask(tasks)    
         
 if __name__ == '__main__':
-    run()   
+    runner().run()

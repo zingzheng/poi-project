@@ -14,7 +14,6 @@ from urllib.parse import urlencode
 from urllib import request
 import googlemaps
 
-from zing.Util import logging
 
 BASE_PATH = os.path.split(os.path.realpath(__file__))[0]
 
@@ -47,8 +46,8 @@ class POI(object):
                     self.province, self.city, self.district,
                     self.stree, self.tel, self.poiType, self.price]])
         except Exception as e:
-            logging.error("error in str poi")
-            logging.error(e)
+            self.logger.error("error in str poi")
+            self.logger.error(e)
         return poistr
         
 
@@ -109,8 +108,8 @@ class BaseMap(object):
                 res = json.loads(f.read().decode('utf-8'),strict=False)
                 break
             except Exception as e:
-                logging.warn("erro while conn: %s" %(url))
-                logging.warn(e)
+                self.logger.warn("erro while conn: %s" %(url))
+                self.logger.warn(e)
                 continue
         return res
     
@@ -151,7 +150,8 @@ class GaodeMap(BaseMap):
     #高德api只支持1000次每天，肯定有问题
     '''
     
-    def __init__(self):
+    def __init__(self,logger):
+        self.logger = logger
         #请填入高德的KEY
         self.SEARCH_KEY = ['d74aa1ef25769557ba86c90c7a953337',
                            '42418aff604a1c1ac2368abece1d97ba',
@@ -233,14 +233,14 @@ class GaodeMap(BaseMap):
             if stat == 1:
                 break
             elif stat == -1:
-                logging.error("获取行政子区域失败 %s,%s"%(msg,url))
+                self.logger.error("获取行政子区域失败 %s,%s"%(msg,url))
                 return None
             else:
                 self.SUB_KEY.pop(0)
-                logging.warn("error %s,%s"%(msg,url))
-                logging.info("该key失效，自动替换key。")
+                self.logger.warn("error %s,%s"%(msg,url))
+                self.logger.info("该key失效，自动替换key。")
         if not self.SUB_KEY:
-            logging.error("获取行政子区域失败，key超过限制")
+            self.logger.error("获取行政子区域失败，key超过限制")
             return None
         sub = []
         for d in res['result'][0]:
@@ -296,14 +296,14 @@ class GaodeMap(BaseMap):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("逆地址解析失败: %s,%s"%(msg,rURL))
+                        self.logger.error("逆地址解析失败: %s,%s"%(msg,rURL))
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,rURL))
-                        logging.info("该key失效，自动替换key。")    
+                        self.logger.warn("error %s,%s"%(msg,rURL))
+                        self.logger.info("该key失效，自动替换key。")    
                 if not self.REGEO_KEY:
-                    logging.error("逆地址解析失败，key超过限制")
+                    self.logger.error("逆地址解析失败，key超过限制")
                     return False
                 regeo = rRes['regeocode']
                 try:
@@ -319,8 +319,8 @@ class GaodeMap(BaseMap):
                 poi.stree = regeo['addressComponent']['township']
                 pois.append(poi)       
             except Exception as e:
-                logging.warn("error while parse data")
-                logging.warn(e)
+                self.logger.warn("error while parse data")
+                self.logger.warn(e)
                 continue
         return pois
     
@@ -336,7 +336,8 @@ class TencentMap(BaseMap):
     #具体的地图类：腾讯地图
     '''                
     
-    def __init__(self):
+    def __init__(self,logger):
+        self.logger = logger
         #腾讯3种key是相同的
         self.SEARCH_KEY = ['56SBZ-VEPWV-HSDPF-US3FK-HH4G6-JPFQ7',
                            'JAGBZ-IQU3X-YJR4A-7S64I-HSZHK-6QBDI',
@@ -416,14 +417,14 @@ class TencentMap(BaseMap):
             if stat == 1:
                 break
             elif stat == -1:
-                logging.error("获取行政子区域失败 %s,%s"%(msg,url))
+                self.logger.error("获取行政子区域失败 %s,%s"%(msg,url))
                 return None
             else:
                 self.SUB_KEY.pop(0)
-                logging.warn("error %s,%s"%(msg,url))
-                logging.info("该key失效，自动替换key。")
+                self.logger.warn("error %s,%s"%(msg,url))
+                self.logger.info("该key失效，自动替换key。")
         if not self.SUB_KEY:
-            logging.error("获取行政子区域失败,key已经用完")
+            self.logger.error("获取行政子区域失败,key已经用完")
             return None
     
         sub = []
@@ -486,14 +487,14 @@ class TencentMap(BaseMap):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("failed request: %s,%s"%(msg,rURL))
+                        self.logger.error("failed request: %s,%s"%(msg,rURL))
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,rURL))
-                        logging.info("该key失效，自动替换key。")
+                        self.logger.warn("error %s,%s"%(msg,rURL))
+                        self.logger.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
-                    logging.error("逆地址解析失败，key已近用完")
+                    self.logger.error("逆地址解析失败，key已近用完")
                     return False
                     
                 regeo = rRes['result']
@@ -507,8 +508,8 @@ class TencentMap(BaseMap):
                 poi.stree = regeo['address_component']['street']
                 pois.append(poi)       
             except Exception as e:
-                logging.warn("error while parse data")
-                logging.warn(e)
+                self.logger.warn("error while parse data")
+                self.logger.warn(e)
                 continue
         return pois
     
@@ -521,7 +522,8 @@ class BaiduMap(BaseMap):
     #具体的地图类：百度地图
     ''' 
     
-    def __init__(self):
+    def __init__(self,logger):
+        self.logger = logger
         #百度地图的SEARCH_KEY 和 REGEO_KEY用的是百度的
         #暂时不支持行政区域划分，故无SUB_KEY
         self.SEARCH_KEY = ['voRyF7opZzGGETYert5D2PYk',
@@ -647,14 +649,14 @@ class BaiduMap(BaseMap):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("逆地址解析失败: %s,%s" % (msg,rURL))
+                        self.logger.error("逆地址解析失败: %s,%s" % (msg,rURL))
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,rURL))
-                        logging.info("该key失效，自动替换key。")
+                        self.logger.warn("error %s,%s"%(msg,rURL))
+                        self.logger.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
-                    logging.error("逆地址解析失败，key用完")
+                    self.logger.error("逆地址解析失败，key用完")
                     return False
                 regeo = rRes['result']
                 poi.stree_num = regeo['addressComponent']['street_number']
@@ -667,8 +669,8 @@ class BaiduMap(BaseMap):
                 poi.stree = regeo['addressComponent']['street']
                 pois.append(poi)       
             except Exception as e:
-                logging.warn("error while parse data")
-                logging.warn(e)
+                self.logger.warn("error while parse data")
+                self.logger.warn(e)
                 continue
         return pois
 
@@ -679,7 +681,8 @@ class GoogleMap(BaseMap):
     '''
     #具体的地图类：谷歌地图地图
     ''' 
-    def __init__(self):
+    def __init__(self,logger):
+        self.logger = logger
         #只支持圆形区域划分
         self.gclient = None
         self.SEARCH_KEY = ['AIzaSyDsjSwLtFLs007PRBCc-m9RCCYSehvKbuk',
@@ -705,7 +708,7 @@ class GoogleMap(BaseMap):
                 resGeo = gclient.place(location)
                 break
             except Exception as e:
-                logging.warn("erro in google https, retrying")
+                self.logger.warn("erro in google https, retrying")
                 retry-=1
         
         #return json.loads(resGeo,strict=False)
@@ -721,7 +724,7 @@ class GoogleMap(BaseMap):
                 res = gclient.places_radar(location=region, radius=radius*1000, keyword=keyword)
                 break
             except Exception as e:
-                logging.warn("erro in google https, retrying")
+                self.logger.warn("erro in google https, retrying")
                 retry-=1
         return res
     
@@ -764,14 +767,14 @@ class GoogleMap(BaseMap):
                     if stat == 1:
                         break
                     elif stat == -1:
-                        logging.error("逆地址解析失败: %s,%s" % (msg,place_id))
+                        self.logger.error("逆地址解析失败: %s,%s" % (msg,place_id))
                         return False
                     else:
                         self.REGEO_KEY.pop(0)
-                        logging.warn("error %s,%s"%(msg,place_id))
-                        logging.info("该key失效，自动替换key。")
+                        self.logger.warn("error %s,%s"%(msg,place_id))
+                        self.logger.info("该key失效，自动替换key。")
                 if not self.REGEO_KEY:
-                    logging.error("逆地址解析失败，key用完")
+                    self.logger.error("逆地址解析失败，key用完")
                     return False
                 regeo = rRes['result']
                 poi.append(regeo['name'] if regeo['name'] else ' ')
@@ -780,22 +783,22 @@ class GoogleMap(BaseMap):
                 poi.append(regeo['formatted_address'])
                 pois.append(poi)       
             except Exception as e:
-                logging.warn("error while parse data")
-                logging.warn(e)
+                self.logger.warn("error while parse data")
+                self.logger.warn(e)
                 continue
         return pois
     
     
     
-def map_fac(mapType):
+def map_fac(mapType,logger):
     '''
     #地图方言工厂方法
     '''
     if mapType == '百度':
-        return BaiduMap()
+        return BaiduMap(logger)
     elif mapType == '腾讯':
-        return TencentMap()
+        return TencentMap(logger)
     elif mapType == '高德':
-        return GaodeMap()
+        return GaodeMap(logger)
     elif mapType == '谷歌':
-        return GoogleMap()
+        return GoogleMap(logger)

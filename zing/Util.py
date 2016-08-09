@@ -14,17 +14,23 @@ import os
 import logging
 import math
 
-BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/..'
-logging.basicConfig(level=logging.DEBUG,
-                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                datefmt='%a, %d %b %Y %H:%M:%S',
-                filename=BASE_PATH+'/log.txt',
-                filemode='a')
-console = logging.StreamHandler()  
-console.setLevel(logging.INFO)   
-formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')  
-console.setFormatter(formatter)  
-logging.getLogger('').addHandler(console) 
+BASE_PATH = os.path.split(os.path.realpath(__file__))[0] + '/../'
+
+def getLogger(fileName,name=None):
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    #文件handler
+    fh = logging.FileHandler(BASE_PATH+fileName)
+    #控制台handler
+    ch = logging.StreamHandler() 
+    #设置输出格式
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')  
+    fh.setFormatter(formatter)  
+    ch.setFormatter(formatter)
+    #把handler添加到logger
+    logger.addHandler(fh)  
+    logger.addHandler(ch)
+    return logger
 
 
 # def showShape(points):
