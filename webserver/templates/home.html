@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 {% extends "layout.html" %}
 {% block body %}
 {% if session.username %}
@@ -8,20 +8,30 @@
     	<h2>任务列表：</h2>
     	<tr>
     		<th>id</th><th>地图类型</th><th>切割方法</th><th>搜索范围</th><th>搜索区域</th><th>关键词</th>
-    		<th>创建者</th><th>创建时间</th><th>结束时间</th><th>状态</th>
+    		<th>结果文件</th><th>日志文件</th><th>创建者</th><th>创建时间</th><th>结束时间</th><th>状态</th>
     	</tr>
     	{% for job in jobs %}
     	<tr>
     		<td>{{job[0]}}</td>
-    		<td>{{job[2]}}</td>
     		<td>{{job[1]}}</td>
+    		<td>{{job[2]}}</td>
     		<td>{{job[3]}}</td>
     		<td>{{job[4]}}</td>
     		<td>{{job[5]}}</td>
-    		<td>{{job[6]}}</td>
-            <td>{{job[7]}}</td>
-            <td>{{job[8]}}</td>
-            <td>{{job[9]}}</td>
+    		{% if job[9] %}
+    			<td><a href="/download?filename={{job[9]}}">下载结果</a></td>
+    		{% else %}
+    			<td>{{job[9]}}</td>
+    		{% endif %}
+            {% if job[9] %}
+    			<td><a href="/download?filename={{job[10]}}">下载日志</a></td>
+    		{% else %}
+    			<td>{{job[10]}}</td>
+    		{% endif %}
+            <td>{{job[11]}}</td>
+            <td>{{job[12]}}</td>
+            <td>{{job[13]}}</td>
+            <td>{{job[14]}}</td>
     		
     	</tr>
     	{% endfor %}
@@ -34,6 +44,17 @@
 	<h2>添加任务：</h2>
 	  <form action='/addJob' method=post>
 		<tr>
+			<td>core_type: </td>
+			<td>
+			    <select name="core_type" id="core_type_select">
+					<option value="网格切分">网格切分</option>
+					<option value="所有省网格切分">所有省网格切分</option>
+					<option value="行政划分">行政划分</option>
+					<option value="圆形划分">圆形划分</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
 			<td>map_type: </td>
 			<td>
 				<select name="map_type" id="map_type_select">
@@ -41,16 +62,6 @@
 					<option value="谷歌地图">谷歌地图</option>
 					<option value="腾讯地图">腾讯地图</option>
 					<option value="高德地图">高德地图</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>core_type: </td>
-			<td>
-			    <select name="core_type" id="core_type_select">
-					<option value="网格切分">网格切分</option>
-					<option value="行政划分">行政划分</option>
-					<option value="圆形划分">圆形划分</option>
 				</select>
 			</td>
 		</tr>

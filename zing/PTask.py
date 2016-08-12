@@ -30,6 +30,12 @@ class BaseTask(object):
         self.grid = [100,20,10]
         self.core_type = args[0]
         self.map_type = args[1]
+        if args[2] == '国':
+            args[2] = '0'
+        if args[2] == '省':
+            args[2] = '1'
+        if args[2] == '市':
+            args[2] = '2'    
         self.region_type = int(args[2])
         self.region = args[3]
         self.keyword = args[4]
@@ -47,8 +53,8 @@ class BaseTask(object):
             self.filePath = args[8]
         #等任务执行时再分配boxsPath
         self.boxsPath = ''
-        
-        self.logger = getLogger('res/'+self.filePath+'.log')
+        self.logPath = self.filePath+'.log'
+        self.logger = getLogger('res/'+ self.logPath)
         
     def readBoxs(self):
         '''
@@ -516,12 +522,12 @@ def taskFac(args):
     '''
     #静态方法，任务工厂类
     '''
-    s = int(args[0])
-    if s == 0:
+    s = args[0]
+    if s == "网格切分":
         return CutTask(args)
-    elif s == 1:
+    elif s == "行政划分":
         return SubTask(args)
-    elif s == 2:
+    elif s == "所有省网格切分":
         return CutProTask(args)
-    elif s == 3:
+    elif s == "圆形划分":
         return CircleTask(args)

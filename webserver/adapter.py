@@ -11,46 +11,46 @@ import threading
 from webserver.mybean import *
 from webserver.mydao import *
 from zing import PTask
+import datetime
 
 class POIAdapter(object):
     
     def __init__(self, job):
         self.job = job
         self.task = self.jobToTask(job)
-        self.jobDao = JobInfoDao()
-    
-    @staticmethod
-    def jobToTask(job):
-        args = [job.core_type,job.map_type,job.region_type,job.region,job.keyword,job.delta,
-                job.nex]
-        if job.recover:
-            args.append(job.recover)
+
+    def jobToTask(self,job):
+        args = [job.core_type,job.map_type,job.region_type,job.region,job.keyword,
+                job.delta,job.nex]
+        if job.boxs:
+            args.append(job.boxs)
             args.append(job.res)
-        PTask.taskFac(args)
+        return PTask.taskFac(args)
     
-    def taskToJob(self):
+    def updateJob(self):
         self.job.nex = self.task.nex
-        self.job.res = self.task.res
-        if self.task.recover:
-            self.job.recover = self.task.recover
-            self.job.state = 'fail'
+        self.job.boxs = self.task.boxsPath
+        self.job.res = self.task.filePath
+        self.job.log = self.task.logPath
+        self.job.finishTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        if self.job.boxs:
+            self.job.status = 'fail'
         else:
-            self.job.state = 'success'
+            self.job.status = 'success'
+        JobInfoDao().update(self.job)
+        
     
     def run(self):
         try:
             if self.task.isTime():
                 if self.task.run():
                     self.task.goNex()
-                self.taskToJob()
-                self.jobDao.update(self.job)    
+                self.updateJob()    
         except Exception as e:
-            self.taskToJob()
-            self.jobDao.update(self.job)
+            self.updateJob()
             
     def go(self):
         t = threading.Thread(target=self.run)
         t.start()
-        self.jobDao.update(self.job)
         
     

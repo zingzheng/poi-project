@@ -33,15 +33,25 @@ class JobInfoDao(BaseDao):
         self.mydb = self.BASEPATH+'/db/JobInfo.sql'
         
     def insert(self,job):
+        qStr = "insert into JobInfo(" + ','.join(["%s"]*14) + ") values(" + ','.join(["'%s'"]*14) +")"
         with closing(JobInfoDao().connect_db()) as db:
-            db.cursor().execute("insert into JobInfo(%s,%s,%s,%s,%s,%s,%s,%s,%s)\
-                values('%s','%s','%s','%s','%s','%s','%s','%s','%s')" % job.sp())
+            cursor = db.cursor()
+            cursor.execute(qStr % job.sp())
             db.commit()
+            cursor.execute("select id from JobInfo where createTime='%s'"%(job.createTime))
+            rows = cursor.fetchall()
+            cursor.close()
+            return rows[0][0]
+            
             
     def update(self,job):
+        qStr = "update JobInfo set " + ','.join(["%s='%s'"]*14) + " where id = %d"
+        qArg = job.mix()
+        qArg.append(job.id)
+        qArg = tuple(qArg)
+        print(qArg)
         with closing(JobInfoDao().connect_db()) as db:
-            db.cursor().execute("update JobInfo set %s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s',%s='%s' \
-                where id = %s" % job.mix().append(job.id))
+            db.cursor().execute(qStr % qArg)
             db.commit()
             
     def select(self):

@@ -794,11 +794,11 @@ def map_fac(mapType,logger):
     '''
     #地图方言工厂方法
     '''
-    if mapType == '百度':
+    if mapType == '百度地图':
         return BaiduMap(logger)
-    elif mapType == '腾讯':
+    elif mapType == '腾讯地图':
         return TencentMap(logger)
-    elif mapType == '高德':
+    elif mapType == '高德地图':
         return GaodeMap(logger)
-    elif mapType == '谷歌':
+    elif mapType == '谷歌地图':
         return GoogleMap(logger)

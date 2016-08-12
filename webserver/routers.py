@@ -13,7 +13,7 @@ from contextlib import closing
 
 
 app = Flask(__name__)
-
+BASE_PATH = os.path.split(os.path.realpath(__file__))[0]+'/../res/'
 
 
 
@@ -81,14 +81,28 @@ def addJob():
     job.region_type = request.form['region_type']
     job.region = request.form['region']
     job.keyword = request.form['keyword']
+    job.delta = '0'
+    job.nex = datetime.datetime.now().strftime('%Y%m%d')
+    job.boxs = ''
+    job.res = ''
+    job.log = ''
     job.owner = session['username']
     job.createTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     job.finishTime = '--'
     job.status = 'running'
-    JobInfoDao().insert(job)
-    #POIAdapter(job).go()
+    id = JobInfoDao().insert(job)
+    job.id = id
+    POIAdapter(job).go()
     return redirect('/')
-    
+
+@app.route('/download', methods=['get'])  
+def download():
+    filename = request.args.get('filename').split('/')[-1] 
+    response = make_response(send_file(BASE_PATH+filename))
+    response.headers["Content-Disposition"] = "attachment; filename=%s" %(filename)
+    return response
+
+
 
 if __name__ == '__main__':
     app.secret_key = 'A0Zr98j/3sdfasdf09(N]LWX/,?RT'
