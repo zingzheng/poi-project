@@ -233,7 +233,7 @@ class CircleTask(BaseTask):
         super().__init__(args)
         self.shape = self._getShape(self.region)
         self.bbox = self.shape.bbox
-        self.radius = 10
+        self.radius = 20
         
     
     def _getShape(self, region):

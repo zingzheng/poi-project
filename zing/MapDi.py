@@ -718,7 +718,7 @@ class GoogleMap(BaseMap):
         while retry:
             try:
                 gclient = googlemaps.Client(key=self.SEARCH_KEY[0])
-                res = gclient.places_radar(location=region, radius=radius*1000, keyword=keyword)
+                res = gclient.places_radar(location=region[::-1], radius=radius*1000, keyword=keyword)
                 break
             except Exception as e:
                 logging.warn("erro in google https, retrying")
