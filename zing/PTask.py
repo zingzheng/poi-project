@@ -141,7 +141,7 @@ class BaseTask(object):
         '''
         with open(BASE_PATH+self.filePath,'a',encoding = 'utf-8') as f:
             for data in datas:
-                f.write(self.keyword + ',' + data)
+                f.write(self.keyword + '#' + data)
                 f.write('\n')
     
     def run(self):
@@ -255,7 +255,9 @@ class CircleTask(BaseTask):
         '''
         if not self.recover:
             logging.info('正在切割圆形网格。。。')
-            self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), self.radius)
+            #myUtil.showShape(self.shape.points)
+            self.bboxs = myUtil.CCut(self.shape, self.radius)
+            #self.bboxs = myUtil.cutC(self.bbox, Polygon(self.shape.points), self.radius)
             #myUtil.showUp(self.shape.points,self.bboxs)
         else:
             logging.info('正在从断点恢复。。。')
@@ -295,7 +297,7 @@ class CircleTask(BaseTask):
             if pois == False:
                 return False
             for poi in pois:
-                poi = ','.join(poi)
+                poi = '#'.join(poi)
                 print(poi)
                 datas.append(poi)
             self.dumpFile(datas)

@@ -41,7 +41,7 @@ class POI(object):
     def toString(self):
         poistr = None
         try:
-            poistr = ','.join([str(s) for s in [
+            poistr = '#'.join([str(s) for s in [
                     self.name, self.stree_num, self.lat, self.lng,
                     self.address, self.adcode, self.country,
                     self.province, self.city, self.district,
@@ -778,6 +778,7 @@ class GoogleMap(BaseMap):
                 poi.append(str(data['geometry']['location']['lat']))
                 poi.append(str(data['geometry']['location']['lng']))
                 poi.append(regeo['formatted_address'])
+                poi.append(regeo['types'][0])
                 pois.append(poi)       
             except Exception as e:
                 logging.warn("error while parse data")

@@ -8,7 +8,7 @@ Created on 2016年6月14日
 
 
 #import matplotlib.pyplot as plt
-from shapely.geometry import box
+from shapely.geometry import box,Polygon,MultiPolygon
 from pypinyin import lazy_pinyin
 import os 
 import logging
@@ -102,18 +102,38 @@ def reCutC(bbox):
     #递归划分
     '''
     bboxs = []
-    r = bbox[2]/1.414
+    r = bbox[2]/(1.414*2)
     d_lat = getDLat(r)
-    n_lat = bbox[1] + r
+    n_lat = bbox[1] + d_lat
     d_lng = getDlng(r, n_lat)
     bboxs.append([bbox[0]-d_lng,n_lat,bbox[2]/2])
     bboxs.append([bbox[0]+d_lng,n_lat,bbox[2]/2])
     
-    n_lat = bbox[1] - r
+    n_lat = bbox[1] - d_lat
     d_lng = getDlng(r, n_lat)
     bboxs.append([bbox[0]-d_lng,n_lat,bbox[2]/2])
     bboxs.append([bbox[0]+d_lng,n_lat,bbox[2]/2])
     
+    return bboxs
+    
+
+def CCut(shape,radius):
+    polylist = []
+    for i in range(len(shape.parts)):
+        if i+1 == len(shape.parts):
+            points = shape.points[shape.parts[i]:]
+        else:
+            points = shape.points[shape.parts[i]:shape.parts[i+1]]
+        poly = Polygon(points)
+        if poly.exterior.is_ccw:
+            continue
+        polylist.append(poly)
+    
+    mpoly = MultiPolygon(polylist)
+    
+    bboxs = []
+    for poly in mpoly:
+        bboxs.extend(cutC(poly.bounds, poly, radius))
     return bboxs
     
 
@@ -142,8 +162,8 @@ def cutC(bbox,region_polygon,radius):
         m_lng =bbox[0] + d_lng/2.0
         while m_lng < bbox[2]:
             ##判断圆心是否在多边形内
-            rect = box(m_lng - radius/1.41,m_lat - radius/1.41,
-                       m_lng + radius/1.41,m_lat + radius/1.41)
+            rect = box(m_lng - d_lng,m_lat - d_lat,
+                       m_lng + d_lng,m_lat + d_lat)
             if rect.intersects(region_polygon):
                 bboxs.append([m_lng,m_lat,radius])
             m_lng += d_lng
