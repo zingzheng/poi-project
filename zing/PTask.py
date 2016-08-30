@@ -243,7 +243,7 @@ class CircleTask(BaseTask):
         sf = shapefile.Reader(R_PATH+'/GADM/WORLD/TM_WORLD_BORDERS-0.3.shp')
         shapeRec = None
         for shapeRec in sf.iterShapeRecords():
-            if shapeRec.record[4] == region: # country name stored in 5-th field ['TW', 'TW', 'TWN', 158, 'Taiwan', 0, 0, 0, 0, 120.946, 23.754]
+            if shapeRec.record[4] == region('_',' '): # country name stored in 5-th field ['TW', 'TW', 'TWN', 158, 'Taiwan', 0, 0, 0, 0, 120.946, 23.754]
                 return shapeRec.shape
     
     def _getSub(self,location):
